@@ -1,0 +1,6 @@
+# GEO_Restock — Netlify config (2026-07-25)
+# The web app lives in a subfolder of the repo, so Netlify publishes from there.
+# It's a static site — no build step.
+[build]
+  publish = "Geo Restock APP Code"
+  command = ""

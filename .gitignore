@@ -1,0 +1,33 @@
+# GEO_Restock — folder-level WHITELIST .gitignore (2026-07-25)
+# Model: ignore EVERYTHING by default, then bless specific folders back in.
+# Anything inside a blessed folder commits automatically, including files that
+# don't exist yet (e.g. a new part image, or a new MP3 dropped in Soundtrack).
+# Surgical exclusions below handle junk/non-runtime items sitting inside a
+# blessed folder. To add a whole new servable folder later, add one "!" line.
+
+# --- ignore everything at the root ---
+/*
+
+# --- allow the two root config files back ---
+!/.gitignore
+!/netlify.toml
+
+# --- BLESSED: the web app ---
+!/Geo Restock APP Code/
+#   surgical exclusions inside the app folder (non-runtime / local-only):
+/Geo Restock APP Code/.claude/
+/Geo Restock APP Code/Macbook Web Server.py
+/Geo Restock APP Code/GeothermParts.json
+/Geo Restock APP Code/GEO_Restock_Architecture.md
+
+# --- BLESSED: part images + servable illustrations (NOT Images/UI) ---
+!/Images/
+/Images/*
+!/Images/Parts/
+!/Images/Illustrations/
+
+# --- BLESSED: soundtrack (originals included, by design) ---
+!/Soundtrack/
+
+# --- junk, ignored everywhere including inside blessed folders ---
+**/.DS_Store
