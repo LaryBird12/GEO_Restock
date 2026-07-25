@@ -1,7 +1,7 @@
 {
- "Export Timestamp": "2026-07-25T20:50:23+00:00",
- "Source Change ID": 3535,
- "Object Count": 785,
+ "Export Timestamp": "2026-07-25T23:43:27+00:00",
+ "Source Change ID": 3557,
+ "Object Count": 787,
  "Parts": [
   {
    "Part ID": 1,
@@ -8990,7 +8990,7 @@
    "CAT 1": "Perishable Materials (trailer)",
    "CAT 2": "Sweat Bag",
    "CAT 3": null,
-   "Is Trailer Stock": true,
+   "Is Trailer Stock": false,
    "Location ID": 1,
    "Location Path": [
     {
@@ -32928,16 +32928,16 @@
    "Vendor Cost": 1.21
   },
   {
-   "Part ID": 398,
-   "DB Entry Type": "Tool",
+   "Part ID": 579,
+   "DB Entry Type": "Part",
    "Stock Type": "Nonstock",
-   "Description": "12 ft. x 1\" Ratchet Tie-Down Straps with S-Hook (4-Pack)",
+   "Description": "25' 12/3 Extension Cord",
    "Size": null,
-   "Manufacturer": "Husky",
-   "MFG Part Number": "FH0829",
-   "CAT 1": "Tool",
-   "CAT 2": "Geo Trailer",
-   "CAT 3": "Large Hand Tools",
+   "Manufacturer": "RIDGID",
+   "MFG Part Number": "74025RGD",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
    "Is Trailer Stock": true,
    "Location ID": 63,
    "Location Path": [
@@ -32967,19 +32967,127 @@
      "Node Name": "Tools"
     }
    ],
-   "Stock Min": 4.0,
-   "Stock Max": 4.0,
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": "Each",
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Home Depot",
-   "VEN Part Number": "312994495",
-   "VEN URL": "https://www.homedepot.com/p/Husky-12-ft-x-1-in-Ratchet-Tie-Down-Straps-with-S-Hook-4-Pack-FH0829/312994495",
-   "VEN Case QTY Txt": "4 Straps",
-   "VEN Case QTY #": 4,
-   "VEN Unit Description": "Straps",
-   "Vendor Cost": 9.97
+   "VEN Part Number": "203736186",
+   "VEN URL": "https://www.homedepot.com/p/RIDGID-25-ft-12-3-Heavy-Duty-Indoor-Outdoor-Extension-Cord-with-Lighted-End-Orange-Grey-74025RGD/203736186",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 49.97
+  },
+  {
+   "Part ID": 580,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "50' 12/3 Extension Cord",
+   "Size": null,
+   "Manufacturer": "RIDGID",
+   "MFG Part Number": "74050RGD",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Is Trailer Stock": true,
+   "Location ID": 63,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "203736187",
+   "VEN URL": "https://www.homedepot.com/p/RIDGID-50-ft-12-3-Heavy-Duty-Indoor-Outdoor-Extension-Cord-with-Lighted-End-Orange-Grey-74050RGD/203736187",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 74.97
+  },
+  {
+   "Part ID": 581,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "100' 12/3 Extension Cord",
+   "Size": null,
+   "Manufacturer": "RIDGID",
+   "MFG Part Number": "AW62621",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Is Trailer Stock": true,
+   "Location ID": 63,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "100661449",
+   "VEN URL": "https://www.homedepot.com/p/RIDGID-100-ft-12-3-Extension-Cord-AW62621/100661449",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 119.0
   },
   {
    "Part ID": 536,
@@ -33088,6 +33196,60 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Compressor",
    "Vendor Cost": 519.0
+  },
+  {
+   "Part ID": 398,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "12 ft. x 1\" Ratchet Tie-Down Straps with S-Hook (4-Pack)",
+   "Size": null,
+   "Manufacturer": "Husky",
+   "MFG Part Number": "FH0829",
+   "CAT 1": "Tool",
+   "CAT 2": "Geo Trailer",
+   "CAT 3": "Large Hand Tools",
+   "Is Trailer Stock": true,
+   "Location ID": 63,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 4.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "312994495",
+   "VEN URL": "https://www.homedepot.com/p/Husky-12-ft-x-1-in-Ratchet-Tie-Down-Straps-with-S-Hook-4-Pack-FH0829/312994495",
+   "VEN Case QTY Txt": "4 Straps",
+   "VEN Case QTY #": 4,
+   "VEN Unit Description": "Straps",
+   "Vendor Cost": 9.97
   },
   {
    "Part ID": 400,
@@ -36676,8 +36838,8 @@
      "Node Name": "Duct Bag"
     }
    ],
-   "Stock Min": null,
-   "Stock Max": null,
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": null,
    "Component Quantity": null,
@@ -39895,70 +40057,6 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Each",
    "Vendor Cost": 9.32
-  },
-  {
-   "Part ID": 205,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Solder - 95/5 Lead Free",
-   "Size": "95/5",
-   "Manufacturer": "Harris",
-   "MFG Part Number": "331760",
-   "CAT 1": "Perishable Materials (trailer)",
-   "CAT 2": "Sweat Bag",
-   "CAT 3": null,
-   "Is Trailer Stock": true,
-   "Location ID": 47,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 1,
-     "Node Name": "Geo"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 5,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 63,
-     "Node Name": "Tools"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 8,
-     "Node Name": "Tool Bags"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 47,
-     "Node Name": "Copper Sweat"
-    }
-   ],
-   "Stock Min": 0.5,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "331760",
-   "VEN URL": "https://www.supplyhouse.com/Harris-331760-95-5-Lead-Free-Wire-Solder-1-lb-Spool-95-Tin-5-Antimony",
-   "VEN Case QTY Txt": "Each",
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 53.52
   },
   {
    "Part ID": 216,
