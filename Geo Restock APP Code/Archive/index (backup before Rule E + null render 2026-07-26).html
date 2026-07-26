@@ -675,21 +675,11 @@ function reorderRows(){
       // Falls back to the part's single shop quantity if no division resolves,
       // so nothing regresses while Solar is still empty.
       orderQty:(function(){
-        // TWO INDEPENDENT DEMANDS, SUMMED.
-        //  SHELF portion  (Rules A + B): one stored quantity per FLAGGED
-        //    DIVISION -- same-division team flags never multiply, divisions sum.
-        //  ASSEMBLY portion (Rule E): BOM qty x number of teams that flagged the
-        //    assembly -- each team has its own physical assembly to build.
-        // A nonstock assembly component has no shelf entry, so it contributes 0
-        // from the shelf side and takes its whole quantity from the BOM. No
-        // Stock Min / Reorder Quantity ever needs to be populated for it.
         const divs=[...new Set(teamOrder.filter(t=>teamsObj[t]).map(t=>(TEAMS[t]&&TEAMS[t].division)||'geo'))];
         const qmap=p.shopQtyByDiv||{};
-        let shelf=0,shelfKnown=false;
-        divs.forEach(d=>{const v=qmap[d];if(v!=null&&v!==''){shelf+=Number(v)||0;shelfKnown=true;}});
-        const asm=(r.asmQty?Object.values(r.asmQty).reduce((a,b)=>a+Number(b||0),0):0);
-        if(!shelfKnown&&!asm)return (p.shopOrderQty!=null?p.shopOrderQty:'');
-        return (shelfKnown?shelf:0)+asm;
+        let sum=0,known=false;
+        divs.forEach(d=>{const v=qmap[d];if(v!=null&&v!==''){sum+=Number(v)||0;known=true;}});
+        return known?sum:(p.shopOrderQty!=null?p.shopOrderQty:'');
       })(),
       cost:(p.cost!=null?p.cost:''),
       venCaseQty:p.venCaseQty||'',
@@ -698,14 +688,7 @@ function reorderRows(){
       notes:(r.notes?Object.values(r.notes).sort((a,b)=>(a.ts||0)-(b.ts||0)):[]),
       // Assembly-component demand: per-team qtys summed at read time (the
       // locked aggregation rule) — "4 ×, Gold, Cobalt", one line never two.
-      // asmSum = the ASSEMBLY CONTRIBUTION (Rule E): each team owns its own
-      // physical assembly on its own trailer, so BOM qty multiplies per team.
-      // (Deliberate exception to Rule A, which governs one shared shelf.)
       asmSum:(r.asmQty?Object.values(r.asmQty).reduce((a,b)=>a+Number(b||0),0):0),
-      // asmBom (the per-assembly BOM number) was RETIRED 2026-07-26: it only ever
-      // fed the "N ×" prefix, which is gone. Carson must never see a breadcrumb
-      // pointing back at an assembly -- Order Qty is the whole story. The Rule E
-      // math is unaffected; asmSum above still does it.
       // Demand count for a plain warehouse part: one "below shop minimum" flag
       // per team = 1 unit each, summed at read time (same rule asmQty follows for
       // assembly components). Gold + Krypton flagging one box of screws = qty 2,
@@ -719,12 +702,11 @@ function csvCell(v){v=(v==null?'':String(v));return /[",\n]/.test(v)?'"'+v.repla
 function exportReorderCSV(){
   const rows=reorderRows();
   if(!rows.length){toast('List is empty');return;}
-  // NO second quantity figure anywhere on the reorder report (Mitch 2026-07-26):
-  // Order Qty carries the one final number. The old "Flag Qty" column is gone.
-  let csv=['Part ID','Description','Vendor','Vendor Part #','Shop Min','Order Qty','Unit Cost','VEN Case QTY','VEN URL','Flagged By','Tool Notes'].join(',')+'\n';
+  let csv=['Part ID','Description','Vendor','Vendor Part #','Shop Min','Order Qty','Flag Qty','Unit Cost','VEN Case QTY','VEN URL','Flagged By','Tool Notes'].join(',')+'\n';
   rows.forEach(r=>{
     const noteTxt=r.notes.map(n=>(n.name||'?')+noteTag(n)+': '+n.reason).join('; ');
-    csv+=[r.id,r.name,r.vendor,r.vendorPart,r.shopMin,r.orderQty,r.cost,r.venCaseQty,r.venUrl,r.teamLabel,noteTxt].map(csvCell).join(',')+'\n';
+    const flagQty=(r.notes.length||r.asmSum)||'';
+    csv+=[r.id,r.name,r.vendor,r.vendorPart,r.shopMin,r.orderQty,flagQty,r.cost,r.venCaseQty,r.venUrl,r.teamLabel,noteTxt].map(csvCell).join(',')+'\n';
   });
   const d=new Date(),pad=n=>String(n).padStart(2,'0');
   const fname='GeoReorder_'+d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'.csv';
@@ -744,10 +726,7 @@ function printReorder(){
   // Shop Min / Order Qty / VEN Case QTY print as the literal word "null" when the catalog has no
   // value there, instead of a blank cell — a blank cell next to filled-in ones reads as if the
   // value shifted into the wrong column; a visible "null" can't be mistaken for real data.
-  // MISSING renders truly BLANK. ZERO still renders "0" (String(0)==="0", never
-  // empty) so the missing/zero distinction survives. The word "null" is never
-  // printed -- nothing is ever shown in place of nothing.
-  const nz=s=>{const v=(s==null?'':String(s)).trim();return v===''?'':esc(v);};
+  const nz=s=>{const v=(s==null?'':String(s)).trim();return v===''?'<span class="nullval">null</span>':esc(v);};
 
   // Group by vendor (case-insensitive alpha order); items with no vendor land in one bucket.
   const byVendor={};
@@ -774,7 +753,8 @@ function printReorder(){
     t+='<tbody>'+items.map(r=>{
       const link=r.venUrl?'<a href="'+h(r.venUrl)+'">Web Link</a>':'—';
       const cost=(r.cost===''||r.cost==null)?'<span class="nullval">null</span>':esc(CFG.currency+r.cost);
-      let tr='<tr><td>'+esc(r.name)+'</td><td class="num">'+nz(r.shopMin)+'</td><td class="num">'+nz(r.orderQty)+'</td><td class="num">'+cost+'</td><td class="num">'+nz(r.venCaseQty)+'</td><td>'+link+'</td><td>'+esc(r.teamLabel)+'</td></tr>';
+      const namePfx=(r.notes.length||r.asmSum)?(r.notes.length||r.asmSum)+' × ':'';
+      let tr='<tr><td>'+namePfx+esc(r.name)+'</td><td class="num">'+nz(r.shopMin)+'</td><td class="num">'+nz(r.orderQty)+'</td><td class="num">'+cost+'</td><td class="num">'+nz(r.venCaseQty)+'</td><td>'+link+'</td><td>'+esc(r.teamLabel)+'</td></tr>';
       // Tool replacement notes ride directly under their line item, stacked.
       r.notes.forEach(n=>{tr+='<tr class="noterow"><td colspan="7">&#128295; '+esc(n.name||'?')+esc(noteTag(n))+': '+esc(n.reason)+'</td></tr>';});
       return tr;
@@ -1520,8 +1500,8 @@ function buildHTML(){
             <div style="font-size:13px;color:#4a5a7a;">Nothing is flagged for reorder right now.</div></div>`:
           rows.map(r=>`<div class="rep-row" style="cursor:default;">
               <div style="flex:1;min-width:0;">
-                <div style="font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${h(r.name||('Part '+r.id))}</div>
-                <div style="font-size:11px;color:#4a5a7a;margin-top:2px;">${[r.vendor?h(String(r.vendor)):'',(r.shopMin==null||r.shopMin==='')?'':'Shop min: '+h(String(r.shopMin)),r.venCaseQty?h(String(r.venCaseQty)):'',r.teamLabel?'by '+h(r.teamLabel):''].filter(Boolean).join(' · ')}</div>
+                <div style="font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${(r.notes.length||r.asmSum)?'<span style="color:#fbbf24;">'+(r.notes.length||r.asmSum)+' ×</span> ':''}${h(r.name||('Part '+r.id))}</div>
+                <div style="font-size:11px;color:#4a5a7a;margin-top:2px;">${r.vendor?h(String(r.vendor))+' · ':''}Shop min: ${(r.shopMin==null||r.shopMin==='')?'—':h(String(r.shopMin))}${r.venCaseQty?' · '+h(String(r.venCaseQty)):''}${r.teamLabel?' · by '+h(r.teamLabel):''}</div>
                 ${r.notes.length?r.notes.map(n=>`<div style="font-size:11px;color:#94a3b8;margin-top:3px;">🛠 <b>${h(n.name||'?')}</b>${h(noteTag(n))}: ${h(n.reason)}</div>`).join(''):''}
               </div>
               ${r.venUrl?`<a href="${h(r.venUrl)}" target="_blank" rel="noopener" style="flex-shrink:0;margin-left:8px;font-size:11px;font-weight:700;color:#38bdf8;text-decoration:none;white-space:nowrap;" onclick="event.stopPropagation()">🔗 Web Link</a>`:''}

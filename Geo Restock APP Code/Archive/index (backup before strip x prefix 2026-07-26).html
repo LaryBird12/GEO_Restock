@@ -702,10 +702,9 @@ function reorderRows(){
       // physical assembly on its own trailer, so BOM qty multiplies per team.
       // (Deliberate exception to Rule A, which governs one shared shelf.)
       asmSum:(r.asmQty?Object.values(r.asmQty).reduce((a,b)=>a+Number(b||0),0):0),
-      // asmBom (the per-assembly BOM number) was RETIRED 2026-07-26: it only ever
-      // fed the "N ×" prefix, which is gone. Carson must never see a breadcrumb
-      // pointing back at an assembly -- Order Qty is the whole story. The Rule E
-      // math is unaffected; asmSum above still does it.
+      // asmBom = the PER-ASSEMBLY BOM quantity, intrinsic to the assembly and
+      // unchanged by team count -- this is what the "N ×" prefix shows.
+      asmBom:(r.asmQty?Math.max.apply(null,Object.values(r.asmQty).map(v=>Number(v)||0)):0),
       // Demand count for a plain warehouse part: one "below shop minimum" flag
       // per team = 1 unit each, summed at read time (same rule asmQty follows for
       // assembly components). Gold + Krypton flagging one box of screws = qty 2,
@@ -719,12 +718,11 @@ function csvCell(v){v=(v==null?'':String(v));return /[",\n]/.test(v)?'"'+v.repla
 function exportReorderCSV(){
   const rows=reorderRows();
   if(!rows.length){toast('List is empty');return;}
-  // NO second quantity figure anywhere on the reorder report (Mitch 2026-07-26):
-  // Order Qty carries the one final number. The old "Flag Qty" column is gone.
-  let csv=['Part ID','Description','Vendor','Vendor Part #','Shop Min','Order Qty','Unit Cost','VEN Case QTY','VEN URL','Flagged By','Tool Notes'].join(',')+'\n';
+  let csv=['Part ID','Description','Vendor','Vendor Part #','Shop Min','Order Qty','Flag Qty','Unit Cost','VEN Case QTY','VEN URL','Flagged By','Tool Notes'].join(',')+'\n';
   rows.forEach(r=>{
     const noteTxt=r.notes.map(n=>(n.name||'?')+noteTag(n)+': '+n.reason).join('; ');
-    csv+=[r.id,r.name,r.vendor,r.vendorPart,r.shopMin,r.orderQty,r.cost,r.venCaseQty,r.venUrl,r.teamLabel,noteTxt].map(csvCell).join(',')+'\n';
+    const flagQty=(r.notes.length||r.asmBom)||'';
+    csv+=[r.id,r.name,r.vendor,r.vendorPart,r.shopMin,r.orderQty,flagQty,r.cost,r.venCaseQty,r.venUrl,r.teamLabel,noteTxt].map(csvCell).join(',')+'\n';
   });
   const d=new Date(),pad=n=>String(n).padStart(2,'0');
   const fname='GeoReorder_'+d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'.csv';
@@ -774,7 +772,8 @@ function printReorder(){
     t+='<tbody>'+items.map(r=>{
       const link=r.venUrl?'<a href="'+h(r.venUrl)+'">Web Link</a>':'—';
       const cost=(r.cost===''||r.cost==null)?'<span class="nullval">null</span>':esc(CFG.currency+r.cost);
-      let tr='<tr><td>'+esc(r.name)+'</td><td class="num">'+nz(r.shopMin)+'</td><td class="num">'+nz(r.orderQty)+'</td><td class="num">'+cost+'</td><td class="num">'+nz(r.venCaseQty)+'</td><td>'+link+'</td><td>'+esc(r.teamLabel)+'</td></tr>';
+      const namePfx=(r.notes.length||r.asmBom)?(r.notes.length||r.asmBom)+' × ':'';
+      let tr='<tr><td>'+namePfx+esc(r.name)+'</td><td class="num">'+nz(r.shopMin)+'</td><td class="num">'+nz(r.orderQty)+'</td><td class="num">'+cost+'</td><td class="num">'+nz(r.venCaseQty)+'</td><td>'+link+'</td><td>'+esc(r.teamLabel)+'</td></tr>';
       // Tool replacement notes ride directly under their line item, stacked.
       r.notes.forEach(n=>{tr+='<tr class="noterow"><td colspan="7">&#128295; '+esc(n.name||'?')+esc(noteTag(n))+': '+esc(n.reason)+'</td></tr>';});
       return tr;
@@ -1520,7 +1519,7 @@ function buildHTML(){
             <div style="font-size:13px;color:#4a5a7a;">Nothing is flagged for reorder right now.</div></div>`:
           rows.map(r=>`<div class="rep-row" style="cursor:default;">
               <div style="flex:1;min-width:0;">
-                <div style="font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${h(r.name||('Part '+r.id))}</div>
+                <div style="font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${(r.notes.length||r.asmBom)?'<span style="color:#fbbf24;">'+(r.notes.length||r.asmBom)+' ×</span> ':''}${h(r.name||('Part '+r.id))}</div>
                 <div style="font-size:11px;color:#4a5a7a;margin-top:2px;">${[r.vendor?h(String(r.vendor)):'',(r.shopMin==null||r.shopMin==='')?'':'Shop min: '+h(String(r.shopMin)),r.venCaseQty?h(String(r.venCaseQty)):'',r.teamLabel?'by '+h(r.teamLabel):''].filter(Boolean).join(' · ')}</div>
                 ${r.notes.length?r.notes.map(n=>`<div style="font-size:11px;color:#94a3b8;margin-top:3px;">🛠 <b>${h(n.name||'?')}</b>${h(noteTag(n))}: ${h(n.reason)}</div>`).join(''):''}
               </div>
