@@ -40,6 +40,56 @@ self.GEO_CONFIG = {
   imageBase: "https://raw.githubusercontent.com/LaryBird12/GEO_Restock/main/Images/Parts/",
   imageExt: ".jpg",
 
+  // Warehouse sections suppressed from the Warehouse Stock button because the
+  // top-level tiles already cover them. Subtraction rule: everything under the
+  // warehouse shows EXCEPT these subtrees. Add a new warehouse section and it
+  // appears automatically; it only disappears if its Location ID is listed here.
+  // NAMING TRAP, do not "fix": the warehouse section named "Trailer Stock" is a
+  // warehouse SHELF AREA staging trailer-bound goods -- not the physical trailer
+  // (that's node 5, Geo > Trailer). Both names are correct as they stand.
+  warehouseHiddenSections: [70, 81],   // 70 = Cases Stock, 81 = Trailer Stock
+
+  // The Warehouse node the "Warehouse Stock" button drills into. Browsing it
+  // works exactly like the tiles above: folders first (Job Stock, Ductwork),
+  // then shelves, then parts. Same style as tiles[].locationId.
+  warehouseLocationId: 65,             // Geo > Warehouse
+
+  // ── 2b. DIVISION MAP ────────────────────────────────────────────────────────
+  // Every team belongs to a division, and a division owns its own trailer and
+  // its own section of the ONE physical warehouse. Add a division here and a
+  // team pointing at it; no code change required.
+  //   trailerLocationId    - root of that division's trailer subtree
+  //   warehouseLocationId  - the Warehouse node the Warehouse button drills into
+  //   warehouseHiddenSections - sections suppressed from the Warehouse button
+  //                          because top-level tiles already cover them.
+  //                          PER-DIVISION on purpose: 70/81 are GEO's sections
+  //                          and must never be applied to Solar.
+  //   tiles                - the top-level trailer compartments on the nav screen
+  // Solar is scaffolded but EMPTY until the import lands: no tiles yet, nothing
+  // to hide. Krypton opens to correct empty screens, then fills in on its own.
+  divisions: {
+    geo: {
+      label: "Geo",
+      divisionLocationId: 1,
+      trailerLocationId: 5,
+      warehouseLocationId: 65,
+      warehouseHiddenSections: [70, 81],   // 70 = Cases Stock, 81 = Trailer Stock
+      tiles: [
+        { label: "Trailer Stock", icon: "🚛", locationId: 6,  bg: "#152a45", border: "#2a4a6c" },
+        { label: "Case Stock",    icon: "🧰", locationId: 7,  bg: "#0f2a3a", border: "#1a3a4a" },
+        { label: "Tools",         icon: "🛠️", locationId: 63, bg: "#2a2333", border: "#4a3a5c" }
+      ]
+    },
+    solar: {
+      label: "Solar",
+      divisionLocationId: 2,
+      trailerLocationId: 67,
+      warehouseLocationId: 68,
+      warehouseHiddenSections: [],
+      tiles: []
+    }
+  },
+
   // ── 3. TEAM-TO-BRANCH MAPPING ───────────────────────────────────────────────
   // homeLocationId scopes a team to its division branch of the Locations tree.
   // Geo = 1, Solar = 2, GeoDoctor = 3. Future: krypton → 2 once Solar is built.
@@ -47,13 +97,15 @@ self.GEO_CONFIG = {
   // Button order on the home screen = this object's order (Mitch, 2026-07-24):
   // Gold, Titanium, Cobalt, Krypton — Part & Dart renders just below them.
   teams: {
-    gold:     { label: "Gold",     color: "#f59e0b", bg: "#271c00", border: "#4a3500", icon: "🏅", homeLocationId: 1, hidden: false },
-    titanium: { label: "Titanium", color: "#94a3b8", bg: "#141820", border: "#2c3348", icon: "⚙️", homeLocationId: 1, hidden: false },
-    cobalt:   { label: "Cobalt",   color: "#60a5fa", bg: "#001440", border: "#0c2a6e", icon: "🔷", homeLocationId: 1, hidden: false },
-    // Krypton is BACK on the home screen — but its Solar branch is empty, so
-    // the button opens the under-construction experience, not team navigation.
-    krypton:  { label: "Krypton",  color: "#4ade80", bg: "#06251a", border: "#14532d", icon: "🪐", homeLocationId: 2, hidden: false, underConstruction: true },
-    test:     { label: "Test",     color: "#a78bfa", bg: "#1a1530", border: "#2e2350", icon: "🧪", homeLocationId: 1, hidden: true  }
+    gold:     { label: "Gold",     color: "#f59e0b", bg: "#271c00", border: "#4a3500", icon: "🏅", homeLocationId: 1, hidden: false, division: "geo" },
+    titanium: { label: "Titanium", color: "#94a3b8", bg: "#141820", border: "#2c3348", icon: "⚙️", homeLocationId: 1, hidden: false, division: "geo" },
+    cobalt:   { label: "Cobalt",   color: "#60a5fa", bg: "#001440", border: "#0c2a6e", icon: "🔷", homeLocationId: 1, hidden: false, division: "geo" },
+    // Krypton is a REAL team as of 2026-07-26 — the Solar division's trailer.
+    // Same flow as Gold/Titanium/Cobalt, just pointed at Solar's nodes. Its
+    // subtree is empty until Mitch's Solar import lands, so it opens to correct
+    // empty screens rather than "coming soon".
+    krypton:  { label: "Krypton",  color: "#4ade80", bg: "#06251a", border: "#14532d", icon: "🪐", homeLocationId: 2, hidden: false, division: "solar" },
+    test:     { label: "Test",     color: "#a78bfa", bg: "#1a1530", border: "#2e2350", icon: "🧪", homeLocationId: 1, hidden: true,  division: "geo" }
   },
 
   // Krypton under-construction screen (the final add, 2026-07-24): the button

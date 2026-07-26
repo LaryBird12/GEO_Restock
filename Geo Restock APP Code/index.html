@@ -33,7 +33,8 @@ input{width:100%;padding:13px 14px;background:#1a2540;border:1px solid #2a3a5c;b
 .offline-pill{position:fixed;top:max(6px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);background:#7c2d12;color:#fed7aa;font-size:11px;font-weight:700;padding:4px 12px;border-radius:12px;z-index:900;display:none;border:1px solid rgba(251,146,60,.4)}
 /* Team selection */
 .team-screen{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px;overflow-y:auto}
-.team-grid{display:flex;flex-direction:column;gap:12px;width:100%;max-width:340px}
+.group-hdr{font-size:15px;color:#7a8fb5;margin-bottom:26px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;}
+    .team-grid{display:flex;flex-direction:column;gap:12px;width:100%;max-width:340px}
 .team-card{border:none;border-radius:18px;padding:20px 22px;cursor:pointer;text-align:left;display:flex;align-items:center;gap:16px;width:100%;touch-action:manipulation}
 .team-card-icon{font-size:34px;flex-shrink:0;width:46px;text-align:center;line-height:1}
 .team-card-label{font-size:22px;font-weight:800;letter-spacing:.01em}
@@ -203,7 +204,7 @@ function mapObj(r){
     stockType:r['Stock Type'],          // Consumable / Nonstock — flow routing
     size:r['Size'],
     cat1:r['CAT 1']||'',cat2:r['CAT 2']||'',cat3:r['CAT 3']||'',
-    isTrailerStock:r['Is Trailer Stock']===true,
+    stockClass:r['Stock Class'],           // trailer / shop / nonstock — single-source role
     locationId:r['Location ID'],
     path:r['Location Path']||[],
     stockMin:r['Stock Min'],
@@ -222,6 +223,29 @@ function mapObj(r){
     cost:r['Vendor Cost'],
     img:CFG.imageBase+r['Part ID']+CFG.imageExt, // the image rule: base + Part ID + ext
   };
+}
+// A placement is "hidden warehouse" if any non-Assembly step in its path is one of the
+// suppressed warehouse sections. Path-based, so it catches any depth of shelf beneath
+// the section — including shelves that don't exist yet. Stated as SUBTRACTION, never a
+// whitelist: a new warehouse section shows up automatically and only disappears if its
+// Location ID is added to CFG.warehouseHiddenSections. Missing key fails SAFE (hides
+// nothing) rather than blanking the list.
+// Hoisted function declaration on purpose — buildData below references it.
+// Which division does this PLACEMENT sit in? Reads CFG.divisions, so adding a
+// division needs no code change. Null if it matches none.
+function divKeyOf(o){
+  const ds=CFG.divisions||{};
+  if(!o||!Array.isArray(o.path))return null;
+  for(const k in ds){
+    const id=ds[k].divisionLocationId;
+    if(id!=null&&o.path.some(s=>s['Step Type']!=='Assembly'&&s['Node ID']===id))return k;
+  }
+  return null;
+}
+function inHiddenWarehouse(o){
+  const hidden=divHidden();
+  if(!hidden.length||!o||!Array.isArray(o.path))return false;
+  return o.path.some(s=>s['Step Type']!=='Assembly'&&hidden.indexOf(s['Node ID'])>=0);
 }
 function buildData(raw){
   OBJS=raw.map(mapObj);NODES={};PMAP={};PARTS=[];
@@ -244,13 +268,49 @@ function buildData(raw){
     let m=PMAP[o.id];
     if(!m){m=PMAP[o.id]=Object.assign({},o);m.placements=[];PARTS.push(m);}
     m.placements.push(o);
-    // Division home row (Geo/Solar/GeoDoctor) carries the SHOP rules.
-    if(o.locationId===1||o.locationId===2||o.locationId===3){m.shopMin=o.stockMin;m.shopOrderQty=o.reorderQty;}
-    else{m.trailerObj=m.trailerObj||o;} // first real compartment placement
+    // Shop rows (a division node OR anywhere under a Warehouse subtree) carry
+    // the SHOP rules; trailer rows carry trailer rules. Stock Class is the
+    // single-source role (part_api.classify_location), replacing the old
+    // hardcoded Location ID 1/2/3 check.
+    // PER-PLACEMENT, NOT PER-PART (2026-07-26). A part is not "a warehouse part"
+    // or "a trailer part" — each of its PLACEMENTS is one or the other, and each
+    // carries its own honest numbers. We keep a reference to each life:
+    //   shopObj    = the warehouse placement -> Stock Min + Reorder Quantity
+    //   trailerObj = the trailer placement   -> Stock Min + Stock Max
+    // A dual-life part has BOTH and belongs in BOTH lists, showing that
+    // placement's numbers each time. Neither may suppress the other.
+    if(o.stockClass==='shop'){
+      m.shopObj=m.shopObj||o;m.shopMin=o.stockMin;m.shopOrderQty=o.reorderQty;
+      // Per-division reorder quantity: Geo's shelf and Solar's shelf each hold
+      // their own. Keyed by division so flags within ONE division can never
+      // multiply it, while separate divisions sum (Rules A and B).
+      const dk=divKeyOf(o);
+      if(dk){
+        m.shopQtyByDiv=m.shopQtyByDiv||{};m.shopQtyByDiv[dk]=o.reorderQty;
+        m.shopMinByDiv=m.shopMinByDiv||{};m.shopMinByDiv[dk]=o.stockMin;
+      }
+    }
+    else if(o.stockClass==='trailer'){m.trailerObj=m.trailerObj||o;} // first trailer placement
+    // 'nonstock' rows contribute neither — reorder-neutral as standalone parts.
   });
-  // A part's TRAILER placement defines its usage semantics (Each vs Bin/Bag) —
-  // the division home row only holds shop rules and must not win that argument.
-  PARTS.forEach(m=>{const o=m.trailerObj;if(o){m.isEach=o.isEach;m.unit=o.unit;m.refill=o.refill;m.refillTo=o.refillTo;m.stockMin=o.stockMin;m.stockMax=o.stockMax;}});
+  // Role flags describe WHICH LIVES a part has, not one verdict about the part.
+  // hasShop/hasTrailer are independent and a part may have both. The weekly
+  // vendor reorder still re-collapses to one row per Part ID on purpose (that PO
+  // must never list a part twice) — see reorderRows.
+  PARTS.forEach(m=>{
+    m.hasShop=m.placements.some(p=>p.stockClass==='shop');
+    // hasShop = the FACT (this part has a warehouse placement).
+    // hasShopVisible = the DISPLAY RULE (that placement is in a section we surface).
+    // Keep them separate: hiding is a crew-facing view decision, never a claim that the
+    // part isn't stocked in the warehouse. The reorder report keys off the shop NUMBERS,
+    // not this flag, so hidden-section parts still reorder normally.
+    m.hasShopVisible=m.placements.some(p=>p.stockClass==='shop'&&!inHiddenWarehouse(p));
+    m.hasTrailer=m.placements.some(p=>p.stockClass==='trailer');
+    // The TRAILER placement defines deploy semantics (Each vs Bin/Bag) and the
+    // trailer min/max. Shop numbers live separately in shopMin/shopOrderQty, so
+    // this can never clobber them.
+    const o=m.trailerObj;if(o){m.isEach=o.isEach;m.unit=o.unit;m.refill=o.refill;m.refillTo=o.refillTo;m.stockMin=o.stockMin;m.stockMax=o.stockMax;}
+  });
 }
 function nodeByLocId(id){for(const k in NODES){const n=NODES[k];if(n.step['Step Type']!=='Assembly'&&n.step['Node ID']===id)return n;}return null;}
 function subtreeParts(n,acc){acc=acc||[];n.parts.forEach(o=>{if(o.compQty==null)acc.push(o);});n.children.forEach(k=>subtreeParts(NODES[k],acc));return acc;}
@@ -283,27 +343,75 @@ const ti=()=>team?TEAMS[team]:{label:'',color:'#38bdf8',bg:'#0f172a',border:'#2a
 // (write-time attribution), summed at read time. Never collapsed on write.
 const usagePath=p=>ROOT+'/teams/'+team+'/usage/'+p.id;
 const isLogged=p=>{const u=allUsage[p.id];return p.isEach?(Number(u)>0):(u===true||u==='true');};
-// Read-time rollup across teams. Hidden teams (test) only count for themselves.
-function aggUsage(id){
-  let total=0,flag=false;const teams=[];
-  Object.keys(TEAMS).forEach(t=>{
-    if(TEAMS[t].hidden&&t!==team)return;
-    const u=allTeams[t]&&allTeams[t].usage?allTeams[t].usage[id]:null;
-    if(u==null)return;
-    if(u===true||u==='true'){flag=true;teams.push(TEAMS[t].label);}
-    else if(Number(u)>0){total+=Number(u);teams.push(TEAMS[t].label);}
-  });
-  return {total,flag,teams};
+// TEAM-SCOPED usage read (2026-07-26 blocker fix). Each trailer is its OWN
+// entity: a part pulled off Gold's trailer is Gold's refill obligation and must
+// never appear on Titanium's or Cobalt's report. This reads ONLY the active
+// team's usage (allUsage, already narrowed to teams/{team}/usage by the
+// listener) — never a cross-team sum.
+// It deliberately REPLACES the old aggUsage/isLoggedAny cross-team rollup, which
+// was the bug: writes were always correctly per-team, but the report summed
+// every team at read time. Removed rather than left in place so it can't be
+// re-wired by accident.
+// NOTE: this is the TRAILER side only. The warehouse/shop reorder list is
+// correctly GLOBAL (one physical warehouse) and reads shopFlags, not usage —
+// untouched by this.
+function myUsage(id){
+  const u=allUsage[id];
+  if(u==null)return{total:0,flag:false};
+  if(u===true||u==='true')return{total:0,flag:true};
+  const n=Number(u);
+  return{total:n>0?n:0,flag:false};
 }
-const isLoggedAny=p=>{const a=aggUsage(p.id);return p.isEach?a.total>0:a.flag;};
 // PARTS/OBJS arrive in tree-walk order — output order IS display order, no sorts.
-const tileFor=o=>{if(!o||!o.path)return null;for(const s of o.path){if(s['Step Type']!=='Assembly')for(const tl of CFG.tiles)if(tl.locationId===s['Node ID'])return tl;}return null;};
+// ── DIVISION RESOLVERS (2026-07-26) ─────────────────────────────────────────
+// Every team belongs to a division (CFG.divisions). A division owns its own
+// trailer and its own section of the ONE physical warehouse. These resolve the
+// active team's division at READ time, so a team switch re-points everything.
+// All three fall back to the legacy top-level CFG keys, then to Geo, so a bad
+// or missing divisions entry can never break the Geo teams.
+function divCfg(){
+  const key=(TEAMS[team]&&TEAMS[team].division)||'geo';
+  const d=(CFG.divisions&&(CFG.divisions[key]||CFG.divisions.geo))||{};
+  return d;
+}
+function divTiles(){const d=divCfg();return Array.isArray(d.tiles)?d.tiles:(CFG.tiles||[]);}
+function divWarehouseId(){const d=divCfg();return d.warehouseLocationId!=null?d.warehouseLocationId:CFG.warehouseLocationId;}
+function divHidden(){const d=divCfg();return Array.isArray(d.warehouseHiddenSections)?d.warehouseHiddenSections:(CFG.warehouseHiddenSections||[]);}
+// True if this PLACEMENT lives under the active team's division. Geo teams see
+// Geo's tree, Krypton sees Solar's — no cross-division bleed. Fails OPEN (true)
+// if the division id is unknown, so nothing can vanish unexpectedly.
+function inMyDiv(o){
+  const d=divCfg().divisionLocationId;
+  if(d==null||!o||!Array.isArray(o.path))return true;
+  return o.path.some(s=>s['Step Type']!=='Assembly'&&s['Node ID']===d);
+}
+// Parts with a trailer placement in THIS division (the trailer-side universe).
+function trailerParts(){return PARTS.filter(p=>p.placements&&p.placements.some(x=>x.stockClass==='trailer'&&inMyDiv(x)));}
+const tileFor=o=>{if(!o||!o.path)return null;for(const s of o.path){if(s['Step Type']!=='Assembly')for(const tl of divTiles())if(tl.locationId===s['Node ID'])return tl;}return null;};
 const nodeName=o=>{const n=o&&o.nodeKey?NODES[o.nodeKey]:null;return n?n.step['Node Name']:'';};
 const uniqLogged=list=>{const seen={};let n=0;list.forEach(o=>{if(!seen[o.id]&&isLogged(o)){seen[o.id]=1;n++;}});return n;};
-const loggedParts=()=>PARTS.filter(p=>p.isTrailerStock&&isLoggedAny(p)); // report = ALL teams' demand
+const loggedParts=()=>trailerParts().filter(p=>isLogged(p)); // THIS team's trailer, THIS division only
 const repGroup=p=>p.trailerObj?nodeName(p.trailerObj):(p.cat1||'Other');
 const loggedGroups=()=>{const o=[];loggedParts().forEach(p=>{const g=repGroup(p);if(o.indexOf(g)<0)o.push(g)});return o;};
-const warehouseParts=()=>PARTS.filter(p=>!p.isTrailerStock);
+// Warehouse membership is "has a placement that classifies as warehouse", FULL
+// STOP — a trailer placement never disqualifies it. The old `&& !hasTrailer`
+// silently hid the 260 dual-life parts (a shelf you reorder from AND a trailer
+// slot you deploy from), so a tech seeing an empty warehouse bin couldn't find
+// the item to flag it. Nonstock-only parts still appear in neither list.
+// Read-time scan (NOT the buildData-time hasShopVisible flag): hidden sections
+// and division are both per-team, so this must re-evaluate on every team switch.
+const warehouseParts=()=>PARTS.filter(p=>p.placements&&p.placements.some(x=>x.stockClass==='shop'&&!inHiddenWarehouse(x)&&inMyDiv(x)));
+// The warehouse shelf this part is reordered from (for labels in warehouse views).
+const shopWhere=p=>p.shopObj?nodeName(p.shopObj):'';
+// The shop minimum you see is YOUR division's shelf, always — never the other
+// division's number, because that isn't your shelf. Falls back to the part's
+// single shop minimum when no per-division value exists.
+function myShopMin(p){
+  if(!p)return null;
+  const dk=(TEAMS[team]&&TEAMS[team].division)||'geo';
+  const m=p.shopMinByDiv||{};
+  return (m[dk]!=null)?m[dk]:(p.shopMin!=null?p.shopMin:null);
+}
 let _tt;function toast(msg){clearTimeout(_tt);const e=$('toast');e.textContent=msg;e.style.display='block';_tt=setTimeout(()=>e.style.display='none',2200);}
 function imgFail(el){if(el&&el.parentElement)el.parentElement.innerHTML='<div class="img-ph">No image</div>';}
 function imgBlock(p){return p.img?`<div class="pop-img"><img src="${h(p.img)}" alt="" onerror="imgFail(this)"></div>`:`<div class="pop-img"><div class="img-ph">No image</div></div>`;}
@@ -424,7 +532,7 @@ function matchSearch(p,q){
 }
 function buildSearchResults(q){          // nav search: trailer parts normally; ALL parts in grab mode
   if(!q.trim())return'';
-  const res=(grab?PARTS:PARTS.filter(p=>p.isTrailerStock)).filter(p=>matchSearch(p,q)).slice(0,15);
+  const res=(grab?PARTS:trailerParts()).filter(p=>matchSearch(p,q)).slice(0,15);
   if(!res.length)return`<div style="padding:16px;text-align:center;color:#4a5a7a;font-size:13px;">No ${grab?'':'trailer '}parts for "${h(q)}"</div>`;
   return res.map(p=>rowHTML(p,grab?"openWh":"openPopup")).join('');
 }
@@ -465,10 +573,14 @@ function buildWhResults(q){
   }
   return res.map(p=>{
     const flagged=!!shopFlags[p.id];
+    // Label by the WAREHOUSE shelf (shopObj), never the trailer location — a
+    // dual-life part is being shown here in its warehouse life, so the shelf is
+    // what the tech needs to walk to.
+    const where=shopWhere(p);
     return`<button onclick="openWh(${p.id})" class="item-row${flagged?' used':''}">
       <div style="flex:1;min-width:0;">
         <div class="item-name" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${h(p.name)}</div>
-        <div class="item-meta">Shop min: ${p.shopMin==null?'—':h(fmtQ(p.shopMin))}</div>
+        <div class="item-meta">${where?h(where)+' · ':''}Shop min: ${myShopMin(p)==null?'—':h(fmtQ(myShopMin(p)))}</div>
       </div>
       ${flagged?'<span class="badge flag">RESTOCK</span>':'<span class="chevron">›</span>'}
     </button>`;
@@ -539,7 +651,9 @@ function reorderRows(){
   // Defensive Switch-2 filter: a stamped tool/assembly is already ordered this
   // cycle and must never render on the weekly reorder (flag-time guard is the
   // primary defense; this is the belt to its suspenders).
-  return Object.keys(shopFlags||{}).filter(id=>!stamps[id]).sort((a,b)=>Number(a)-Number(b)).map(id=>{
+  // Belt to the guard's suspenders: never render an assembly row even if one
+  // is already sitting in the data from before the guard existed.
+  return Object.keys(shopFlags||{}).filter(id=>!stamps[id]&&!(PMAP[id]&&PMAP[id].entryType==='Assembly')).sort((a,b)=>Number(a)-Number(b)).map(id=>{
     const r=shopFlags[id]||{},p=PMAP[id]||{};
     const info=r.info||r; // r.info is the current shape; bare r is a fallback for pre-multi-team entries
     // r.teams is a map of every team that has flagged this item, e.g. {gold:true,titanium:true}.
@@ -549,11 +663,24 @@ function reorderRows(){
     const teamLabel=teamOrder.filter(t=>teamsObj[t]).map(t=>TEAMS[t].label).join(', ');
     return{id:id,name:info.name||p.name||'',vendor:info.vendor||p.vendor||'',teamLabel,
       vendorPart:(info.vendorPart!=null?info.vendorPart:(p.vendorPart!=null?p.vendorPart:'')),
-      shopMin:(info.shopMin!=null?info.shopMin:(p.shopMin!=null?p.shopMin:'')),
+      shopMin:(info.shopMin!=null?info.shopMin:(myShopMin(p)!=null?myShopMin(p):'')),
       // Order Qty / VEN Case QTY / VEN URL are NOT frozen at flag-time like the fields above —
       // they always read live from the current catalog, so fixing a link or case size in the
       // next export corrects it immediately for items already sitting on the reorder list.
-      orderQty:(p.shopOrderQty!=null?p.shopOrderQty:''),
+      // QUANTITY MODEL (Mitch 2026-07-26): the flag is BINARY — it never carries
+      // a number. The amount comes from the stored Reorder Quantity of each
+      // FLAGGED DIVISION's warehouse placement.
+      //   Rule A: Gold+Titanium+Cobalt all flag one Geo shelf -> still 100, not 300.
+      //   Rule B: Geo(100) + Solar(25) both flagged -> 125, one line, one buy.
+      // Falls back to the part's single shop quantity if no division resolves,
+      // so nothing regresses while Solar is still empty.
+      orderQty:(function(){
+        const divs=[...new Set(teamOrder.filter(t=>teamsObj[t]).map(t=>(TEAMS[t]&&TEAMS[t].division)||'geo'))];
+        const qmap=p.shopQtyByDiv||{};
+        let sum=0,known=false;
+        divs.forEach(d=>{const v=qmap[d];if(v!=null&&v!==''){sum+=Number(v)||0;known=true;}});
+        return known?sum:(p.shopOrderQty!=null?p.shopOrderQty:'');
+      })(),
       cost:(p.cost!=null?p.cost:''),
       venCaseQty:p.venCaseQty||'',
       venUrl:p.venUrl||'',
@@ -561,7 +688,14 @@ function reorderRows(){
       notes:(r.notes?Object.values(r.notes).sort((a,b)=>(a.ts||0)-(b.ts||0)):[]),
       // Assembly-component demand: per-team qtys summed at read time (the
       // locked aggregation rule) — "4 ×, Gold, Cobalt", one line never two.
-      asmSum:(r.asmQty?Object.values(r.asmQty).reduce((a,b)=>a+Number(b||0),0):0)};
+      asmSum:(r.asmQty?Object.values(r.asmQty).reduce((a,b)=>a+Number(b||0),0):0),
+      // Demand count for a plain warehouse part: one "below shop minimum" flag
+      // per team = 1 unit each, summed at read time (same rule asmQty follows for
+      // assembly components). Gold + Krypton flagging one box of screws = qty 2,
+      // ONE row. 0 when nobody is attributed (legacy/teamless rows) so those show
+      // no invented quantity.
+      // teamCount RETIRED 2026-07-26: flags are accountability, not arithmetic.
+      teamCount:teamOrder.filter(t=>teamsObj[t]).length};
   });
 }
 function csvCell(v){v=(v==null?'':String(v));return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
@@ -691,9 +825,30 @@ function sendFeedback(){
 // Tree navigation — one mechanism for every depth, locations and assemblies alike.
 function goTile(locationId){const n=nodeByLocId(locationId);if(!n){toast('Not in catalog yet');return;}navKey=n.key;scr='node';render();}
 function goNode(key){if(NODES[key]){navKey=key;scr='node';render();}}
-function isTileRoot(key){for(const tl of CFG.tiles){const n=nodeByLocId(tl.locationId);if(n&&n.key===key)return true;}return false;}
+function isTileRoot(key){
+  // The Warehouse is browsed like a tile, so it's a back-navigation root too —
+  // backing out of it returns to the nav screen instead of climbing into the
+  // Geo/Scottsville plumbing above it.
+  const wn=nodeByLocId(divWarehouseId());
+  if(wn&&wn.key===key)return true;
+  for(const tl of divTiles()){const n=nodeByLocId(tl.locationId);if(n&&n.key===key)return true;}
+  return false;
+}
 function goReport(){scr='report';render();}
-function goWarehouse(){whQ='';scr='warehouse';render();}
+// Warehouse browses like a tile (2026-07-26, Mitch): drill INTO the tree so you
+// get folders -> shelves -> parts, the same experience as Trailer/Case Stock,
+// instead of one flat dump. Falls back to the old flat list if that node isn't
+// in the catalog (e.g. an empty division's warehouse), so this can never dead-end.
+// Fast lookup across every visible warehouse item, reusing the flat searchable
+// screen that already exists. Browse by shelf is the default; this is the "I know
+// its name" path.
+function goWarehouseSearch(){whQ='';scr='warehouse';render();}
+function goWarehouse(){
+  whQ='';
+  const n=nodeByLocId(divWarehouseId());
+  if(n){navKey=n.key;scr='node';render();return;}
+  scr='warehouse';render();
+}
 function goBack(){
   if(scr==='krypton'){leaveKrypton();return;}
   if(scr==='node'){
@@ -730,7 +885,7 @@ function qInput(){popQty=Math.max(0,parseInt(($('qv')||{}).value)||0);}
 function toggleFlag(){popFlag=!popFlag;render();}
 
 // report detail (trailer/cases item) — two checkboxes
-function openRepDetail(id){repDetail=PMAP[id];repRecv=false;repBelow=!!shopFlags[id];render();}
+function openRepDetail(id){repDetail=PMAP[id];repRecv=false;repBelow=flaggedByMe(id);render();}
 function editFromReport(id){repDetail=null;openPopup(id);}
 function toggleRecv(){repRecv=!repRecv;render();}
 function toggleBelow(){repBelow=!repBelow;render();}
@@ -768,7 +923,7 @@ function commitRepDetail(){
     // Received clears ONLY this team's demand. The others keep theirs until
     // their own trailer resets — clearing all would fake satisfaction.
     if(repRecv)dbWrite(ROOT+'/teams/'+team+'/usage/'+p.id,null);
-    if(!isTest()){if(repBelow){if(!toolNeeded)flagReorder(p);}else dbWrite(ROOT+'/shopReorder/'+p.id,null);} // set/clear below-min flag
+    if(!isTest()){if(repBelow){if(!toolNeeded)flagReorder(p);}else unflagReorder(p);} // set/clear below-min flag
     repDetail=null;
     toast(isTest()?'Test — not saved to reorder':(repRecv?'Restocked ✓':'Saved'));
     render();
@@ -780,13 +935,13 @@ function commitRepDetail(){
 }
 
 // warehouse detail — single RESTOCK checkbox
-function openWh(id){whDetail=PMAP[id];whRestock=!!shopFlags[id];render();}
+function openWh(id){whDetail=PMAP[id];whRestock=flaggedByMe(id);render();}
 function toggleWhRestock(){whRestock=!whRestock;render();}
 function commitWh(){
   const p=whDetail;if(!p)return;
   // Newly flagging a Tool detours through the required name+reason dialog.
   if(needsToolDialog(p,whRestock&&!shopFlags[p.id])){whDetail=null;openToolFlag(p);return;}
-  if(!isTest()){if(whRestock)flagReorder(p);else dbWrite(ROOT+'/shopReorder/'+p.id,null);}
+  if(!isTest()){if(whRestock)flagReorder(p);else unflagReorder(p);}
   whDetail=null;
   toast(isTest()?'Test — not saved':(whRestock?'Flagged for reorder':'Cleared'));
   render();
@@ -797,7 +952,32 @@ function commitWh(){
 // replacing the first team's. Unflagging (see callers above) still deletes the whole node — clearing
 // it removes it for everyone, by design (confirmed with Mitch: no per-team partial-clear).
 function shopInfo(p){return{ts:Date.now(),name:p.name,shopMin:(p.shopMin==null?null:p.shopMin),vendor:p.vendor||null,vendorPart:(p.vendorPart==null?null:p.vendorPart)};}
+// Did MY team flag this? The reorder ROW is global (one warehouse, one PO) but
+// each team's attribution is its own entry, so the checkbox must reflect this
+// team's flag — not merely that some other team already raised the line.
+// Teamless (Part & Dart) falls back to row existence, as before.
+function flaggedByMe(id){
+  const r=shopFlags[id]||{};
+  const to=r.teams||(r.team?{[r.team]:true}:{});
+  return team?!!to[team]:!!shopFlags[id];
+}
+// Remove ONLY this team's attribution. The row survives while any other team
+// still has it flagged, and only disappears when the last one clears — so a
+// second team can never wipe the first team's request.
+function unflagReorder(p){
+  const r=shopFlags[p.id]||{};
+  const to=r.teams||(r.team?{[r.team]:true}:{});
+  if(team&&to[team]){
+    const remaining=Object.keys(to).filter(t=>t!==team&&to[t]);
+    if(remaining.length){dbWrite(ROOT+'/shopReorder/'+p.id+'/teams/'+team,null);return;}
+  }
+  dbWrite(ROOT+'/shopReorder/'+p.id,null); // last team, or an unattributed row
+}
 function flagReorder(p){
+  // HARD GUARD + DISPATCH: an assembly is a grouping mechanism, never a purchase
+  // line — its own ID is NEVER written to shopReorder. Any path that "flags" an
+  // assembly explodes it into constituent parts instead, silently.
+  if(p&&p.entryType==='Assembly'){flagAssemblyNow(p);return;}
   dbWrite(ROOT+'/shopReorder/'+p.id+'/info', shopInfo(p));
   if(team)dbWrite(ROOT+'/shopReorder/'+p.id+'/teams/'+team, true); // Part & Dart with no team picked: no team credited
 }
@@ -808,8 +988,49 @@ function flagReorder(p){
 // so two teams flagging the same tool never overwrite each other; Carson's
 // report stacks every note under the line item.
 let toolFlag=null; // part pending its replacement note
+// TOOLS ONLY. An assembly never opens this dialog — flagReorder dispatches it
+// to the silent explode instead (Carson never sees the assembly, so a typed
+// reason would have nowhere to land).
 function needsToolDialog(p,wantFlag){return !!(wantFlag&&p&&p.entryType==='Tool');} // test team sees the dialog too; commitToolFlag guards the writes
-function openToolFlag(p){toolFlag=p;render();setTimeout(()=>{const e=$('tfReason');if(e)e.focus();},60);}
+// ASSEMBLY = SILENT EXPLODE (Mitch 2026-07-26). No identity dialog: the dialog
+// exists to produce an explanation a human will READ, and Carson never sees the
+// assembly — only its constituent parts. A typed reason would go nowhere, so it
+// is not collected and NOTHING is written in its place (no placeholder, no fake
+// tech explanation). The acting team is already known from the active team.
+// Everything the dialog's commit path used to do is preserved here.
+function explodeAssembly(p){
+  if(!p)return 0;
+  if(isTest())return -1;                     // full flow, zero pollution
+  // Pin the CONTAINER to the flagging team's trailer list.
+  if(team)dbWrite(ROOT+'/teams/'+team+'/toolPins/'+p.id,{ts:Date.now(),kind:'assembly'});
+  let routed=0;
+  (asmComponents(p.id)||[]).forEach(c=>{
+    if(c.stockType!=='Nonstock')return;      // Consumables are hand-refilled, never ordered
+    if(stamps[c.id])return;                  // Switch-2 guard, per component
+    const cp=PMAP[c.id]||c;
+    dbWrite(ROOT+'/shopReorder/'+c.id+'/info',shopInfo(cp));
+    dbWrite(ROOT+'/shopReorder/'+c.id+'/fromAssembly',true);
+    if(team){
+      dbWrite(ROOT+'/shopReorder/'+c.id+'/teams/'+team,true);
+      dbWrite(ROOT+'/shopReorder/'+c.id+'/asmQty/'+team,(c.compQty!=null?c.compQty:1));
+    }
+    routed++;
+  });
+  return routed;
+}
+// One shared action for BOTH assembly entry points (the gold container card and
+// the Below-Shop-Minimum checkbox) so they can never diverge.
+function flagAssemblyNow(p){
+  const r=explodeAssembly(p);
+  if(r===-1){toast('Test — not saved');render();return;}
+  toast(r?'Flagged — '+r+' part'+(r!==1?'s':'')+' routed to the weekly order':'Flagged — all parts hand-refillable');
+  render();
+}
+// Defensive: an assembly can never open the identity dialog, whatever calls this.
+function openToolFlag(p){
+  if(p&&p.entryType==='Assembly'){flagAssemblyNow(p);return;}
+  toolFlag=p;render();setTimeout(()=>{const e=$('tfReason');if(e)e.focus();},60);
+}
 function cancelToolFlag(){toolFlag=null;toast('Not flagged');render();}
 // A note's identity tag: master users show their TYPE, everyone else their team.
 const noteTag=n=>n.userType==='master'?' (Master)':(n.team&&TEAMS[n.team]?' ('+TEAMS[n.team].label+')':'');
@@ -829,28 +1050,9 @@ function commitToolFlag(){
   if(!reason){toast('Reason is required');const e=$('tfReason');if(e){e.style.borderColor='#ef4444';e.focus();}return;}
   if(isTest()){toolFlag=null;toast('Test — not saved to reorder');render();return;} // full flow, zero pollution
   if(p.entryType==='Assembly'){
-    // CONTAINER MODEL (locked): the assembly is a trigger, not a payload.
-    // Pin the container on the team's list; route ONLY the nonstock components
-    // to Carson as plain part lines — he never sees the word "assembly", and
-    // the tech's reason lives ONLY here on the container (deliberately
-    // opposite to Tools). Consumable components are hand-refilled, never ordered.
-    if(team)dbWrite(ROOT+'/teams/'+team+'/toolPins/'+p.id,{ts:Date.now(),name:name,userType:userType,reason:reason,kind:'assembly'});
-    let routed=0;
-    asmComponents(p.id).forEach(c=>{
-      if(c.stockType!=='Nonstock')return;
-      if(stamps[c.id])return; // Switch-2 guard, per component
-      const cp=PMAP[c.id]||c;
-      dbWrite(ROOT+'/shopReorder/'+c.id+'/info',shopInfo(cp));
-      dbWrite(ROOT+'/shopReorder/'+c.id+'/fromAssembly',true); // hidden marker: Clear stamps these
-      if(team){
-        dbWrite(ROOT+'/shopReorder/'+c.id+'/teams/'+team,true);
-        dbWrite(ROOT+'/shopReorder/'+c.id+'/asmQty/'+team,(c.compQty!=null?c.compQty:1)); // per-team qty, summed at read time
-      }
-      routed++;
-    });
-    toolFlag=null;
-    toast(routed?'Flagged — '+routed+' part'+(routed!==1?'s':'')+' routed to the weekly order':'Flagged — all parts hand-refillable');
-    render();return;
+    // Safety net only — assemblies are dispatched to the silent explode before
+    // ever reaching this dialog. Delegates so the rule lives in ONE place.
+    toolFlag=null;flagAssemblyNow(p);return;
   }
   // SWITCH 1: pin to the flagging team's trailer restock list until Received.
   // Teamless Part & Dart has no trailer list to pin — the flag is Carson-only.
@@ -1027,19 +1229,26 @@ function buildHTML(){
   // the prominent "GEO Restock 2.0" wordmark is the new top of the app.
   if(scr==='team')return`
     <div class="team-screen">
-      <div style="font-size:44px;font-weight:900;color:#e2e8f0;margin-bottom:8px;letter-spacing:.01em;text-align:center;line-height:1.05;">GEO Restock 2.0</div>
-      <div style="font-size:15px;color:#7a8fb5;margin-bottom:26px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;">Select Your Team</div>
+      <div class="group-hdr">Select Your Team</div>
       <div class="team-grid">
         ${Object.entries(TEAMS).filter(([id,tm])=>!tm.hidden).map(([id,tm])=>`
-          <button class="team-card" onclick="${tm.underConstruction?'goKrypton()':`selectTeam('${id}')`}" style="background:${tm.bg};border:2px solid ${tm.border};">
+          <button class="team-card" onclick="selectTeam('${id}')" style="background:${tm.bg};border:2px solid ${tm.border};">
             <div class="team-card-icon">${tm.icon}</div>
             <div><div class="team-card-label" style="color:${tm.color};">${tm.label}</div>
-            <div class="team-card-sub" style="color:${tm.color};">${tm.underConstruction?'coming soon':'tap to enter'}</div></div>
+            <div class="team-card-sub" style="color:${tm.color};">tap to enter</div></div>
           </button>`).join('')}
+      </div>
+      <div class="group-hdr" style="margin-top:26px;">Team Agnostic</div>
+      <div class="team-grid">
         <button class="team-card" onclick="goGrab()" style="background:linear-gradient(135deg,#a51d1d,#6e1414);border:2px solid #d94b4b;">
           <div class="team-card-icon">⏱️</div>
           <div><div class="team-card-label" style="color:#ffffff;">Part &amp; Dart 🎯</div>
           <div class="team-card-sub" style="color:#f3c4c4;">pull from the shelf</div></div>
+        </button>
+        <button class="team-card" onclick="goKrypton()" style="background:${TEAMS.gold.bg};border:2px solid ${TEAMS.gold.border};">
+          <div class="team-card-icon">🤖</div>
+          <div><div class="team-card-label" style="color:${TEAMS.gold.color};">Dr. Wheelers Radio 📡</div>
+          <div class="team-card-sub" style="color:${TEAMS.gold.color};">tune in</div></div>
         </button>
       </div>
     </div>`;
@@ -1056,13 +1265,17 @@ function buildHTML(){
       ${sdot()}
     </div></div>
     <div class="scroll"><div style="padding:16px 20px 4px;">
-      ${CFG.tiles.map(tl=>{
+      ${divTiles().map(tl=>{
         const n=nodeByLocId(tl.locationId);
         const used=n?uniqLogged(subtreeParts(n)):0;
         return`<button class="nav-card" onclick="goTile(${tl.locationId})" style="background:${tl.bg};border:1px solid ${tl.border};">
         <div style="font-size:28px;flex-shrink:0;">${tl.icon}</div>
         <div><div class="nav-card-title">${h(tl.label)}</div><div class="nav-card-sub">${used>0?used+' items logged':'Nothing logged yet'}</div></div>
       </button>`;}).join('')}
+      ${divTiles().length?'':`<div style="padding:22px 16px;margin-bottom:12px;background:#101a2c;border:1px solid #1e2c44;border-radius:12px;text-align:center;">
+        <div style="font-size:15px;font-weight:700;color:#94a3b8;margin-bottom:6px;">${h(divCfg().label||'This division')} trailer is empty</div>
+        <div style="font-size:12px;color:#4a5a7a;line-height:1.5;">No compartments set up yet — they appear here automatically once parts are imported.</div>
+      </div>`}
       <div class="search-wrap" style="padding:0 0 12px;">
         <div class="search-input-wrap">
           <input type="text" id="sq" value="${h(searchQ)}" placeholder="Search Trailer Parts" autocomplete="off" autocorrect="off" spellcheck="false" oninput="updateSearch(this.value)">
@@ -1076,7 +1289,7 @@ function buildHTML(){
       </button>`:''}
       <button class="nav-card" onclick="goWarehouse()" style="background:#241a33;border:1px solid #3a2a4c;">
         <div style="font-size:28px;flex-shrink:0;">🏢</div>
-        <div><div class="nav-card-title">Warehouse Stock</div><div class="nav-card-sub">${warehouseParts().length} shop-only items</div></div>
+        <div><div class="nav-card-title">Warehouse Stock</div><div class="nav-card-sub">${warehouseParts().length} warehouse items</div></div>
       </button>
       <button class="nav-card" onclick="openFeedback()" style="background:#0f2733;border:1px solid #1e4457;">
         <div style="font-size:28px;flex-shrink:0;">✉️</div>
@@ -1098,13 +1311,13 @@ function buildHTML(){
     </div></div>
     <div class="scroll"><div style="padding:16px 20px 4px;">
       <div style="font-size:11px;color:#4a5a7a;line-height:1.5;margin-bottom:12px;">Grabbing parts off the shelf? Find the item and flag it if you just dropped it below its shop minimum — that adds it to the weekly reorder list.</div>
-      ${CFG.tiles.map(tl=>`<button class="nav-card" onclick="goTile(${tl.locationId})" style="background:${tl.bg};border:1px solid ${tl.border};">
+      ${divTiles().map(tl=>`<button class="nav-card" onclick="goTile(${tl.locationId})" style="background:${tl.bg};border:1px solid ${tl.border};">
         <div style="font-size:28px;flex-shrink:0;">${tl.icon}</div>
         <div><div class="nav-card-title">${h(tl.label)}</div><div class="nav-card-sub">Browse &amp; flag below-minimum</div></div>
       </button>`).join('')}
       <button class="nav-card" onclick="goWarehouse()" style="background:#241a33;border:1px solid #3a2a4c;">
         <div style="font-size:28px;flex-shrink:0;">🏢</div>
-        <div><div class="nav-card-title">Warehouse Items</div><div class="nav-card-sub">${warehouseParts().length} shop-only items</div></div>
+        <div><div class="nav-card-title">Warehouse Items</div><div class="nav-card-sub">${warehouseParts().length} warehouse items</div></div>
       </button>
       <div class="search-wrap" style="padding:0 0 12px;">
         <div class="search-input-wrap">
@@ -1152,16 +1365,24 @@ function buildHTML(){
     const n=NODES[navKey];
     if(!n){navKey=null;scr=grab?'grabnav':'nav';return buildHTML();}
     const isAsm=n.step['Step Type']==='Assembly';
-    const kids=n.children.map(k=>NODES[k]);
+    // Suppressed warehouse sections don't render as folders either — same
+    // subtraction rule (CFG.warehouseHiddenSections) that governs the warehouse
+    // membership count, so browse and count always agree. Assemblies are never
+    // filtered (their Node IDs are Part IDs, a different namespace).
+    const kids=n.children.map(k=>NODES[k]).filter(c=>c.step['Step Type']==='Assembly'||divHidden().indexOf(c.step['Node ID'])<0);
     // An assembly is both a placed part row and an expandable child node — show
     // it once, as the tile (the locked interaction), not twice.
     const items=n.parts.filter(o=>!(o.entryType==='Assembly'&&NODES[n.key+'/A'+o.id]));
     const tl=tileFor(items[0]||subtreeParts(n)[0]||n.parts[0]);
     const srcLabel=(grab?'🎯 Part & Dart · ':'')+(tl?tl.icon+' '+tl.label:'');
+    // At the Warehouse root, offer the flat searchable list as a fast lookup
+    // alongside browsing by shelf (Mitch: keep the search box).
+    const isWhRoot=!isAsm&&n.step['Node ID']===divWarehouseId();
     return`
       <div class="hdr"><div class="hdr-row">
         <button class="back" onclick="goBack()">‹</button>
         <div style="flex:1;min-width:0;"><div class="hdr-title">${isAsm?'🔩 ':''}${h(n.step['Node Name'])}</div><div class="hdr-sub">${srcLabel} · <span style="color:${t.color};">${t.icon} Team ${t.label}</span></div></div>
+        ${isWhRoot?`<button class="icon-btn" onclick="goWarehouseSearch()" title="Search all warehouse items">🔍</button>`:''}
         ${items.length?`<button class="icon-btn" onclick="toggleView()" title="Toggle view">${viewIcon()}</button>`:''}
         ${sdot()}
       </div></div>
@@ -1171,7 +1392,7 @@ function buildHTML(){
             <div style="font-size:14px;font-weight:700;color:#e2e8f0;">🔩 This whole assembly</div>
             <div style="font-size:11px;color:#7a8fb5;margin-top:2px;">Broken or lost as a unit? Flag it — components stay untouched</div>
           </div>
-          <button class="btn blue sm" style="flex-shrink:0;" onclick="openToolFlag(PMAP[${n.step['Node ID']}])">Broken / Lost</button>
+          <button class="btn blue sm" style="flex-shrink:0;" onclick="flagAssemblyNow(PMAP[${n.step['Node ID']}])">Broken / Lost</button>
         </div>`:''}
         ${kids.length?`<div class="cat-grid">${kids.map(c=>{
           const cIsAsm=c.step['Step Type']==='Assembly';
@@ -1183,24 +1404,28 @@ function buildHTML(){
         }).join('')}</div>`:''}
         ${viewMode==='grid'&&items.length
           ? `<div class="wh-grid">`+items.map(o=>{
-              const flagged=grab?!!shopFlags[o.id]:isLogged(o);
+              // A WAREHOUSE placement behaves like the warehouse view even outside
+              // grab mode: RESTOCK state + the shop popup, never usage logging.
+              const shopMode=grab||o.stockClass==='shop';
+              const flagged=shopMode?!!shopFlags[o.id]:isLogged(o);
               const img=`<img src="${h(o.img)}" alt="" onerror="imgFail(this)">`;
-              const badge=grab?(shopFlags[o.id]?`<span class="wh-tile-badge">🧾</span>`:'')
+              const badge=shopMode?(shopFlags[o.id]?`<span class="wh-tile-badge">🧾</span>`:'')
                              :(isLogged(o)?(o.isEach?`<span class="wh-tile-badge">-${allUsage[o.id]}</span>`:`<span class="wh-tile-badge">↻</span>`):'');
-              return`<button class="wh-tile${flagged?' flagged':''}" onclick="${grab?`openWh(${o.id})`:`openPopupAt('${n.key}',${o.id})`}">
+              return`<button class="wh-tile${flagged?' flagged':''}" onclick="${shopMode?`openWh(${o.id})`:`openPopupAt('${n.key}',${o.id})`}">
                 <div class="wh-thumb">${img}</div>
                 <div class="wh-tile-name">${h(o.name)}</div>
                 ${badge}
               </button>`;
             }).join('')+`</div>`
           : items.map(o=>{
-          const flagged=grab?!!shopFlags[o.id]:isLogged(o);
-          let right=grab?(shopFlags[o.id]?`<span class="badge flag">🧾</span>`:'')
+          const shopMode=grab||o.stockClass==='shop';
+          const flagged=shopMode?!!shopFlags[o.id]:isLogged(o);
+          let right=shopMode?(shopFlags[o.id]?`<span class="badge flag">🧾</span>`:'')
                         :(isLogged(o)?(o.isEach?`<span class="badge">-${allUsage[o.id]}</span>`:`<span class="badge flag">↻ ${h(fmtQ(o.refillTo))}</span>`):'');
           const meta=o.compQty!=null?`${h(fmtQ(o.compQty))}× in this assembly`
-            :grab?`Shop min: ${PMAP[o.id]&&PMAP[o.id].shopMin!=null?h(fmtQ(PMAP[o.id].shopMin)):'—'}`
+            :shopMode?`Shop min: ${(o.stockClass==='shop'&&o.stockMin!=null)?h(fmtQ(o.stockMin)):(myShopMin(PMAP[o.id])!=null?h(fmtQ(myShopMin(PMAP[o.id]))):'—')}`
             :(o.isEach?`Max: ${h(fmtQ(o.stockMax))}${o.stockMin!=null?' · Min: '+h(fmtQ(o.stockMin)):''}`:`Refill to: ${h(fmtQ(o.refillTo))}`);
-          return`<button class="item-row${flagged?' used':''}" onclick="${grab?`openWh(${o.id})`:`openPopupAt('${n.key}',${o.id})`}">
+          return`<button class="item-row${flagged?' used':''}" onclick="${shopMode?`openWh(${o.id})`:`openPopupAt('${n.key}',${o.id})`}">
             <div style="flex:1;min-width:0;">
               <div class="item-name" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${h(o.name)}</div>
               <div class="item-meta">${meta}</div></div>
@@ -1237,14 +1462,14 @@ function buildHTML(){
           loggedGroups().map(cat=>`
             <div class="sec-hdr">${h(cat)}</div>
             ${up.filter(p=>repGroup(p)===cat).map(p=>{
-              // Read-time rollup: one summed number, every contributing team named.
-              const a=aggUsage(p.id);
+              // This team's own pull count — never another trailer's.
+              const a=myUsage(p.id);
               const target=p.isEach?('Qty '+a.total):('Refill '+h(fmtQ(p.refillTo)));
               const tl=tileFor(p.trailerObj||p);
               return`<button class="rep-row" onclick="openRepDetail(${p.id})">
                 <div style="flex:1;min-width:0;">
                   <div style="font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${h(p.name)}</div>
-                  <div style="font-size:11px;color:#4a5a7a;margin-top:2px;">${tl?tl.icon+' '+h(tl.label):'📦 Warehouse'} · <span style="color:#7a8fb5;font-weight:600;">${h(a.teams.join(', '))}</span></div>
+                  <div style="font-size:11px;color:#4a5a7a;margin-top:2px;">${tl?tl.icon+' '+h(tl.label):'📦 Warehouse'} · <span style="color:#7a8fb5;font-weight:600;">${h(ti().label)}</span></div>
                 </div>
                 <div style="text-align:right;margin-left:8px;flex-shrink:0;display:flex;align-items:center;gap:6px;">
                   <span style="font-size:15px;font-weight:700;color:${p.isEach?'#ef4444':'#38bdf8'};">${target}</span>
@@ -1299,7 +1524,7 @@ function buildHTML(){
         ${sdot()}
       </div></div>
       <div class="scroll">
-        <div class="wh-count"><b>${warehouseParts().length}</b> non-trailer shop items</div>
+        <div class="wh-count"><b>${warehouseParts().length}</b> warehouse items</div>
         <div class="search-wrap">
           <div class="search-input-wrap">
             <input type="text" id="whq" value="${h(whQ)}" placeholder="Search warehouse items…" autocomplete="off" autocorrect="off" spellcheck="false" oninput="updateWh(this.value)">
@@ -1351,8 +1576,8 @@ function renderPopup(){
 // ── REPORT DETAIL (trailer/cases) ─────────────────────────────────────────────
 function renderRepDetail(){
   const p=repDetail;
-  const a=aggUsage(p.id);
-  const target=(p.isEach?('Qty '+a.total):('Refill to '+h(fmtQ(p.refillTo))))+(a.teams.length?' · '+h(a.teams.join(', ')):'');
+  const a=myUsage(p.id);
+  const target=(p.isEach?('Qty '+a.total):('Refill to '+h(fmtQ(p.refillTo))));
   return`<div class="overlay" onclick="if(event.target===this){repDetail=null;render();}"><div class="popup">
     ${imgBlock(p)}
     <div class="pop-name">${h(p.name)}</div>
@@ -1379,10 +1604,11 @@ function renderWhDetail(){
   return`<div class="overlay" onclick="if(event.target===this){whDetail=null;render();}"><div class="popup">
     ${imgBlock(p)}
     <div class="pop-name">${h(p.name)}</div>
-    <div class="pop-meta">${isTool?'🛠️ Tool':''}${isTool&&p.vendor?' · ':''}${p.vendor?h(p.vendor):(isTool?'':'Warehouse item')}</div>
+    <div class="pop-meta">${isTool?'🛠️ Tool':''}${isTool&&p.vendor?' · ':''}${p.vendor?h(p.vendor):(isTool?'':'Warehouse item')}${(!isTool&&shopWhere(p))?' · '+h(shopWhere(p)):''}</div>
     ${isTool
       ?`<div class="chk${whRestock?' on':''}" onclick="toggleWhRestock()"><div class="box">${whRestock?'✓':''}</div><div class="lbl">Broken / Lost<small>Flag this tool for replacement</small></div></div>`
-      :`<div class="detail-stat" style="margin-bottom:16px;"><span class="k">Shop minimum</span><span class="v">${p.shopMin==null?'—':h(fmtQ(p.shopMin))}</span></div>
+      :`<div class="detail-stat"><span class="k">Shop minimum</span><span class="v">${myShopMin(p)==null?'—':h(fmtQ(myShopMin(p)))}</span></div>
+    <div class="detail-stat" style="margin-bottom:16px;"><span class="k">Reorder quantity</span><span class="v">${p.shopOrderQty==null?'—':h(fmtQ(p.shopOrderQty))}</span></div>
     <div class="chk${whRestock?' on':''}" onclick="toggleWhRestock()"><div class="box">${whRestock?'✓':''}</div><div class="lbl">Below Shop Minimum<small>Add to the weekly reorder list</small></div></div>`}
     ${isTest()?'<div style="font-size:12px;color:#a78bfa;text-align:center;margin:2px 0 12px;">🧪 Test mode — this will not be saved</div>':''}
     <button class="btn blue" onclick="commitWh()">Done</button>

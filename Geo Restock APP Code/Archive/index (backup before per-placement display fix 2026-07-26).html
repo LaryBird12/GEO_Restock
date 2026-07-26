@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="GEO Restock">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f172a">
+<title>GEO Restock</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+button,input{touch-action:manipulation}
+html,body{height:100%;background:#0f172a;overflow:hidden}
+body{font-family:-apple-system,system-ui,sans-serif;color:#e2e8f0}
+#app{height:100vh;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.hdr{background:var(--team-hdr-bg,#1a2540);padding:13px 16px;border-bottom:2px solid var(--team-hdr-border,#2a3a5c);flex-shrink:0}
+.hdr-row{display:flex;align-items:center;gap:8px}
+.hdr-title{font-size:16px;font-weight:700;color:#e2e8f0}
+.hdr-sub{font-size:11px;color:#4a5a7a;margin-top:1px}
+.back{background:none;border:none;color:#38bdf8;font-size:28px;cursor:pointer;padding:0 6px 0 0;line-height:1;flex-shrink:0}
+.scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:max(80px,env(safe-area-inset-bottom))}
+input{width:100%;padding:13px 14px;background:#1a2540;border:1px solid #2a3a5c;border-radius:10px;color:#e2e8f0;font-size:16px;outline:none;-webkit-appearance:none;display:block}
+.btn{border:none;border-radius:10px;padding:13px 16px;font-size:15px;font-weight:600;cursor:pointer;width:100%;display:block;text-align:center}
+.btn+.btn{margin-top:10px}
+.blue{background:#38bdf8;color:#0f172a}
+.green{background:#22c55e;color:#fff}
+.ghost{background:#1a2540;color:#7a8fb5;border:1px solid #2a3a5c}
+.sm{padding:8px 12px;font-size:13px;width:auto}
+.offline-pill{position:fixed;top:max(6px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);background:#7c2d12;color:#fed7aa;font-size:11px;font-weight:700;padding:4px 12px;border-radius:12px;z-index:900;display:none;border:1px solid rgba(251,146,60,.4)}
+/* Team selection */
+.team-screen{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px;overflow-y:auto}
+.team-grid{display:flex;flex-direction:column;gap:12px;width:100%;max-width:340px}
+.team-card{border:none;border-radius:18px;padding:20px 22px;cursor:pointer;text-align:left;display:flex;align-items:center;gap:16px;width:100%;touch-action:manipulation}
+.team-card-icon{font-size:34px;flex-shrink:0;width:46px;text-align:center;line-height:1}
+.team-card-label{font-size:22px;font-weight:800;letter-spacing:.01em}
+.team-card-sub{font-size:12px;opacity:.6;margin-top:3px;font-weight:500}
+/* Nav cards */
+.nav-card{border-radius:14px;padding:20px;width:100%;text-align:left;cursor:pointer;display:flex;align-items:center;gap:14px;margin-bottom:12px;border:none}
+.nav-card-title{font-size:17px;font-weight:700;color:#e2e8f0}
+.nav-card-sub{font-size:12px;color:#7a8fb5;margin-top:3px}
+.report-link{background:#1a2540;color:#38bdf8;border:1px solid #2a3a5c;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:600;cursor:pointer;width:100%;text-align:center;margin-bottom:12px;display:block}
+/* Search */
+.search-wrap{padding:8px 20px 4px}
+.search-lbl{font-size:16px;font-weight:700;color:#7a8fb5;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.search-input-wrap{position:relative}
+.search-input-wrap input{padding-right:44px}
+.srch-clr{position:absolute;right:0;top:0;bottom:0;width:44px;background:none;border:none;color:#7a8fb5;font-size:18px;cursor:pointer;display:none;align-items:center;justify-content:center}
+/* Categories */
+/* Single-column compartment tiles (Mitch, go night): name left, count mid, logged right — one row */
+.cat-grid{display:grid;grid-template-columns:1fr;gap:10px;padding:14px}
+.cat-tile{background:#1a2540;border:1px solid #2a3a5c;border-radius:12px;padding:16px;cursor:pointer;text-align:left;display:flex;align-items:center;gap:12px}
+.cat-tile.has-use{background:#0d2a4a;border-color:rgba(56,189,248,.3)}
+.ct-name{font-size:14px;font-weight:600;color:#e2e8f0;flex:1;min-width:0}
+.ct-count{font-size:12px;color:#4a5a7a;flex-shrink:0}
+.ct-used{font-size:12px;color:#38bdf8;font-weight:600;flex-shrink:0;min-width:64px;text-align:right}
+/* Items */
+.item-row{display:flex;align-items:center;padding:13px 16px;cursor:pointer;width:100%;text-align:left;background:transparent;border:none;border-bottom:1px solid #101e35}
+.item-row.used{background:#0d2038}
+.item-name{font-size:14px;color:#7a8fb5;font-weight:400}
+.item-row.used .item-name{color:#e2e8f0;font-weight:600}
+.item-meta{font-size:11px;color:#2a3a5c;margin-top:1px}
+.badge{background:rgba(239,68,68,.15);color:#ef4444;border-radius:8px;padding:3px 9px;font-size:13px;font-weight:700;margin-right:4px}
+.badge.flag{background:rgba(56,189,248,.15);color:#38bdf8}
+.chevron{color:#2a3a5c;font-size:18px;flex-shrink:0;margin-left:6px}
+.wh-count{padding:14px 20px 6px;font-size:13px;color:#7a8fb5;font-weight:600}
+.wh-count b{color:#e2e8f0}
+/* Assembly container (exploded view): green = hand-refill, amber = on order */
+.asm-sec{padding:10px 2px 6px;font-size:11px;font-weight:800;letter-spacing:.06em}
+.asm-sec-green{color:#22c55e}
+.asm-sec-amber{color:#fbbf24}
+.asm-row{display:flex;align-items:center;gap:10px;width:100%;background:#0f172a;border:1px solid #2a3a5c;border-radius:10px;padding:10px 12px;margin-bottom:8px;text-align:left;cursor:pointer;font-family:inherit}
+.asm-row.done{border-color:#22c55e;background:#0c2a18}
+.asm-row.static{cursor:default;border-color:#4a3a10;background:#1d1a0e}
+.asm-row .box{width:22px;height:22px;border-radius:6px;border:2px solid #3a4a6c;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#0f172a}
+.ar-name{font-size:13px;font-weight:600;color:#e2e8f0}
+.ar-meta{font-size:11px;color:#7a8fb5;margin-top:1px}
+/* Report */
+.sec-hdr{padding:7px 16px;background:#101e35;font-size:11px;font-weight:700;color:#7a8fb5;text-transform:uppercase;letter-spacing:.06em;position:sticky;top:0;z-index:1}
+.rep-row{display:flex;align-items:center;padding:13px 16px;border-bottom:1px solid #101e35;cursor:pointer;width:100%;background:transparent;border-left:none;border-right:none;border-top:none;text-align:left}
+/* Popup / detail */
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,.82);display:flex;align-items:center;justify-content:center;z-index:50;padding:24px}
+.popup{background:#1a2540;border-radius:16px;padding:22px;width:100%;max-width:330px;border:1px solid #2a3a5c;max-height:88vh;overflow-y:auto}
+.pop-img{width:100%;height:170px;border-radius:12px;background:#0f172a;border:1px solid #2a3a5c;margin-bottom:16px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pop-img img{width:100%;height:100%;object-fit:contain}
+.img-ph{color:#3a4a6c;font-size:13px;font-weight:600}
+.pop-name{font-size:17px;font-weight:700;margin-bottom:4px;line-height:1.3}
+.pop-meta{font-size:14px;color:#7a8fb5;margin-bottom:18px}
+.pop-meta .hl{color:#e2e8f0;font-weight:600}
+.pop-lbl{font-size:12px;color:#7a8fb5;font-weight:600;margin-bottom:8px}
+.qty-row{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.qty-btn{width:50px;height:50px;border-radius:10px;border:none;font-size:26px;font-weight:700;cursor:pointer;flex-shrink:0}
+.qty-minus{background:#ef4444;color:#fff}
+.qty-minus.off{background:#2a3a5c;opacity:.3;cursor:default}
+.qty-plus{background:#22c55e;color:#fff}
+.qty-input{flex:1;text-align:center;font-size:26px;font-weight:700;padding:10px;background:#0f172a;border:1px solid #2a3a5c;border-radius:10px;color:#e2e8f0}
+/* Checkbox controls */
+.chk{display:flex;align-items:center;gap:12px;width:100%;background:#0f172a;border:1px solid #2a3a5c;border-radius:12px;padding:14px 16px;cursor:pointer;margin-bottom:12px;text-align:left}
+.chk .box{width:26px;height:26px;border-radius:7px;border:2px solid #3a4a6c;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:#0f172a}
+.chk.on{border-color:#22c55e;background:#0c2a18}
+.chk.on .box{background:#22c55e;border-color:#22c55e}
+.chk .lbl{font-size:15px;font-weight:600;color:#e2e8f0}
+.chk .lbl small{display:block;font-size:12px;font-weight:500;color:#7a8fb5;margin-top:2px}
+.chk.big{flex-direction:column;align-items:stretch;gap:12px;padding:16px 16px 18px}
+.chk.big .chk-top{display:flex;align-items:center;gap:12px;width:100%}
+.chk.big .chk-qty{font-size:27px;font-weight:800;color:#e2e8f0;line-height:1.05;text-align:left}
+.detail-stat{background:#0f172a;border:1px solid #2a3a5c;border-radius:10px;padding:12px 14px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.detail-stat .k{font-size:12px;color:#7a8fb5;font-weight:600}
+.detail-stat .v{font-size:18px;color:#e2e8f0;font-weight:700}
+/* Toast */
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#166534;color:#bbf7d0;padding:10px 22px;border-radius:20px;font-size:14px;font-weight:600;z-index:999;pointer-events:none;white-space:nowrap;display:none;border:1px solid rgba(34,197,94,.3)}
+/* Sync status dot */
+.sync-pill{width:15px;height:15px;min-width:15px;border-radius:50%;background:#22c55e;border:2px solid #0c2a18;padding:0;cursor:pointer;flex-shrink:0;box-shadow:0 0 7px rgba(34,197,94,.55)}
+.sync-pill.pending{background:#ef4444;border-color:#3a0f0f;box-shadow:0 0 7px rgba(239,68,68,.65)}
+.sync-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:flex-start;justify-content:flex-end;z-index:1000;padding:max(56px,calc(env(safe-area-inset-top) + 50px)) 12px 0}
+.syncbox{background:#1a2540;border:1px solid #2a3a5c;border-radius:14px;padding:18px;width:258px;max-width:82vw;box-shadow:0 12px 44px rgba(0,0,0,.55)}
+.syncrow{display:flex;align-items:flex-start;gap:12px}
+.sdotbig{width:14px;height:14px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.sdotbig.g{background:#22c55e}.sdotbig.r{background:#ef4444}
+.syncbox b{font-size:14px;color:#e2e8f0}
+.syncsub{font-size:11px;color:#7a8fb5;margin-top:2px}
+.syncdiv{height:1px;background:#2a3a5c;margin:14px 0}
+.syncrow2{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#7a8fb5}
+.syncrow2 b{font-size:17px;color:#38bdf8}
+.syncoff{font-size:11px;color:#fed7aa;margin-top:12px;background:#7c2d12;border-radius:8px;padding:7px 10px;border:1px solid rgba(251,146,60,.4)}
+.refresh-sub{text-align:center;font-size:11px;color:#4a5a7a;margin-top:6px}
+/* Warehouse view toggle + grid */
+.icon-btn{background:#1a2540;border:1px solid #2a3a5c;color:#9fb3d4;border-radius:8px;width:34px;height:34px;font-size:16px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:0}
+.wh-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:10px}
+.wh-tile{background:#1a2540;border:1px solid #2a3a5c;border-radius:8px;padding:5px;cursor:pointer;text-align:center;position:relative;overflow:hidden}
+.wh-tile.flagged{border-color:#38bdf8;background:#0d2a4a}
+.wh-thumb{width:100%;aspect-ratio:1;border-radius:5px;background:#0f172a;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:4px}
+.wh-thumb img{width:100%;height:100%;object-fit:contain}
+.wh-thumb .img-ph{font-size:9px;color:#3a4a6c}
+.wh-tile-name{font-size:9px;color:#94a3b8;line-height:1.15;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.wh-tile-badge{position:absolute;top:3px;right:3px;background:#38bdf8;color:#0f172a;font-size:7px;font-weight:800;padding:1px 4px;border-radius:4px}
+.detail-stat.tappable{cursor:pointer;border-color:#2a4a6c}
+.detail-stat.tappable .k{color:#38bdf8}
+.team-logo{width:min(88vw,460px);max-height:40vh;height:auto;margin-bottom:18px;object-fit:contain}
+@keyframes cardpoof{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.5)}}
+.puffing{animation:cardpoof .4s ease-in forwards;pointer-events:none}
+@keyframes smokeP{0%{opacity:0;transform:translate(-50%,-50%) translate(0,0) scale(.3)}15%{opacity:.85}100%{opacity:0;transform:translate(-50%,-50%) translate(var(--dx),var(--dy)) scale(var(--s))}}
+.smoke-p{position:fixed;width:60px;height:60px;border-radius:50%;background:radial-gradient(circle,rgba(205,214,230,.72),rgba(205,214,230,0) 70%);filter:blur(4px);pointer-events:none;z-index:9999;animation:smokeP .62s ease-out forwards}
+@keyframes rockOn{0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}25%{opacity:1;transform:translate(-50%,-50%) scale(1.18)}45%{transform:translate(-50%,-50%) scale(1)}78%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.12)}}
+.poof-emoji{position:fixed;z-index:10000;font-size:74px;line-height:1;pointer-events:none;animation:rockOn .72s ease-out forwards}
+/* Krypton (2026-07-24): portrait artwork fills the screen whole; the amber
+   work-light flicker survives only on the quick "Coming Soon" splash. */
+.krypton-coming{font-size:min(9vw,46px);font-weight:900;letter-spacing:.08em;color:#fbbf24;text-align:center;animation:kflicker 2.8s infinite}
+@keyframes kflicker{
+  0%,100%{opacity:1;text-shadow:0 0 18px rgba(251,191,36,.85),0 0 44px rgba(251,191,36,.35)}
+  7%{opacity:.5}
+  9%{opacity:1}
+  36%{opacity:.85}
+  41%{opacity:.25;text-shadow:none}
+  43%{opacity:1;text-shadow:0 0 18px rgba(251,191,36,.85),0 0 44px rgba(251,191,36,.35)}
+  71%{opacity:.9}
+  74%{opacity:1}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="toast" class="toast"></div>
+<div id="offpill" class="offline-pill">⚠ Offline — changes will sync</div>
+<div id="syncinfo" class="sync-overlay" onclick="hideSyncInfo()"></div>
+
+<script src="config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script>
+// 2.0: every value that used to be hardcoded here lives in config.js.
+const CFG=window.GEO_CONFIG;
+firebase.initializeApp(CFG.firebase);
+const DB=firebase.database();
+// Every 2.0 write is walled inside this node; the 1.0 node stays sacred.
+const ROOT=CFG.rootNode;
+
+// ── TEAMS (from config — team-to-branch mapping is the load-bearing entry) ────
+const TEAMS=CFG.teams;
+const isTest=()=>team==='test';
+
+// ── DATA (loaded from the Restock Export catalog) ─────────────────────────────
+// 2.0 model: one object per PLACEMENT (duplicate Part IDs expected and correct)
+// plus one object per assembly component. The browsable tree is assembled at
+// runtime from each object's Location Path — output order IS display order.
+let OBJS=[];            // every export object, in tree-walk order
+let PARTS=[];           // one merged entry per unique Part ID (search, reports)
+let PMAP={};            // id -> merged part
+let NODES={};           // nodeKey -> {key,parentKey,step,children:[],parts:[]}
+function stepKey(s){return (s['Step Type']==='Assembly'?'A':'L')+s['Node ID'];}
+function pathKey(path,len){let k='';for(let i=0;i<len;i++)k+=(i?'/':'')+stepKey(path[i]);return k;}
+function mapObj(r){
+  const unit=r['Locations Unit Of Measure'];
+  const isEach=!unit||String(unit).toLowerCase()==='each';
+  return {
+    id:r['Part ID'],
+    name:r['Description']||'',
+    entryType:r['DB Entry Type'],       // Part / Assembly / Tool — behavior by kind
+    stockType:r['Stock Type'],          // Consumable / Nonstock — flow routing
+    size:r['Size'],
+    cat1:r['CAT 1']||'',cat2:r['CAT 2']||'',cat3:r['CAT 3']||'',
+    stockClass:r['Stock Class'],           // trailer / shop / nonstock — single-source role
+    locationId:r['Location ID'],
+    path:r['Location Path']||[],
+    stockMin:r['Stock Min'],
+    stockMax:r['Stock Max'],
+    reorderQty:r['Reorder Quantity'],
+    unit,isEach,
+    refill:!isEach?unit:null,
+    refillTo:!isEach?(r['Stock Max']!=null?String(r['Stock Max']):String(unit)):null,
+    compQty:r['Component Quantity'],    // non-null only on assembly-component rows
+    compUnit:r['Component Unit Description'],
+    vendor:r['Vendor Name']||'',
+    vendorPart:r['VEN Part Number'],
+    venUrl:r['VEN URL']||'',
+    venCaseQty:r['VEN Case QTY Txt']||'',
+    venCaseQtyNum:r['VEN Case QTY #'],
+    cost:r['Vendor Cost'],
+    img:CFG.imageBase+r['Part ID']+CFG.imageExt, // the image rule: base + Part ID + ext
+  };
+}
+function buildData(raw){
+  OBJS=raw.map(mapObj);NODES={};PMAP={};PARTS=[];
+  OBJS.forEach(o=>{
+    let parentKey=null;
+    o.path.forEach((s,i)=>{
+      const k=pathKey(o.path,i+1);
+      if(!NODES[k]){
+        NODES[k]={key:k,parentKey,step:s,children:[],parts:[]};
+        if(parentKey)NODES[parentKey].children.push(k);
+      }
+      parentKey=k;
+    });
+    o.nodeKey=parentKey;
+    if(parentKey)NODES[parentKey].parts.push(o);
+  });
+  // Merged per-part map. Real placements only — component rows are the same
+  // physical part wearing its assembly hat, and every part has >=1 placement.
+  OBJS.filter(o=>o.compQty==null).forEach(o=>{
+    let m=PMAP[o.id];
+    if(!m){m=PMAP[o.id]=Object.assign({},o);m.placements=[];PARTS.push(m);}
+    m.placements.push(o);
+    // Shop rows (a division node OR anywhere under a Warehouse subtree) carry
+    // the SHOP rules; trailer rows carry trailer rules. Stock Class is the
+    // single-source role (part_api.classify_location), replacing the old
+    // hardcoded Location ID 1/2/3 check.
+    if(o.stockClass==='shop'){m.shopMin=o.stockMin;m.shopOrderQty=o.reorderQty;}
+    else if(o.stockClass==='trailer'){m.trailerObj=m.trailerObj||o;} // first trailer placement
+    // 'nonstock' rows contribute neither — reorder-neutral as standalone parts.
+  });
+  // Part-level role flags keep the reports per-Part-ID (weekly reorder groups by
+  // Part ID, so it's unaffected). hasShop/hasTrailer replace the old part-level
+  // isTrailerStock boolean. A part's TRAILER placement still defines its usage
+  // semantics (Each vs Bin/Bag); the division/shop row only holds shop rules.
+  PARTS.forEach(m=>{
+    m.hasShop=m.placements.some(p=>p.stockClass==='shop');
+    m.hasTrailer=m.placements.some(p=>p.stockClass==='trailer');
+    const o=m.trailerObj;if(o){m.isEach=o.isEach;m.unit=o.unit;m.refill=o.refill;m.refillTo=o.refillTo;m.stockMin=o.stockMin;m.stockMax=o.stockMax;}
+  });
+}
+function nodeByLocId(id){for(const k in NODES){const n=NODES[k];if(n.step['Step Type']!=='Assembly'&&n.step['Node ID']===id)return n;}return null;}
+function subtreeParts(n,acc){acc=acc||[];n.parts.forEach(o=>{if(o.compQty==null)acc.push(o);});n.children.forEach(k=>subtreeParts(NODES[k],acc));return acc;}
+// Friendly-fraction display: DB keeps honest decimals, config maps the face.
+function fmtQ(v){
+  if(v==null||v==='')return v;
+  const n=Number(v);if(isNaN(n))return String(v);
+  const w=Math.floor(n),f=+(n-w).toFixed(2),fr=CFG.fractions[String(f)];
+  if(fr)return (w>0?w:'')+fr;
+  return String(Number.isInteger(n)?n:v);
+}
+
+// ── STATE ─────────────────────────────────────────────────────────────────────
+let team=localStorage.getItem('g_team')||null;
+let allUsage={},allTeams={},shopFlags={},stamps={},searchQ='',whQ='';
+let scr='login'; // app always starts gated behind login; onAuthStateChanged below decides where to go next
+let navKey=null;        // current tree node (any depth — locations and assemblies alike)
+let popup=null,popQty=0,popFlag=false;          // usage popup
+let pinDetail=null,pinRecv=false;               // pinned tool/assembly detail (Switch 1)
+let repDetail=null,repRecv=false,repBelow=false; // report detail
+let whDetail=null,whRestock=false;               // warehouse detail
+let _usageRef=null,_shopRef=null,_stampRef=null;
+let pendingWrites=0,refreshing=false,viewMode=(localStorage.getItem('geo_viewMode')||'list');
+
+// ── HELPERS ───────────────────────────────────────────────────────────────────
+const $=id=>document.getElementById(id);
+const h=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const ti=()=>team?TEAMS[team]:{label:'',color:'#38bdf8',bg:'#0f172a',border:'#2a3a5c',icon:''};
+// Usage key — LOCKED 2026-07-24: aggregate by Part ID. Stored per team
+// (write-time attribution), summed at read time. Never collapsed on write.
+const usagePath=p=>ROOT+'/teams/'+team+'/usage/'+p.id;
+const isLogged=p=>{const u=allUsage[p.id];return p.isEach?(Number(u)>0):(u===true||u==='true');};
+// Read-time rollup across teams. Hidden teams (test) only count for themselves.
+function aggUsage(id){
+  let total=0,flag=false;const teams=[];
+  Object.keys(TEAMS).forEach(t=>{
+    if(TEAMS[t].hidden&&t!==team)return;
+    const u=allTeams[t]&&allTeams[t].usage?allTeams[t].usage[id]:null;
+    if(u==null)return;
+    if(u===true||u==='true'){flag=true;teams.push(TEAMS[t].label);}
+    else if(Number(u)>0){total+=Number(u);teams.push(TEAMS[t].label);}
+  });
+  return {total,flag,teams};
+}
+const isLoggedAny=p=>{const a=aggUsage(p.id);return p.isEach?a.total>0:a.flag;};
+// PARTS/OBJS arrive in tree-walk order — output order IS display order, no sorts.
+const tileFor=o=>{if(!o||!o.path)return null;for(const s of o.path){if(s['Step Type']!=='Assembly')for(const tl of CFG.tiles)if(tl.locationId===s['Node ID'])return tl;}return null;};
+const nodeName=o=>{const n=o&&o.nodeKey?NODES[o.nodeKey]:null;return n?n.step['Node Name']:'';};
+const uniqLogged=list=>{const seen={};let n=0;list.forEach(o=>{if(!seen[o.id]&&isLogged(o)){seen[o.id]=1;n++;}});return n;};
+const loggedParts=()=>PARTS.filter(p=>p.hasTrailer&&isLoggedAny(p)); // report = ALL teams' demand
+const repGroup=p=>p.trailerObj?nodeName(p.trailerObj):(p.cat1||'Other');
+const loggedGroups=()=>{const o=[];loggedParts().forEach(p=>{const g=repGroup(p);if(o.indexOf(g)<0)o.push(g)});return o;};
+const warehouseParts=()=>PARTS.filter(p=>p.hasShop&&!p.hasTrailer); // shop stock not also on a trailer; matches today's !isTrailerStock and keeps nonstock-only parts out of both reports
+let _tt;function toast(msg){clearTimeout(_tt);const e=$('toast');e.textContent=msg;e.style.display='block';_tt=setTimeout(()=>e.style.display='none',2200);}
+function imgFail(el){if(el&&el.parentElement)el.parentElement.innerHTML='<div class="img-ph">No image</div>';}
+function imgBlock(p){return p.img?`<div class="pop-img"><img src="${h(p.img)}" alt="" onerror="imgFail(this)"></div>`:`<div class="pop-img"><div class="img-ph">No image</div></div>`;}
+
+// ── OFFLINE-AWARE WRITES + SYNC TRACKING ──────────────────────────────────────
+function queueLen(){try{return JSON.parse(localStorage.getItem('geo_wq')||'[]').length}catch(e){return 0}}
+function syncIsPending(){return pendingWrites>0||queueLen()>0}
+function setLastSync(){localStorage.setItem('geo_lastSync',String(Date.now()));}
+function queueWrite(path,value){
+  let q;try{q=JSON.parse(localStorage.getItem('geo_wq')||'[]')}catch(e){q=[]}
+  q.push({path,value});localStorage.setItem('geo_wq',JSON.stringify(q));
+}
+function flushQueue(){
+  let q;try{q=JSON.parse(localStorage.getItem('geo_wq')||'[]')}catch(e){q=[]}
+  if(!q.length){updSync();return;}
+  const rest=[];
+  q.forEach(op=>{
+    try{const ref=DB.ref(op.path);(op.value===null?ref.remove():ref.set(op.value)).then(setLastSync).catch(()=>rest.push(op));}
+    catch(e){rest.push(op)}
+  });
+  localStorage.setItem('geo_wq',JSON.stringify(rest));
+  updSync();
+}
+function dbWrite(path,value){
+  if(!navigator.onLine)queueWrite(path,value);
+  pendingWrites++;updSync();
+  let pr;
+  try{const ref=DB.ref(path);pr=(value===null?ref.remove():ref.set(value));}
+  catch(e){pr=Promise.reject(e);}
+  pr.then(()=>{pendingWrites--;setLastSync();updSync();})
+    .catch(()=>{pendingWrites--;queueWrite(path,value);updSync();});
+}
+function updOffPill(){const e=$('offpill');if(e)e.style.display=navigator.onLine?'none':'block';}
+function updSync(){const d=$('syncdot');if(d)d.className='sync-pill'+(syncIsPending()?' pending':'');updOffPill();}
+window.addEventListener('online',()=>{updOffPill();flushQueue();});
+window.addEventListener('offline',()=>{updOffPill();updSync();});
+
+// ── TIME + SYNC INFO POPUP ────────────────────────────────────────────────────
+function timeAgo(ms){
+  ms=Number(ms)||0;if(!ms)return'never';
+  const s=Math.floor((Date.now()-ms)/1000);
+  if(s<60)return'just now';
+  const m=Math.floor(s/60);if(m<60)return m+'m ago';
+  const hr=Math.floor(m/60);if(hr<24)return hr+'h ago';
+  const d=Math.floor(hr/24);if(d<7)return d+'d ago';
+  return new Date(ms).toLocaleDateString();
+}
+function lastRefreshTxt(){return timeAgo(localStorage.getItem('geo_lastRefresh'));}
+function sdot(){return`<button id="syncdot" class="sync-pill${syncIsPending()?' pending':''}" onclick="showSyncInfo()" title="Sync status"></button>`;}
+function showSyncInfo(){
+  const pend=pendingWrites+queueLen();
+  const synced=!syncIsPending();
+  const reorder=Object.keys(shopFlags||{}).length;
+  $('syncinfo').innerHTML=`<div class="syncbox" onclick="event.stopPropagation()">
+    <div class="syncrow"><span class="sdotbig ${synced?'g':'r'}"></span>
+      <div><b>${synced?'All changes synced':pend+' change'+(pend!==1?'s':'')+' pending'}</b>
+      <div class="syncsub">Last sync: ${h(timeAgo(localStorage.getItem('geo_lastSync')))}</div></div></div>
+    <div class="syncdiv"></div>
+    <div class="syncrow2"><span>🧾 Weekly reorder list</span><b>${reorder} item${reorder!==1?'s':''}</b></div>
+    ${!navigator.onLine?'<div class="syncoff">⚠ Offline — changes will sync on reconnect</div>':''}
+    <div class="syncdiv"></div>
+    <div class="syncrow2"><span>🗂 Catalog</span><b>updated ${h(lastRefreshTxt())}</b></div>
+    <button class="btn ghost sm" style="width:100%;margin-top:14px;color:#fbbf24;border-color:#6b4416;" onclick="askAdmin()">⛔ Admin Only</button>
+    <button class="btn ghost sm" style="width:100%;margin-top:8px;" onclick="hideSyncInfo();refreshCache();">↻ Refresh Data</button>
+    <button class="btn ghost sm" style="width:100%;margin-top:8px;color:#fca5a5;" onclick="hideSyncInfo();doSignOut();">🚪 Sign Out</button>
+    <button class="btn ghost sm" style="width:100%;margin-top:8px;" onclick="hideSyncInfo()">Close</button>
+  </div>`;
+  $('syncinfo').style.display='flex';
+}
+function askAdmin(){
+  $('syncinfo').innerHTML=`<div class="syncbox" onclick="event.stopPropagation()">
+    <div style="font-weight:800;font-size:16px;color:#fbbf24;margin-bottom:4px;">⛔ Admin Only</div>
+    <div class="syncsub" style="margin-bottom:12px;">Enter password to continue.</div>
+    <input type="password" id="admpw" placeholder="Password" autocomplete="off" autocorrect="off" spellcheck="false" onkeydown="if(event.key==='Enter')submitAdminPw()" style="width:100%;box-sizing:border-box;background:#0d1526;border:1px solid #24314d;border-radius:10px;color:#e2e8f0;font-size:15px;padding:11px;margin-bottom:12px;">
+    <button class="btn blue" style="width:100%;" onclick="submitAdminPw()">Enter</button>
+    <button class="btn ghost sm" style="width:100%;margin-top:8px;" onclick="hideSyncInfo()">Cancel</button>
+  </div>`;
+  $('syncinfo').style.display='flex';
+  setTimeout(()=>{const i=$('admpw');if(i)i.focus();},60);
+}
+function submitAdminPw(){
+  const i=$('admpw');const v=i?i.value:'';
+  if(v===CFG.adminPassword){hideSyncInfo();goAdmin();}
+  else{toast('Wrong password');if(i){i.value='';i.focus();}}
+}
+function hideSyncInfo(){const e=$('syncinfo');if(e)e.style.display='none';}
+
+// ── CACHE REFRESH (manual button + weekly auto) ───────────────────────────────
+function refreshCache(){
+  if(refreshing)return;
+  if(!navigator.onLine){toast('Offline — connect to refresh');return;}
+  refreshing=true;render();
+  if(navigator.serviceWorker&&navigator.serviceWorker.controller){
+    try{navigator.serviceWorker.controller.postMessage({type:'REFRESH'});}catch(e){}
+  }
+  fetch(CFG.catalogFile+'?v='+Date.now(),{cache:'no-store'})
+    .then(r=>{if(!r.ok)throw 0;return r.json();})
+    .then(env=>{
+      buildData(env.Parts||[]);
+      try{localStorage.setItem('geo_exportTs',env['Export Timestamp']||'');}catch(e){}
+      localStorage.setItem('geo_lastRefresh',String(Date.now()));
+      refreshing=false;render();
+      toast('Data refreshed · '+PARTS.length+' parts');
+    })
+    .catch(()=>{refreshing=false;render();toast('Refresh failed — try again');});
+}
+function maybeAutoRefresh(){
+  const last=Number(localStorage.getItem('geo_lastRefresh'))||0;
+  if(navigator.onLine && last && (Date.now()-last)>=CFG.autoRefreshDays*864e5)refreshCache();
+}
+
+// ── SEARCH (any-order word match) ─────────────────────────────────────────────
+function matchSearch(p,q){
+  if(!q.trim())return false;
+  const words=q.toLowerCase().split(/\s+/).filter(Boolean);
+  const hay=(p.name+' '+p.cat1+' '+p.cat2+' '+p.cat3+' '+(p.size||'')).toLowerCase();
+  return words.every(w=>hay.includes(w));
+}
+function buildSearchResults(q){          // nav search: trailer parts normally; ALL parts in grab mode
+  if(!q.trim())return'';
+  const res=(grab?PARTS:PARTS.filter(p=>p.hasTrailer)).filter(p=>matchSearch(p,q)).slice(0,15);
+  if(!res.length)return`<div style="padding:16px;text-align:center;color:#4a5a7a;font-size:13px;">No ${grab?'':'trailer '}parts for "${h(q)}"</div>`;
+  return res.map(p=>rowHTML(p,grab?"openWh":"openPopup")).join('');
+}
+function rowHTML(p,fn){
+  const logged=isLogged(p);
+  let right='';
+  if(logged){
+    right=p.isEach?`<span class="badge">-${allUsage[p.id]}</span>`:`<span class="badge flag">↻</span>`;
+  }else{right=`<span class="chevron">›</span>`;}
+  const tl=tileFor(p.trailerObj||p);
+  const tag=tl?tl.icon+' '+tl.label:'📦 Warehouse';
+  const where=p.trailerObj?nodeName(p.trailerObj):p.cat1;
+  return`<button onclick="${fn}(${p.id})" style="display:flex;align-items:center;width:100%;padding:12px 16px;background:${logged?'#0d2038':'transparent'};border:none;border-bottom:1px solid #101e35;text-align:left;cursor:pointer;">
+    <div style="flex:1;min-width:0;">
+      <div style="font-size:14px;font-weight:${logged?'600':'400'};color:${logged?'#e2e8f0':'#94a3b8'};overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${h(p.name)}</div>
+      <div style="font-size:11px;color:#4a5a7a;margin-top:2px;">${where?h(where)+' · ':''}${tag}</div>
+    </div>${right}
+  </button>`;
+}
+function updateSearch(q){searchQ=q;const el=$('sr');if(el)el.innerHTML=buildSearchResults(q);const c=$('sqc');if(c)c.style.display=q?'flex':'none';}
+function clearSearch(){searchQ='';const i=$('sq');if(i){i.value='';i.focus();}const e=$('sr');if(e)e.innerHTML='';const c=$('sqc');if(c)c.style.display='none';}
+
+function buildWhResults(q){
+  let res=warehouseParts();
+  if(q.trim())res=res.filter(p=>matchSearch(p,q));
+  res=res.slice().sort((a,b)=>a.name.localeCompare(b.name));
+  if(!res.length)return`<div style="padding:16px;text-align:center;color:#4a5a7a;font-size:13px;">No warehouse items for "${h(q)}"</div>`;
+  if(viewMode==='grid'){
+    return`<div class="wh-grid">`+res.map(p=>{
+      const flagged=!!shopFlags[p.id];
+      const img=p.img?`<img src="${h(p.img)}" alt="" onerror="imgFail(this)">`:`<div class="img-ph">No image</div>`;
+      return`<button class="wh-tile${flagged?' flagged':''}" onclick="openWh(${p.id})">
+        <div class="wh-thumb">${img}</div>
+        <div class="wh-tile-name">${h(p.name)}</div>
+        ${flagged?'<span class="wh-tile-badge">RESTOCK</span>':''}
+      </button>`;
+    }).join('')+`</div>`;
+  }
+  return res.map(p=>{
+    const flagged=!!shopFlags[p.id];
+    return`<button onclick="openWh(${p.id})" class="item-row${flagged?' used':''}">
+      <div style="flex:1;min-width:0;">
+        <div class="item-name" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${h(p.name)}</div>
+        <div class="item-meta">Shop min: ${p.shopMin==null?'—':h(fmtQ(p.shopMin))}</div>
+      </div>
+      ${flagged?'<span class="badge flag">RESTOCK</span>':'<span class="chevron">›</span>'}
+    </button>`;
+  }).join('');
+}
+const ICON_GRID='<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1.5"/><rect x="9" y="1" width="6" height="6" rx="1.5"/><rect x="1" y="9" width="6" height="6" rx="1.5"/><rect x="9" y="9" width="6" height="6" rx="1.5"/></svg>';
+const ICON_LIST='<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="2.4" cy="3" r="1.2"/><rect x="5" y="2.2" width="9.5" height="1.6" rx=".8"/><circle cx="2.4" cy="8" r="1.2"/><rect x="5" y="7.2" width="9.5" height="1.6" rx=".8"/><circle cx="2.4" cy="13" r="1.2"/><rect x="5" y="12.2" width="9.5" height="1.6" rx=".8"/></svg>';
+function viewIcon(){return viewMode==='grid'?ICON_LIST:ICON_GRID;}
+function toggleView(){viewMode=viewMode==='grid'?'list':'grid';try{localStorage.setItem('geo_viewMode',viewMode);}catch(e){}render();}
+function updateWh(q){whQ=q;const el=$('whr');if(el)el.innerHTML=buildWhResults(q);const c=$('whc');if(c)c.style.display=q?'flex':'none';}
+function clearWh(){whQ='';const i=$('whq');if(i){i.value='';i.focus();}updateWh('');}
+
+// ── FIREBASE LISTENERS ────────────────────────────────────────────────────────
+function startListeners(){
+  if(_usageRef)_usageRef.off();
+  // Listen to ALL teams (trailer-scale data): own team drives browse badges,
+  // the full set drives the read-time rollup on the restock report.
+  _usageRef=DB.ref(ROOT+'/teams');
+  _usageRef.on('value',snap=>{allTeams=snap.val()||{};allUsage=(allTeams[team]&&allTeams[team].usage)||{};if(scr==='loading')scr='nav';render();},()=>{if(scr==='loading')scr='nav';render();});
+}
+function startShop(){                        // shop reorder is shared/team-agnostic — always live
+  if(_shopRef)return;
+  _shopRef=DB.ref(ROOT+'/shopReorder');
+  _shopRef.on('value',snap=>{shopFlags=snap.val()||{};render();},()=>{});
+  // Switch 2 stamps — separate node so Clear can NEVER un-stamp anything.
+  _stampRef=DB.ref(ROOT+'/reorderStamps');
+  _stampRef.on('value',snap=>{stamps=snap.val()||{};render();},()=>{});
+}
+
+// ── ACTIONS ───────────────────────────────────────────────────────────────────
+function selectTeam(t){team=t;localStorage.setItem('g_team',t);allUsage={};scr='loading';render();startListeners();setTimeout(()=>{if(scr==='loading'){scr='nav';render();}},4000);}
+function goHome(){if(_usageRef){_usageRef.off();_usageRef=null;}allUsage={};allTeams={};searchQ='';whQ='';popup=null;repDetail=null;whDetail=null;grab=false;fbOpen=false;team=null;localStorage.removeItem('g_team');scr='team';render();}
+function resetTestUsage(){
+  if(!isTest())return; // hard guard: only ever the Test team
+  if(!confirm('Reset all logged Trailer & Cases items for the Test team?\n\nThis clears only the Test team — no other team and not the weekly reorder list.'))return;
+  dbWrite(ROOT+'/teams/'+team+'/usage', null);
+  allUsage={};
+  toast('Test items reset');
+  render();
+}
+function goShopReorder(){scr='shopreorder';render();}
+function clearShopReorder(){
+  const n=Object.keys(shopFlags||{}).length;
+  if(n===0){toast('Weekly reorder list is already empty');return;}
+  if(!confirm('This permanently clears all '+n+' item'+(n!==1?'s':'')+' from the weekly reorder list.\n\nContinue?'))return;
+  if(!confirm('Are you sure? This cannot be undone.'))return;
+  // CLEAR DOES DOUBLE DUTY (locked): Clear means "these are ordered."
+  // Stamp FIRST, then wipe — the order protects the exactly-once guarantee.
+  // Switch 1 (trailer pins) is deliberately untouched: Clear is not Received.
+  const today=new Date().toISOString().slice(0,10);
+  Object.keys(shopFlags||{}).forEach(id=>{
+    const p=PMAP[id];const e=shopFlags[id]||{};
+    // Tools stamp by kind; assembly components stamp by the hidden marker.
+    // The assembly's own ID is just a trigger — it never carries a stamp.
+    if((p&&p.entryType==='Tool')||e.fromAssembly)dbWrite(ROOT+'/reorderStamps/'+id, today);
+  });
+  dbWrite(ROOT+'/shopReorder', null);
+  shopFlags={};
+  toast('Weekly reorder list cleared');
+  scr='admin';render();
+}
+let grab=false;         // Part & Dart mode (shop-min flagging instead of usage)
+let fbOpen=false;       // Feedback form overlay
+const LEVELER_EMAIL=CFG.levelerEmail;
+
+function reorderRows(){
+  const teamOrder=Object.keys(TEAMS).filter(t=>t!=='test'); // fixed, sensible display order
+  // Defensive Switch-2 filter: a stamped tool/assembly is already ordered this
+  // cycle and must never render on the weekly reorder (flag-time guard is the
+  // primary defense; this is the belt to its suspenders).
+  return Object.keys(shopFlags||{}).filter(id=>!stamps[id]).sort((a,b)=>Number(a)-Number(b)).map(id=>{
+    const r=shopFlags[id]||{},p=PMAP[id]||{};
+    const info=r.info||r; // r.info is the current shape; bare r is a fallback for pre-multi-team entries
+    // r.teams is a map of every team that has flagged this item, e.g. {gold:true,titanium:true}.
+    // Legacy entries only ever had a single r.team string — treat that as a one-team set so old,
+    // not-yet-cleared flags still display correctly instead of showing blank.
+    const teamsObj=r.teams||(r.team?{[r.team]:true}:{});
+    const teamLabel=teamOrder.filter(t=>teamsObj[t]).map(t=>TEAMS[t].label).join(', ');
+    return{id:id,name:info.name||p.name||'',vendor:info.vendor||p.vendor||'',teamLabel,
+      vendorPart:(info.vendorPart!=null?info.vendorPart:(p.vendorPart!=null?p.vendorPart:'')),
+      shopMin:(info.shopMin!=null?info.shopMin:(p.shopMin!=null?p.shopMin:'')),
+      // Order Qty / VEN Case QTY / VEN URL are NOT frozen at flag-time like the fields above —
+      // they always read live from the current catalog, so fixing a link or case size in the
+      // next export corrects it immediately for items already sitting on the reorder list.
+      orderQty:(p.shopOrderQty!=null?p.shopOrderQty:''),
+      cost:(p.cost!=null?p.cost:''),
+      venCaseQty:p.venCaseQty||'',
+      venUrl:p.venUrl||'',
+      // Tool replacement notes, oldest first — the who and the why, stacked.
+      notes:(r.notes?Object.values(r.notes).sort((a,b)=>(a.ts||0)-(b.ts||0)):[]),
+      // Assembly-component demand: per-team qtys summed at read time (the
+      // locked aggregation rule) — "4 ×, Gold, Cobalt", one line never two.
+      asmSum:(r.asmQty?Object.values(r.asmQty).reduce((a,b)=>a+Number(b||0),0):0)};
+  });
+}
+function csvCell(v){v=(v==null?'':String(v));return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
+function exportReorderCSV(){
+  const rows=reorderRows();
+  if(!rows.length){toast('List is empty');return;}
+  let csv=['Part ID','Description','Vendor','Vendor Part #','Shop Min','Order Qty','Flag Qty','Unit Cost','VEN Case QTY','VEN URL','Flagged By','Tool Notes'].join(',')+'\n';
+  rows.forEach(r=>{
+    const noteTxt=r.notes.map(n=>(n.name||'?')+noteTag(n)+': '+n.reason).join('; ');
+    const flagQty=(r.notes.length||r.asmSum)||'';
+    csv+=[r.id,r.name,r.vendor,r.vendorPart,r.shopMin,r.orderQty,flagQty,r.cost,r.venCaseQty,r.venUrl,r.teamLabel,noteTxt].map(csvCell).join(',')+'\n';
+  });
+  const d=new Date(),pad=n=>String(n).padStart(2,'0');
+  const fname='GeoReorder_'+d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'.csv';
+  try{
+    const blob=new Blob([csv],{type:'text/csv'}),url=URL.createObjectURL(blob);
+    const a=document.createElement('a');a.href=url;a.download=fname;document.body.appendChild(a);a.click();
+    setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(url);},1000);
+    toast('CSV exported');
+  }catch(e){toast('Export failed');}
+}
+// Print view: one vendor per printed page, forced landscape letter, native <thead> repetition
+// so the vendor name + column titles reappear automatically on any continuation page.
+function printReorder(){
+  const rows=reorderRows();
+  if(!rows.length){toast('List is empty');return;}
+  const esc=s=>String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  // Shop Min / Order Qty / VEN Case QTY print as the literal word "null" when the catalog has no
+  // value there, instead of a blank cell — a blank cell next to filled-in ones reads as if the
+  // value shifted into the wrong column; a visible "null" can't be mistaken for real data.
+  const nz=s=>{const v=(s==null?'':String(s)).trim();return v===''?'<span class="nullval">null</span>':esc(v);};
+
+  // Group by vendor (case-insensitive alpha order); items with no vendor land in one bucket.
+  const byVendor={};
+  rows.forEach(r=>{const v=r.vendor||'Unknown Vendor';(byVendor[v]=byVendor[v]||[]).push(r);});
+  const vendorNames=Object.keys(byVendor).sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase()));
+
+  const d=new Date();
+  let b='<h1>GEO Weekly Reorder List</h1>';
+  b+='<div class="sub">Generated '+esc(d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}))+' &middot; '+rows.length+' item'+(rows.length!==1?'s':'')+'</div>';
+
+  // Fixed % widths, identical on every vendor table (with table-layout:fixed below) so all six
+  // columns line up in one straight grid top-to-bottom, instead of each vendor's table sizing its
+  // own columns to just its own content (which is what made the ABR row look shifted).
+  const colWidths=[26,10,10,10,14,10,20];
+  const colgroup='<colgroup>'+colWidths.map(w=>'<col style="width:'+w+'%">').join('')+'</colgroup>';
+
+  b+=vendorNames.map((v,vi)=>{
+    const items=byVendor[v];
+    // .pagebreak forces every vendor after the first onto its own fresh page;
+    // the thead (vendor name row + column-title row) reprints on any overflow page for free.
+    let t='<table class="vgroup'+(vi>0?' pagebreak':'')+'">'+colgroup;
+    t+='<thead><tr><th colspan="7" class="vname">'+esc(v)+'</th></tr>';
+    t+='<tr>'+['Part','Shop Min','Order Qty','Unit Cost','VEN Case QTY','Web Link','Flagged By'].map(hh=>'<th>'+hh+'</th>').join('')+'</tr></thead>';
+    t+='<tbody>'+items.map(r=>{
+      const link=r.venUrl?'<a href="'+h(r.venUrl)+'">Web Link</a>':'—';
+      const cost=(r.cost===''||r.cost==null)?'<span class="nullval">null</span>':esc(CFG.currency+r.cost);
+      const namePfx=(r.notes.length||r.asmSum)?(r.notes.length||r.asmSum)+' × ':'';
+      let tr='<tr><td>'+namePfx+esc(r.name)+'</td><td class="num">'+nz(r.shopMin)+'</td><td class="num">'+nz(r.orderQty)+'</td><td class="num">'+cost+'</td><td class="num">'+nz(r.venCaseQty)+'</td><td>'+link+'</td><td>'+esc(r.teamLabel)+'</td></tr>';
+      // Tool replacement notes ride directly under their line item, stacked.
+      r.notes.forEach(n=>{tr+='<tr class="noterow"><td colspan="7">&#128295; '+esc(n.name||'?')+esc(noteTag(n))+': '+esc(n.reason)+'</td></tr>';});
+      return tr;
+    }).join('')+'</tbody></table>';
+    return t;
+  }).join('');
+
+  const style='@page{size:letter landscape;margin:0.4in;}'+
+    '*{box-sizing:border-box;}'+
+    'body{font-family:-apple-system,Arial,sans-serif;color:#111;margin:0;padding:0 4px;}'+
+    'h1{font-size:20px;font-weight:800;margin:0 0 2px;}'+
+    '.sub{font-size:12px;color:#555;margin-bottom:16px;}'+
+    'table.vgroup{width:100%;table-layout:fixed;border-collapse:collapse;margin-bottom:22px;}'+
+    'tbody td{overflow-wrap:break-word;}'+
+    'table.vgroup.pagebreak{page-break-before:always;break-before:page;}'+
+    'th.vname{text-align:left;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid #000;padding:4px 6px 6px;}'+
+    'thead tr:nth-child(2) th{text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;color:#555;border-bottom:1px solid #999;padding:5px 6px;}'+
+    'tbody td{font-size:12px;padding:5px 6px;border-bottom:1px solid #eee;page-break-inside:avoid;break-inside:avoid;}'+
+    'tbody tr{page-break-inside:avoid;break-inside:avoid;}'+
+    'td.num{text-align:right;}'+
+    '.noterow td{font-size:10px;color:#555;font-style:italic;border-bottom:1px solid #eee;padding:2px 6px 6px 14px;}'+
+    'a{color:#1155cc;text-decoration:underline;}'+
+    '.nullval{color:#999;font-style:italic;}';
+
+  const w=window.open('','_blank');
+  if(!w){toast('Allow pop-ups to print');return;}
+  w.document.write('<html><head><title>GEO Weekly Reorder List</title><style>'+style+'</style></head><body>'+b+'<'+'script>window.onload=function(){window.print();}<'+'/script></body></html>');
+  w.document.close();
+}
+function goGrab(){grab=true;navKey=null;searchQ='';scr='grabnav';render();}
+
+// ── KRYPTON — under construction (the final add, 2026-07-24) ──────────────────
+// The button tap IS the audio-unlocking gesture: play()+pause() here unlocks
+// the element, so the resume at the artwork reveal is allowed without a fresh
+// gesture (iOS autoplay rules). "Coming Soon" for a moment, then the Delete
+// the Ceiling artwork with Query the Future playing.
+let kryptonPhase=0,kAudio=null;
+function goKrypton(){
+  kryptonPhase=1;scr='krypton';render();
+  try{new Image().src=CFG.krypton.image;}catch(e){} // preload during the flash — instant reveal
+  try{
+    if(!kAudio){kAudio=new Audio(CFG.krypton.audio);kAudio.loop=true;}
+    const pr=kAudio.play();
+    if(pr&&pr.then)pr.then(function(){kAudio.pause();kAudio.currentTime=0;}).catch(function(){});
+  }catch(e){}
+  setTimeout(function(){
+    if(scr!=='krypton')return;
+    kryptonPhase=2;render();
+    try{if(kAudio)kAudio.play().catch(function(){});}catch(e){}
+  },CFG.krypton.comingSoonMs||1600);
+}
+function leaveKrypton(){
+  try{if(kAudio){kAudio.pause();kAudio.currentTime=0;}}catch(e){}
+  kryptonPhase=0;scr='team';render();
+}
+function goAdmin(){grab=false;scr='admin';render();}
+function openFeedback(){fbOpen=true;render();setTimeout(()=>{const t=$('fbmsg');if(t)t.focus();},50);}
+function closeFeedback(){fbOpen=false;render();}
+function sendFeedback(){
+  const box=$('fbmsg');const msg=box?box.value.trim():'';
+  if(!msg){toast('Type a message first');return;}
+  if(!LEVELER_EMAIL){toast('Feedback email not set yet');return;}
+  const subject='[GEO Restock Feedback]';
+  const body=msg+'\n\n— — —\nTeam: '+(ti().label||'?')+'\nSent: '+new Date().toLocaleString();
+  window.location.href='mailto:'+LEVELER_EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  fbOpen=false;render();
+}
+// Tree navigation — one mechanism for every depth, locations and assemblies alike.
+function goTile(locationId){const n=nodeByLocId(locationId);if(!n){toast('Not in catalog yet');return;}navKey=n.key;scr='node';render();}
+function goNode(key){if(NODES[key]){navKey=key;scr='node';render();}}
+function isTileRoot(key){for(const tl of CFG.tiles){const n=nodeByLocId(tl.locationId);if(n&&n.key===key)return true;}return false;}
+function goReport(){scr='report';render();}
+function goWarehouse(){whQ='';scr='warehouse';render();}
+function goBack(){
+  if(scr==='krypton'){leaveKrypton();return;}
+  if(scr==='node'){
+    const n=NODES[navKey];
+    // Stop climbing at the tile roots — above them is plumbing (Trailer/Geo), not navigation.
+    if(n&&n.parentKey&&!isTileRoot(navKey)&&NODES[n.parentKey]){navKey=n.parentKey;}
+    else{navKey=null;scr=grab?'grabnav':'nav';}
+  }
+  else if(scr==='warehouse'){scr=grab?'grabnav':'nav';}
+  else if(scr==='grabnav'){grab=false;scr=team?'nav':'team';}
+  else if(scr==='shopreorder'){scr='admin';}
+  else if(scr==='admin'){scr=team?'nav':'team';}
+  else if(scr==='report'){scr='nav';}
+  render();
+}
+
+// usage popup — popup holds a PLACEMENT object, so min/max shown are the
+// tapped compartment's own numbers, not another placement's.
+function openPopup(id){const m=PMAP[id];popup=(m&&m.trailerObj)||m;popQty=Number(allUsage[id])||0;popFlag=(allUsage[id]===true||allUsage[id]==='true');render();}
+function openPopupAt(key,id){
+  const n=NODES[key];
+  popup=(n&&n.parts.find(o=>o.id===id))||PMAP[id];
+  popQty=Number(allUsage[id])||0;popFlag=(allUsage[id]===true||allUsage[id]==='true');render();
+}
+function closePopup(){
+  if(!popup)return;
+  const path=usagePath(popup); // PROVISIONAL Part-ID key — open question #1
+  if(popup.isEach){dbWrite(path,popQty>0?popQty:null);}
+  else{dbWrite(path,popFlag?true:null);}
+  popup=null;render();
+}
+function qAdj(d){popQty=Math.max(0,popQty+d);const i=$('qv');if(i)i.value=popQty;const m=$('qm');if(m)m.className='qty-btn qty-minus'+(popQty===0?' off':'');}
+function qInput(){popQty=Math.max(0,parseInt(($('qv')||{}).value)||0);}
+function toggleFlag(){popFlag=!popFlag;render();}
+
+// report detail (trailer/cases item) — two checkboxes
+function openRepDetail(id){repDetail=PMAP[id];repRecv=false;repBelow=!!shopFlags[id];render();}
+function editFromReport(id){repDetail=null;openPopup(id);}
+function toggleRecv(){repRecv=!repRecv;render();}
+function toggleBelow(){repBelow=!repBelow;render();}
+function puffSmoke(card){
+  const r=card.getBoundingClientRect();
+  const cx=r.left+r.width/2, cy=r.top+r.height/2, N=24;
+  for(let i=0;i<N;i++){
+    const el=document.createElement('div');
+    el.className='smoke-p';
+    const ang=(Math.PI*2*i/N)+(Math.random()*0.6-0.3);
+    const dist=90+Math.random()*140;
+    const dx=Math.cos(ang)*dist;
+    const dy=Math.sin(ang)*dist-(50+Math.random()*70);
+    el.style.left=cx+'px'; el.style.top=cy+'px';
+    el.style.setProperty('--dx',dx.toFixed(1)+'px');
+    el.style.setProperty('--dy',dy.toFixed(1)+'px');
+    el.style.setProperty('--s',(1.8+Math.random()*1.8).toFixed(2));
+    el.style.animationDelay=(Math.random()*0.08).toFixed(3)+'s';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),760);
+  }
+  const em=document.createElement('div');
+  em.className='poof-emoji'; em.textContent='🤘';
+  em.style.left=cx+'px'; em.style.top=cy+'px';
+  document.body.appendChild(em);
+  setTimeout(()=>em.remove(),800);
+}
+function commitRepDetail(){
+  const p=repDetail;if(!p)return;
+  // Tool flag (locked 2026-07-24): newly flagging a Tool requires the
+  // name+reason dialog before anything lands on the reorder list.
+  const toolNeeded=needsToolDialog(p,repBelow&&!shopFlags[p.id]);
+  const finish=()=>{
+    // THREE independent trailers, reset on different days (Mitch 2026-07-24):
+    // Received clears ONLY this team's demand. The others keep theirs until
+    // their own trailer resets — clearing all would fake satisfaction.
+    if(repRecv)dbWrite(ROOT+'/teams/'+team+'/usage/'+p.id,null);
+    if(!isTest()){if(repBelow){if(!toolNeeded)flagReorder(p);}else dbWrite(ROOT+'/shopReorder/'+p.id,null);} // set/clear below-min flag
+    repDetail=null;
+    toast(isTest()?'Test — not saved to reorder':(repRecv?'Restocked ✓':'Saved'));
+    render();
+    if(toolNeeded)openToolFlag(p);
+  };
+  const card=repRecv?document.querySelector('.overlay .popup'):null;
+  if(card){ puffSmoke(card); card.classList.add('puffing'); setTimeout(finish,420); }
+  else finish();
+}
+
+// warehouse detail — single RESTOCK checkbox
+function openWh(id){whDetail=PMAP[id];whRestock=!!shopFlags[id];render();}
+function toggleWhRestock(){whRestock=!whRestock;render();}
+function commitWh(){
+  const p=whDetail;if(!p)return;
+  // Newly flagging a Tool detours through the required name+reason dialog.
+  if(needsToolDialog(p,whRestock&&!shopFlags[p.id])){whDetail=null;openToolFlag(p);return;}
+  if(!isTest()){if(whRestock)flagReorder(p);else dbWrite(ROOT+'/shopReorder/'+p.id,null);}
+  whDetail=null;
+  toast(isTest()?'Test — not saved':(whRestock?'Flagged for reorder':'Cleared'));
+  render();
+}
+// Flagging an item writes to two separate sub-paths instead of overwriting the whole node:
+// /info holds the latest snapshot (name/shopMin/vendor/vendorPart/ts), /teams/{team}=true accumulates
+// every team that has flagged it, so a second team flagging the same item adds their name instead of
+// replacing the first team's. Unflagging (see callers above) still deletes the whole node — clearing
+// it removes it for everyone, by design (confirmed with Mitch: no per-team partial-clear).
+function shopInfo(p){return{ts:Date.now(),name:p.name,shopMin:(p.shopMin==null?null:p.shopMin),vendor:p.vendor||null,vendorPart:(p.vendorPart==null?null:p.vendorPart)};}
+function flagReorder(p){
+  dbWrite(ROOT+'/shopReorder/'+p.id+'/info', shopInfo(p));
+  if(team)dbWrite(ROOT+'/shopReorder/'+p.id+'/teams/'+team, true); // Part & Dart with no team picked: no team credited
+}
+
+// ── TOOL FLAG (locked 2026-07-24) ─────────────────────────────────────────────
+// Flagging a Tool for replacement is never silent: a required name+reason
+// dialog gates it. Notes ACCUMULATE under shopReorder/{id}/notes (push keys),
+// so two teams flagging the same tool never overwrite each other; Carson's
+// report stacks every note under the line item.
+let toolFlag=null; // part pending its replacement note
+function needsToolDialog(p,wantFlag){return !!(wantFlag&&p&&p.entryType==='Tool');} // test team sees the dialog too; commitToolFlag guards the writes
+function openToolFlag(p){toolFlag=p;render();setTimeout(()=>{const e=$('tfReason');if(e)e.focus();},60);}
+function cancelToolFlag(){toolFlag=null;toast('Not flagged');render();}
+// A note's identity tag: master users show their TYPE, everyone else their team.
+const noteTag=n=>n.userType==='master'?' (Master)':(n.team&&TEAMS[n.team]?' ('+TEAMS[n.team].label+')':'');
+function commitToolFlag(){
+  const p=toolFlag;if(!p)return;
+  const sel=$('tfName'),ms=$('tfMaster');
+  const selVal=(sel&&sel.value)||'';
+  let name,userType;
+  if(selVal==='__master'){
+    name=((ms&&ms.value)||'').trim();userType='master';
+    if(!name){toast('Pick which Master User');if(ms)ms.style.borderColor='#ef4444';return;}
+  }else{
+    name=selVal.trim();userType='crew';
+    if(!name){toast('Pick your name');if(sel)sel.style.borderColor='#ef4444';return;}
+  }
+  const reason=(($('tfReason')||{}).value||'').trim();
+  if(!reason){toast('Reason is required');const e=$('tfReason');if(e){e.style.borderColor='#ef4444';e.focus();}return;}
+  if(isTest()){toolFlag=null;toast('Test — not saved to reorder');render();return;} // full flow, zero pollution
+  if(p.entryType==='Assembly'){
+    // CONTAINER MODEL (locked): the assembly is a trigger, not a payload.
+    // Pin the container on the team's list; route ONLY the nonstock components
+    // to Carson as plain part lines — he never sees the word "assembly", and
+    // the tech's reason lives ONLY here on the container (deliberately
+    // opposite to Tools). Consumable components are hand-refilled, never ordered.
+    if(team)dbWrite(ROOT+'/teams/'+team+'/toolPins/'+p.id,{ts:Date.now(),name:name,userType:userType,reason:reason,kind:'assembly'});
+    let routed=0;
+    asmComponents(p.id).forEach(c=>{
+      if(c.stockType!=='Nonstock')return;
+      if(stamps[c.id])return; // Switch-2 guard, per component
+      const cp=PMAP[c.id]||c;
+      dbWrite(ROOT+'/shopReorder/'+c.id+'/info',shopInfo(cp));
+      dbWrite(ROOT+'/shopReorder/'+c.id+'/fromAssembly',true); // hidden marker: Clear stamps these
+      if(team){
+        dbWrite(ROOT+'/shopReorder/'+c.id+'/teams/'+team,true);
+        dbWrite(ROOT+'/shopReorder/'+c.id+'/asmQty/'+team,(c.compQty!=null?c.compQty:1)); // per-team qty, summed at read time
+      }
+      routed++;
+    });
+    toolFlag=null;
+    toast(routed?'Flagged — '+routed+' part'+(routed!==1?'s':'')+' routed to the weekly order':'Flagged — all parts hand-refillable');
+    render();return;
+  }
+  // SWITCH 1: pin to the flagging team's trailer restock list until Received.
+  // Teamless Part & Dart has no trailer list to pin — the flag is Carson-only.
+  if(team)dbWrite(ROOT+'/teams/'+team+'/toolPins/'+p.id,{ts:Date.now(),name:name,userType:userType,reason:reason});
+  // SWITCH 2 guard: a stamped item is already on order this cycle — it must
+  // NEVER ride a second weekly reorder until Received re-arms it.
+  if(!stamps[p.id]){
+    flagReorder(p);
+    const key=DB.ref(ROOT+'/shopReorder/'+p.id+'/notes').push().key;
+    dbWrite(ROOT+'/shopReorder/'+p.id+'/notes/'+key,{team:team||null,name:name,userType:userType,reason:reason,ts:Date.now()});
+    toolFlag=null;toast('Flagged for replacement');render();
+  }else{
+    toolFlag=null;toast('Already on order — pinned to your restock list');render();
+  }
+}
+// Distinct components of an assembly (deduped across its placements).
+function asmComponents(asmId){
+  const seen={},out=[];
+  OBJS.forEach(o=>{
+    if(o.compQty==null)return;
+    const last=o.path[o.path.length-1];
+    if(last&&last['Step Type']==='Assembly'&&last['Node ID']===asmId&&!seen[o.id]){seen[o.id]=1;out.push(o);}
+  });
+  return out;
+}
+// ── SWITCH 1: pinned tools/assemblies on the team's trailer restock list ──────
+function pinList(){
+  const t=team&&allTeams[team];const o=(t&&t.toolPins)||{};
+  return Object.keys(o).map(id=>Object.assign({id:Number(id)},o[id])).sort((a,b)=>(a.ts||0)-(b.ts||0));
+}
+function openPinDetail(id){pinDetail=pinList().find(x=>x.id===id)||null;pinRecv=false;render();}
+function commitPinDetail(){
+  const pin=pinDetail;if(!pin)return;
+  if(pinRecv){
+    // Received ends the FULL cycle: clears the pin (Switch 1) AND the stamp(s)
+    // (Switch 2, re-break rule) — re-armed for exactly one future reorder.
+    // Containers clear their nonstock components' stamps; the assembly ID
+    // itself never carried one.
+    dbWrite(ROOT+'/teams/'+team+'/toolPins/'+pin.id,null);
+    if(pin.kind==='assembly'){
+      asmComponents(pin.id).forEach(c=>{if(c.stockType==='Nonstock'&&stamps[c.id])dbWrite(ROOT+'/reorderStamps/'+c.id,null);});
+    }else{
+      dbWrite(ROOT+'/reorderStamps/'+pin.id,null);
+    }
+    toast('Received ✓');
+  }
+  pinDetail=null;render();
+}
+// Hand-refill check-off inside the container: documents the bin + timestamp.
+// NO inventory decrement — ever (Mitch dropped that idea; onesie-twosies).
+function toggleStocked(asmId,compId){
+  const pin=pinDetail;if(!pin||!team)return;
+  const cur=(pin.stocked||{})[compId];
+  const cp=PMAP[compId];
+  const val=cur?null:{ts:Date.now(),bin:(cp&&cp.trailerObj?nodeName(cp.trailerObj):'warehouse shelf')};
+  dbWrite(ROOT+'/teams/'+team+'/toolPins/'+asmId+'/stocked/'+compId,val);
+  pin.stocked=pin.stocked||{};if(val)pin.stocked[compId]=val;else delete pin.stocked[compId];
+  render();
+}
+function renderAsmContainer(pin,p){
+  const comps=asmComponents(pin.id);
+  const cons=comps.filter(c=>c.stockType!=='Nonstock');
+  const nons=comps.filter(c=>c.stockType==='Nonstock');
+  const stocked=pin.stocked||{};
+  return`<div class="overlay" onclick="if(event.target===this){pinDetail=null;render();}"><div class="popup">
+    ${imgBlock(p)}
+    <div class="pop-name">🔩 ${h(p.name)}</div>
+    <div class="pop-meta">${h(pin.name||'?')}: ${h(pin.reason||'')}</div>
+    ${cons.length?`<div class="asm-sec asm-sec-green">REFILL FROM THE TRAILER</div>
+      ${cons.map(c=>{const done=stocked[c.id];const cp=PMAP[c.id];const bin=cp&&cp.trailerObj?nodeName(cp.trailerObj):'warehouse shelf';
+        return`<button class="asm-row${done?' done':''}" onclick="toggleStocked(${pin.id},${c.id})">
+          <div style="flex:1;min-width:0;"><div class="ar-name">${h(c.name)}</div>
+          <div class="ar-meta">${h(fmtQ(c.compQty!=null?c.compQty:1))}× · bin: ${h(bin)}${done?' · ✓ stocked':''}</div></div>
+          <div class="box" style="${done?'background:#22c55e;border-color:#22c55e;':''}">${done?'✓':''}</div>
+        </button>`;}).join('')}`:''}
+    ${nons.length?`<div class="asm-sec asm-sec-amber">ON ORDER — CAN'T HAND-REFILL</div>
+      ${nons.map(c=>`<div class="asm-row static">
+        <div style="flex:1;min-width:0;"><div class="ar-name">${h(c.name)}</div>
+        <div class="ar-meta">${h(fmtQ(c.compQty!=null?c.compQty:1))}× · ${stamps[c.id]?'🧾 ordered '+h(stamps[c.id]):'⏳ waiting on weekly order'}</div></div>
+      </div>`).join('')}`:''}
+    <div class="chk big${pinRecv?' on':''}" onclick="pinRecv=!pinRecv;render();" style="margin-top:14px;">
+      <div class="chk-top"><div class="box">${pinRecv?'✓':''}</div><div class="lbl">Received — assembly whole again<small>Ends the cycle: clears this reminder and re-arms future reorders</small></div></div>
+    </div>
+    <button class="btn blue" onclick="commitPinDetail()">Done</button>
+  </div></div>`;
+}
+function renderPinDetail(){
+  const pin=pinDetail;const p=PMAP[pin.id]||{name:'Part '+pin.id};
+  if(pin.kind==='assembly')return renderAsmContainer(pin,p);
+  return`<div class="overlay" onclick="if(event.target===this){pinDetail=null;render();}"><div class="popup">
+    ${imgBlock(p)}
+    <div class="pop-name">${p.entryType==='Assembly'?'🔩 ':'🛠️ '}${h(p.name)}</div>
+    <div class="pop-meta">${h(pin.name||'?')}: ${h(pin.reason||'')}</div>
+    <div class="pop-meta">${stamps[pin.id]?'🧾 Ordered <span class="hl">'+h(stamps[pin.id])+'</span>':'⏳ Not yet on a weekly order'}</div>
+    <div class="chk big${pinRecv?' on':''}" onclick="pinRecv=!pinRecv;render();">
+      <div class="chk-top"><div class="box">${pinRecv?'✓':''}</div><div class="lbl">Received — back on the trailer<small>Ends the cycle: clears this reminder and re-arms future reorders</small></div></div>
+    </div>
+    <button class="btn blue" onclick="commitPinDetail()">Done</button>
+  </div></div>`;
+}
+function toolCrewList(){
+  // Team known → that team's crew only. Teamless (Part & Dart entered without a
+  // team) → the whole roster, since the app genuinely can't narrow it.
+  if(team&&CFG.crew&&CFG.crew[team])return (CFG.crew[team].members||[]).slice();
+  const all=[];
+  Object.keys(CFG.crew||{}).forEach(t=>{
+    if(t==='test')return;
+    (CFG.crew[t].members||[]).forEach(n=>{if(all.indexOf(n)<0)all.push(n);});
+  });
+  return all;
+}
+function renderToolFlag(){
+  const p=toolFlag;
+  const crew=toolCrewList();
+  // Closed-world picker (Mitch, go night): crew + "Master User" only — no
+  // free text. Master User reveals a second pick: the two masters from config.
+  // A name is REQUIRED; identity is the entire point of this dialog.
+  const reveal="const m=$('tfMasterWrap');if(m)m.style.display=(this.value==='__master')?'block':'none'";
+  const selStyle='width:100%;padding:13px 14px;background:#0f172a;border:1px solid #2a3a5c;border-radius:10px;color:#e2e8f0;font-size:16px;margin-bottom:10px;';
+  const picker=`<select id="tfName" onchange="${reveal}" style="${selStyle}">
+        <option value="">Select your name…</option>${crew.map(n=>`<option>${h(n)}</option>`).join('')}<option value="__master">Master User</option>
+      </select>
+      <div id="tfMasterWrap" style="display:none;">
+        <div class="pop-lbl">Which Master User?</div>
+        <select id="tfMaster" style="${selStyle}">
+          <option value="">Select…</option>${(CFG.masterUsers||[]).map(n=>`<option>${h(n)}</option>`).join('')}
+        </select>
+      </div>`;
+  return`<div class="overlay"><div class="popup">
+    ${imgBlock(p)}
+    <div class="pop-name">${h(p.name)}</div>
+    <div class="pop-meta">${p.entryType==='Assembly'?'🔩 Assembly':'🛠️ Tool'} · <span class="hl">replacement needs a reason</span></div>
+    <div class="pop-lbl">Who's flagging it?</div>
+    ${picker}
+    <div class="pop-lbl">What happened? <span style="color:#ef4444;">(required)</span></div>
+    <textarea id="tfReason" placeholder="lost, broken, walked off the job…" style="width:100%;min-height:74px;box-sizing:border-box;background:#0f172a;border:1px solid #2a3a5c;border-radius:10px;color:#e2e8f0;font-size:15px;font-family:inherit;padding:12px;margin-bottom:14px;"></textarea>
+    <button class="btn blue" onclick="commitToolFlag()">Flag for Replacement</button>
+    <button class="btn ghost" style="margin-top:8px;" onclick="cancelToolFlag()">Cancel</button>
+  </div></div>`;
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────────────
+function render(){const _t=ti();const _r=document.documentElement.style;_r.setProperty('--team-hdr-bg',_t.bg);_r.setProperty('--team-hdr-border',_t.border);$('app').innerHTML=buildHTML();updSync();}
+
+function buildHTML(){
+  const t=ti();
+  // LOGIN — gates the entire app; nothing below this ever renders until signed in
+  if(scr==='login')return`
+    <div class="team-screen">
+      <img src="Logo.png" alt="" class="team-logo" onerror="this.style.display='none'">
+      <div style="font-size:30px;font-weight:800;color:#e2e8f0;margin-bottom:6px;">GEO Restock</div>
+      <div style="font-size:15px;color:#7a8fb5;margin-bottom:26px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;">Sign In</div>
+      <div style="width:100%;max-width:340px;">
+        <div id="loginErrMsg" style="display:none;background:#3a1520;border:1px solid #6e2233;color:#fca5a5;font-size:13px;font-weight:600;padding:10px 14px;border-radius:10px;margin-bottom:14px;text-align:center;"></div>
+        <input type="email" id="loginEmail" placeholder="Email" autocomplete="username" autocorrect="off" autocapitalize="off" spellcheck="false" style="margin-bottom:10px;" onkeydown="if(event.key==='Enter'){event.preventDefault();$('loginPassword').focus();}">
+        <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password" style="margin-bottom:16px;" onkeydown="if(event.key==='Enter'){event.preventDefault();doLogin();}">
+        <button id="loginBtn" class="btn blue" onclick="doLogin()">Sign In</button>
+      </div>
+    </div>`;
+
+  if(scr==='loading')return`<div style="height:100vh;display:flex;align-items:center;justify-content:center;color:#4a5a7a;font-size:16px;">Loading…</div>`;
+
+  // KRYPTON — quick "Coming Soon" flash, then the portrait artwork full and
+  // proud with the song playing. The home tile already says coming soon.
+  if(scr==='krypton'){
+    if(kryptonPhase===1)return`<div style="height:100vh;display:flex;align-items:center;justify-content:center;background:#000;">
+      <div class="krypton-coming">🚧 Coming Soon 🚧</div></div>`;
+    return`<div style="height:100vh;position:relative;background:#000 url('${h(CFG.krypton.image)}') center/cover no-repeat;">
+      <button class="back" onclick="leaveKrypton()" style="position:absolute;top:max(12px,env(safe-area-inset-top));left:12px;z-index:2;font-size:36px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.85);">‹</button>
+    </div>`;
+  }
+
+  // TEAM SELECT — the home screen. No logo image (Mitch cleared it 2026-07-24);
+  // the prominent "GEO Restock 2.0" wordmark is the new top of the app.
+  if(scr==='team')return`
+    <div class="team-screen">
+      <div style="font-size:44px;font-weight:900;color:#e2e8f0;margin-bottom:8px;letter-spacing:.01em;text-align:center;line-height:1.05;">GEO Restock 2.0</div>
+      <div style="font-size:15px;color:#7a8fb5;margin-bottom:26px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;">Select Your Team</div>
+      <div class="team-grid">
+        ${Object.entries(TEAMS).filter(([id,tm])=>!tm.hidden).map(([id,tm])=>`
+          <button class="team-card" onclick="${tm.underConstruction?'goKrypton()':`selectTeam('${id}')`}" style="background:${tm.bg};border:2px solid ${tm.border};">
+            <div class="team-card-icon">${tm.icon}</div>
+            <div><div class="team-card-label" style="color:${tm.color};">${tm.label}</div>
+            <div class="team-card-sub" style="color:${tm.color};">${tm.underConstruction?'coming soon':'tap to enter'}</div></div>
+          </button>`).join('')}
+        <button class="team-card" onclick="goGrab()" style="background:linear-gradient(135deg,#a51d1d,#6e1414);border:2px solid #d94b4b;">
+          <div class="team-card-icon">⏱️</div>
+          <div><div class="team-card-label" style="color:#ffffff;">Part &amp; Dart 🎯</div>
+          <div class="team-card-sub" style="color:#f3c4c4;">pull from the shelf</div></div>
+        </button>
+      </div>
+    </div>`;
+
+  // NAV
+  if(scr==='nav'){
+    const rep=loggedParts().length+pinList().length;
+    const shopN=Object.keys(shopFlags||{}).length;
+    return`
+    <div class="hdr"><div class="hdr-row" style="position:relative;">
+      <div class="hdr-title" style="flex:1;min-width:0;">GEO Restock</div>
+      <div style="position:absolute;left:50%;transform:translateX(-50%);font-size:19px;font-weight:800;color:${t.color};white-space:nowrap;pointer-events:none;">${t.icon} ${t.label}</div>
+      <button class="btn ghost sm" onclick="goHome()" style="flex-shrink:0;white-space:nowrap;">🏠 Home</button>
+      ${sdot()}
+    </div></div>
+    <div class="scroll"><div style="padding:16px 20px 4px;">
+      ${CFG.tiles.map(tl=>{
+        const n=nodeByLocId(tl.locationId);
+        const used=n?uniqLogged(subtreeParts(n)):0;
+        return`<button class="nav-card" onclick="goTile(${tl.locationId})" style="background:${tl.bg};border:1px solid ${tl.border};">
+        <div style="font-size:28px;flex-shrink:0;">${tl.icon}</div>
+        <div><div class="nav-card-title">${h(tl.label)}</div><div class="nav-card-sub">${used>0?used+' items logged':'Nothing logged yet'}</div></div>
+      </button>`;}).join('')}
+      <div class="search-wrap" style="padding:0 0 12px;">
+        <div class="search-input-wrap">
+          <input type="text" id="sq" value="${h(searchQ)}" placeholder="Search Trailer Parts" autocomplete="off" autocorrect="off" spellcheck="false" oninput="updateSearch(this.value)">
+          <button id="sqc" class="srch-clr" onclick="clearSearch()" style="display:${searchQ?'flex':'none'};">✕</button>
+        </div>
+      </div>
+      <div id="sr">${buildSearchResults(searchQ)}</div>
+      ${rep>0?`<button class="nav-card" onclick="goReport()" style="background:#14301c;border:1px solid #22482e;">
+        <div style="font-size:28px;flex-shrink:0;">📋</div>
+        <div><div class="nav-card-title">Trailer Restock Report</div><div class="nav-card-sub">${rep} item${rep!==1?'s':''} to restock</div></div>
+      </button>`:''}
+      <button class="nav-card" onclick="goWarehouse()" style="background:#241a33;border:1px solid #3a2a4c;">
+        <div style="font-size:28px;flex-shrink:0;">🏢</div>
+        <div><div class="nav-card-title">Warehouse Stock</div><div class="nav-card-sub">${warehouseParts().length} shop-only items</div></div>
+      </button>
+      <button class="nav-card" onclick="openFeedback()" style="background:#0f2733;border:1px solid #1e4457;">
+        <div style="font-size:28px;flex-shrink:0;">✉️</div>
+        <div><div class="nav-card-title">Feedback for Leveler Mitch</div><div class="nav-card-sub">Something off? Send a message</div></div>
+      </button>
+      <div style="height:20px;"></div>
+    </div></div>
+    ${fbOpen?renderFeedback():''}
+    ${popup?renderPopup():''}`;
+  }
+
+  // GRAB SHIT & GO — landing
+  if(scr==='grabnav'){
+    return`
+    <div class="hdr"><div class="hdr-row">
+      <button class="back" onclick="goBack()">‹</button>
+      <div style="flex:1;min-width:0;"><div class="hdr-title">🎯 Part &amp; Dart</div><div class="hdr-sub" style="color:${t.color};">${t.icon} ${t.label} · flag below-minimums</div></div>
+      ${sdot()}
+    </div></div>
+    <div class="scroll"><div style="padding:16px 20px 4px;">
+      <div style="font-size:11px;color:#4a5a7a;line-height:1.5;margin-bottom:12px;">Grabbing parts off the shelf? Find the item and flag it if you just dropped it below its shop minimum — that adds it to the weekly reorder list.</div>
+      ${CFG.tiles.map(tl=>`<button class="nav-card" onclick="goTile(${tl.locationId})" style="background:${tl.bg};border:1px solid ${tl.border};">
+        <div style="font-size:28px;flex-shrink:0;">${tl.icon}</div>
+        <div><div class="nav-card-title">${h(tl.label)}</div><div class="nav-card-sub">Browse &amp; flag below-minimum</div></div>
+      </button>`).join('')}
+      <button class="nav-card" onclick="goWarehouse()" style="background:#241a33;border:1px solid #3a2a4c;">
+        <div style="font-size:28px;flex-shrink:0;">🏢</div>
+        <div><div class="nav-card-title">Warehouse Items</div><div class="nav-card-sub">${warehouseParts().length} shop-only items</div></div>
+      </button>
+      <div class="search-wrap" style="padding:0 0 12px;">
+        <div class="search-input-wrap">
+          <input type="text" id="sq" value="${h(searchQ)}" placeholder="Search parts" autocomplete="off" autocorrect="off" spellcheck="false" oninput="updateSearch(this.value)">
+          <button id="sqc" class="srch-clr" onclick="clearSearch()" style="display:${searchQ?'flex':'none'};">✕</button>
+        </div>
+      </div>
+      <div id="sr">${buildSearchResults(searchQ)}</div>
+      <button class="nav-card" onclick="openFeedback()" style="background:#0f2733;border:1px solid #1e4457;">
+        <div style="font-size:28px;flex-shrink:0;">✉️</div>
+        <div><div class="nav-card-title">Feedback for Leveler Mitch</div><div class="nav-card-sub">Something off? Send a message</div></div>
+      </button>
+      <div style="height:20px;"></div>
+    </div></div>
+    ${fbOpen?renderFeedback():''}
+    ${whDetail?renderWhDetail():''}${toolFlag?renderToolFlag():''}`;
+  }
+
+  // ADMIN — Mitch's room
+  if(scr==='admin'){
+    const shopN=Object.keys(shopFlags||{}).length;
+    return`
+    <div class="hdr"><div class="hdr-row">
+      <button class="back" onclick="goBack()">‹</button>
+      <div style="flex:1;min-width:0;"><div class="hdr-title">⛔ Admin</div></div>
+      ${sdot()}
+    </div></div>
+    <div class="scroll"><div style="padding:20px;">
+      <div style="text-align:center;font-size:22px;font-weight:900;color:#fbbf24;letter-spacing:.5px;margin:6px 0 4px;">Mitch's Room</div>
+      <div style="text-align:center;font-size:13px;font-weight:700;color:#b45309;margin-bottom:22px;">— STAY OUT !! —</div>
+      <button class="nav-card" onclick="goShopReorder()" style="background:#2a1a33;border:1px solid #4a2a5c;">
+        <div style="font-size:28px;flex-shrink:0;">🧾</div>
+        <div><div class="nav-card-title">Weekly Reorder List</div><div class="nav-card-sub">${shopN>0?shopN+' item'+(shopN!==1?'s':'')+' flagged':'Nothing flagged yet'}</div></div>
+      </button>
+      <div style="text-align:center;margin-top:20px;">
+        <button class="btn" onclick="clearShopReorder()" style="width:auto;display:inline-block;padding:10px 20px;font-size:13px;font-weight:700;background:#3a1520;border:1px solid #6e2233;color:#fca5a5;">🗑 Reset Weekly Reorder List</button>
+      </div>
+      <div style="height:20px;"></div>
+    </div></div>`;
+  }
+
+  // NODE — one screen for every tree depth. Child locations AND assemblies render
+  // as tiles (same interaction — locked §6.4); parts placed here render as rows.
+  if(scr==='node'){
+    const n=NODES[navKey];
+    if(!n){navKey=null;scr=grab?'grabnav':'nav';return buildHTML();}
+    const isAsm=n.step['Step Type']==='Assembly';
+    const kids=n.children.map(k=>NODES[k]);
+    // An assembly is both a placed part row and an expandable child node — show
+    // it once, as the tile (the locked interaction), not twice.
+    const items=n.parts.filter(o=>!(o.entryType==='Assembly'&&NODES[n.key+'/A'+o.id]));
+    const tl=tileFor(items[0]||subtreeParts(n)[0]||n.parts[0]);
+    const srcLabel=(grab?'🎯 Part & Dart · ':'')+(tl?tl.icon+' '+tl.label:'');
+    return`
+      <div class="hdr"><div class="hdr-row">
+        <button class="back" onclick="goBack()">‹</button>
+        <div style="flex:1;min-width:0;"><div class="hdr-title">${isAsm?'🔩 ':''}${h(n.step['Node Name'])}</div><div class="hdr-sub">${srcLabel} · <span style="color:${t.color};">${t.icon} Team ${t.label}</span></div></div>
+        ${items.length?`<button class="icon-btn" onclick="toggleView()" title="Toggle view">${viewIcon()}</button>`:''}
+        ${sdot()}
+      </div></div>
+      <div class="scroll" style="position:relative;">
+        ${isAsm?`<div style="margin:14px 14px 0;background:#1d1a0e;border:1px solid #4a3a10;border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
+          <div style="flex:1;min-width:0;">
+            <div style="font-size:14px;font-weight:700;color:#e2e8f0;">🔩 This whole assembly</div>
+            <div style="font-size:11px;color:#7a8fb5;margin-top:2px;">Broken or lost as a unit? Flag it — components stay untouched</div>
+          </div>
+          <button class="btn blue sm" style="flex-shrink:0;" onclick="openToolFlag(PMAP[${n.step['Node ID']}])">Broken / Lost</button>
+        </div>`:''}
+        ${kids.length?`<div class="cat-grid">${kids.map(c=>{
+          const cIsAsm=c.step['Step Type']==='Assembly';
+          const cp=cIsAsm?c.parts:subtreeParts(c);
+          const used=uniqLogged(cp);
+          return`<button class="cat-tile${used>0?' has-use':''}" onclick="goNode('${c.key}')">
+            <div class="ct-name">${cIsAsm?'🔩 ':''}${h(c.step['Node Name'])}</div><div class="ct-count">${cp.length} ${cIsAsm?'components':'items'}</div>
+            <div class="ct-used">${used>0?used+' logged':''}</div></button>`;
+        }).join('')}</div>`:''}
+        ${viewMode==='grid'&&items.length
+          ? `<div class="wh-grid">`+items.map(o=>{
+              const flagged=grab?!!shopFlags[o.id]:isLogged(o);
+              const img=`<img src="${h(o.img)}" alt="" onerror="imgFail(this)">`;
+              const badge=grab?(shopFlags[o.id]?`<span class="wh-tile-badge">🧾</span>`:'')
+                             :(isLogged(o)?(o.isEach?`<span class="wh-tile-badge">-${allUsage[o.id]}</span>`:`<span class="wh-tile-badge">↻</span>`):'');
+              return`<button class="wh-tile${flagged?' flagged':''}" onclick="${grab?`openWh(${o.id})`:`openPopupAt('${n.key}',${o.id})`}">
+                <div class="wh-thumb">${img}</div>
+                <div class="wh-tile-name">${h(o.name)}</div>
+                ${badge}
+              </button>`;
+            }).join('')+`</div>`
+          : items.map(o=>{
+          const flagged=grab?!!shopFlags[o.id]:isLogged(o);
+          let right=grab?(shopFlags[o.id]?`<span class="badge flag">🧾</span>`:'')
+                        :(isLogged(o)?(o.isEach?`<span class="badge">-${allUsage[o.id]}</span>`:`<span class="badge flag">↻ ${h(fmtQ(o.refillTo))}</span>`):'');
+          const meta=o.compQty!=null?`${h(fmtQ(o.compQty))}× in this assembly`
+            :grab?`Shop min: ${PMAP[o.id]&&PMAP[o.id].shopMin!=null?h(fmtQ(PMAP[o.id].shopMin)):'—'}`
+            :(o.isEach?`Max: ${h(fmtQ(o.stockMax))}${o.stockMin!=null?' · Min: '+h(fmtQ(o.stockMin)):''}`:`Refill to: ${h(fmtQ(o.refillTo))}`);
+          return`<button class="item-row${flagged?' used':''}" onclick="${grab?`openWh(${o.id})`:`openPopupAt('${n.key}',${o.id})`}">
+            <div style="flex:1;min-width:0;">
+              <div class="item-name" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${h(o.name)}</div>
+              <div class="item-meta">${meta}</div></div>
+            <div style="display:flex;align-items:center;gap:4px;flex-shrink:0;margin-left:8px;">${right}<span class="chevron">›</span></div>
+          </button>`;
+        }).join('')}
+        <div style="height:20px;"></div>
+      </div>${popup?renderPopup():''}${whDetail?renderWhDetail():''}${toolFlag?renderToolFlag():''}`;
+  }
+
+  // REPORT
+  if(scr==='report'){
+    const up=loggedParts();
+    const pins=pinList();
+    return`
+      <div class="hdr"><div class="hdr-row">
+        <button class="back" onclick="goBack()">‹</button>
+        <div style="flex:1;"><div class="hdr-title">Restock Report</div>
+        <div class="hdr-sub"><span style="color:${t.color};">${t.icon} Team ${t.label}</span>${up.length>0?' · '+up.length+' item'+(up.length!==1?'s':'')+' needed':''}</div></div>
+        ${sdot()}
+      </div></div>
+      <div class="scroll">
+        ${pins.length?`<div class="sec-hdr" style="color:#fbbf24;">🛠 Owed to the trailer — until Received</div>
+          ${pins.map(pin=>{const p=PMAP[pin.id]||{name:'Part '+pin.id};
+            return`<button class="rep-row" onclick="openPinDetail(${pin.id})" style="background:#1d1a0e;">
+              <div style="flex:1;min-width:0;">
+                <div style="font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${p.entryType==='Assembly'?'🔩':'🛠'} ${h(p.name)}</div>
+                <div style="font-size:11px;color:#4a5a7a;margin-top:2px;">${h(pin.name||'?')}: ${h(pin.reason||'')}${stamps[pin.id]?' · 🧾 ordered '+h(stamps[pin.id]):''}</div>
+              </div><span class="chevron">›</span></button>`;}).join('')}`:''}
+        ${up.length===0&&pins.length===0?`<div style="padding:56px 24px;text-align:center;">
+            <div style="font-size:48px;margin-bottom:14px;">🎉</div>
+            <div style="font-size:17px;font-weight:700;color:#22c55e;margin-bottom:8px;">All caught up!</div>
+            <div style="font-size:13px;color:#4a5a7a;line-height:1.6;">Nothing needs restocking for Team ${h(t.label)} right now.</div></div>`:
+          loggedGroups().map(cat=>`
+            <div class="sec-hdr">${h(cat)}</div>
+            ${up.filter(p=>repGroup(p)===cat).map(p=>{
+              // Read-time rollup: one summed number, every contributing team named.
+              const a=aggUsage(p.id);
+              const target=p.isEach?('Qty '+a.total):('Refill '+h(fmtQ(p.refillTo)));
+              const tl=tileFor(p.trailerObj||p);
+              return`<button class="rep-row" onclick="openRepDetail(${p.id})">
+                <div style="flex:1;min-width:0;">
+                  <div style="font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${h(p.name)}</div>
+                  <div style="font-size:11px;color:#4a5a7a;margin-top:2px;">${tl?tl.icon+' '+h(tl.label):'📦 Warehouse'} · <span style="color:#7a8fb5;font-weight:600;">${h(a.teams.join(', '))}</span></div>
+                </div>
+                <div style="text-align:right;margin-left:8px;flex-shrink:0;display:flex;align-items:center;gap:6px;">
+                  <span style="font-size:15px;font-weight:700;color:${p.isEach?'#ef4444':'#38bdf8'};">${target}</span>
+                  <span class="chevron">›</span>
+                </div></button>`;
+            }).join('')}`).join('')}
+        <div style="height:20px;"></div>
+      </div>${repDetail?renderRepDetail():''}${pinDetail?renderPinDetail():''}${popup?renderPopup():''}${toolFlag?renderToolFlag():''}`;
+  }
+
+  // WEEKLY REORDER LIST (Test-only admin)
+  if(scr==='shopreorder'){
+    // Single shared dataset for screen/print/CSV — reorderRows() joins shopFlags + live catalog
+    // (Order Qty / VEN Case QTY / VEN URL always come from the current catalog, see reorderRows()).
+    const rows=reorderRows();
+    return`
+      <div class="hdr"><div class="hdr-row">
+        <button class="back" onclick="goBack()">‹</button>
+        <div style="flex:1;"><div class="hdr-title">Weekly Reorder List</div>
+        <div class="hdr-sub"><span style="color:${t.color};">${t.icon} ${t.label}</span>${rows.length>0?' · '+rows.length+' item'+(rows.length!==1?'s':''):''}</div></div>
+        ${sdot()}
+      </div></div>
+      <div class="scroll"><div style="padding:14px 18px;">
+        <div style="font-size:11px;color:#4a5a7a;line-height:1.5;margin-bottom:12px;">Shop-wide reorder flags, raised by any team when an item drops below its shop minimum. Clear this after the weekly order is placed.</div>
+        ${rows.length===0?`<div style="padding:48px 24px;text-align:center;">
+            <div style="font-size:44px;margin-bottom:12px;">✅</div>
+            <div style="font-size:16px;font-weight:700;color:#22c55e;margin-bottom:6px;">List is empty</div>
+            <div style="font-size:13px;color:#4a5a7a;">Nothing is flagged for reorder right now.</div></div>`:
+          rows.map(r=>`<div class="rep-row" style="cursor:default;">
+              <div style="flex:1;min-width:0;">
+                <div style="font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${(r.notes.length||r.asmSum)?'<span style="color:#fbbf24;">'+(r.notes.length||r.asmSum)+' ×</span> ':''}${h(r.name||('Part '+r.id))}</div>
+                <div style="font-size:11px;color:#4a5a7a;margin-top:2px;">${r.vendor?h(String(r.vendor))+' · ':''}Shop min: ${(r.shopMin==null||r.shopMin==='')?'—':h(String(r.shopMin))}${r.venCaseQty?' · '+h(String(r.venCaseQty)):''}${r.teamLabel?' · by '+h(r.teamLabel):''}</div>
+                ${r.notes.length?r.notes.map(n=>`<div style="font-size:11px;color:#94a3b8;margin-top:3px;">🛠 <b>${h(n.name||'?')}</b>${h(noteTag(n))}: ${h(n.reason)}</div>`).join(''):''}
+              </div>
+              ${r.venUrl?`<a href="${h(r.venUrl)}" target="_blank" rel="noopener" style="flex-shrink:0;margin-left:8px;font-size:11px;font-weight:700;color:#38bdf8;text-decoration:none;white-space:nowrap;" onclick="event.stopPropagation()">🔗 Web Link</a>`:''}
+            </div>`).join('')}
+        ${rows.length>0?`<div style="display:flex;gap:10px;margin-top:24px;">
+            <button class="btn ghost" onclick="printReorder()" style="flex:1;padding:11px;font-size:13px;font-weight:700;">🖨 Print</button>
+            <button class="btn ghost" onclick="exportReorderCSV()" style="flex:1;padding:11px;font-size:13px;font-weight:700;">⬇ Export CSV</button>
+          </div>`:''}
+        <div style="height:20px;"></div>
+      </div></div>`;
+  }
+
+  // WAREHOUSE
+  if(scr==='warehouse'){
+    return`
+      <div class="hdr"><div class="hdr-row">
+        <button class="back" onclick="goBack()">‹</button>
+        <div style="flex:1;min-width:0;"><div class="hdr-title">🏢 Warehouse ${grab?'Items':'Stock'}</div><div class="hdr-sub" style="color:${t.color};">${t.icon} Team ${t.label}</div></div>
+        <button class="icon-btn" onclick="toggleView()" title="Toggle view">${viewIcon()}</button>
+        ${sdot()}
+      </div></div>
+      <div class="scroll">
+        <div class="wh-count"><b>${warehouseParts().length}</b> non-trailer shop items</div>
+        <div class="search-wrap">
+          <div class="search-input-wrap">
+            <input type="text" id="whq" value="${h(whQ)}" placeholder="Search warehouse items…" autocomplete="off" autocorrect="off" spellcheck="false" oninput="updateWh(this.value)">
+            <button id="whc" class="srch-clr" onclick="clearWh()" style="display:${whQ?'flex':'none'};">✕</button>
+          </div>
+        </div>
+        <div id="whr">${buildWhResults(whQ)}</div>
+        <div style="height:20px;"></div>
+      </div>${whDetail?renderWhDetail():''}${toolFlag?renderToolFlag():''}`;
+  }
+  return'';
+}
+
+// ── POPUP (usage) ─────────────────────────────────────────────────────────────
+function toolFromPopup(){const p=popup;popup=null;openToolFlag(PMAP[p.id]||p);}
+function renderPopup(){
+  const p=popup;
+  // Tools have no usage semantics (behavior by kind, §7.3): the team-side tap
+  // goes straight to Broken/Lost → identity dialog → Carson's report with the
+  // who and the why. Same gate as Part & Dart, identical for every team.
+  if(p.entryType==='Tool')return`<div class="overlay" onclick="if(event.target===this){popup=null;render();}"><div class="popup">
+    ${imgBlock(p)}
+    <div class="pop-name">${h(p.name)}</div>
+    <div class="pop-meta">🛠️ Tool · flag it if it needs replacing</div>
+    <button class="btn blue" onclick="toolFromPopup()">Broken / Lost</button>
+    <button class="btn ghost" style="margin-top:8px;" onclick="popup=null;render();">Cancel</button>
+  </div></div>`;
+  return`<div class="overlay" onclick="if(event.target===this)closePopup()"><div class="popup">
+    ${imgBlock(p)}
+    <div class="pop-name">${h(p.name)}</div>
+    ${p.compQty!=null?`<div class="pop-meta">🔩 <span class="hl">${h(fmtQ(p.compQty))}×</span> in this assembly</div>`:''}
+    ${p.isEach
+      ?`<div class="pop-meta">Max: <span class="hl">${h(fmtQ(p.stockMax))}</span>${p.stockMin!=null?' · Min: <span class="hl">'+h(fmtQ(p.stockMin))+'</span>':''}</div>
+        <div class="pop-lbl">Team usage:</div>
+        <div class="qty-row">
+          <button id="qm" class="qty-btn qty-minus${popQty===0?' off':''}" onclick="qAdj(-1)">−</button>
+          <input id="qv" class="qty-input" type="number" value="${popQty}" min="0" onchange="qInput()">
+          <button class="qty-btn qty-plus" onclick="qAdj(1)">+</button>
+        </div>`
+      :`<div class="pop-meta">${(p.stockMin!=null&&(''+p.stockMin).trim()!=='')?'Restock at: <span class="hl">'+h(fmtQ(p.stockMin))+'</span> → ':''}Refill to: <span class="hl">${h(fmtQ(p.refillTo))}</span></div>
+        <div class="chk${popFlag?' on':''}" onclick="toggleFlag()">
+          <div class="box">${popFlag?'✓':''}</div>
+          <div class="lbl">Add to restock list<small>Refill to ${h(fmtQ(p.refillTo))}</small></div>
+        </div>`}
+    <button class="btn blue" onclick="closePopup()">Done</button>
+  </div></div>`;
+}
+
+// ── REPORT DETAIL (trailer/cases) ─────────────────────────────────────────────
+function renderRepDetail(){
+  const p=repDetail;
+  const a=aggUsage(p.id);
+  const target=(p.isEach?('Qty '+a.total):('Refill to '+h(fmtQ(p.refillTo))))+(a.teams.length?' · '+h(a.teams.join(', ')):'');
+  return`<div class="overlay" onclick="if(event.target===this){repDetail=null;render();}"><div class="popup">
+    ${imgBlock(p)}
+    <div class="pop-name">${h(p.name)}</div>
+    <div class="pop-meta">${(function(){const tl=tileFor(p.trailerObj||p);return tl?tl.icon+' '+h(tl.label):'📦 Warehouse';})()} · ${h(repGroup(p))}</div>
+    <div class="chk big${repRecv?' on':''}" onclick="toggleRecv()">
+      <div class="chk-top"><div class="box">${repRecv?'✓':''}</div><div class="lbl">Trailer Stock Received<small>Clears ${h(ti().label)}'s demand — other trailers keep theirs</small></div></div>
+      <div class="chk-qty">${target}</div>
+    </div>
+    <div class="chk big${repBelow?' on':''}" onclick="toggleBelow()">
+      <div class="chk-top"><div class="box">${repBelow?'✓':''}</div><div class="lbl">Below Shop Minimum<small>Flag for the weekly shop reorder</small></div></div>
+      <div class="chk-qty">${p.shopMin==null||p.shopMin===''?'—':h(fmtQ(p.shopMin))}</div>
+    </div>
+    ${isTest()?'<div style="font-size:12px;color:#a78bfa;text-align:center;margin:2px 0 12px;">🧪 Test mode — below-min flags will not be saved</div>':''}
+    <button class="btn blue" onclick="commitRepDetail()">Done</button>
+  </div></div>`;
+}
+
+// ── WAREHOUSE DETAIL ──────────────────────────────────────────────────────────
+function renderWhDetail(){
+  const p=whDetail;
+  // Tools don't do shop minimums (Mitch, go night): one checkbox — Broken/Lost —
+  // and Done routes into the required identity dialog.
+  const isTool=p.entryType==='Tool';
+  return`<div class="overlay" onclick="if(event.target===this){whDetail=null;render();}"><div class="popup">
+    ${imgBlock(p)}
+    <div class="pop-name">${h(p.name)}</div>
+    <div class="pop-meta">${isTool?'🛠️ Tool':''}${isTool&&p.vendor?' · ':''}${p.vendor?h(p.vendor):(isTool?'':'Warehouse item')}</div>
+    ${isTool
+      ?`<div class="chk${whRestock?' on':''}" onclick="toggleWhRestock()"><div class="box">${whRestock?'✓':''}</div><div class="lbl">Broken / Lost<small>Flag this tool for replacement</small></div></div>`
+      :`<div class="detail-stat" style="margin-bottom:16px;"><span class="k">Shop minimum</span><span class="v">${p.shopMin==null?'—':h(fmtQ(p.shopMin))}</span></div>
+    <div class="chk${whRestock?' on':''}" onclick="toggleWhRestock()"><div class="box">${whRestock?'✓':''}</div><div class="lbl">Below Shop Minimum<small>Add to the weekly reorder list</small></div></div>`}
+    ${isTest()?'<div style="font-size:12px;color:#a78bfa;text-align:center;margin:2px 0 12px;">🧪 Test mode — this will not be saved</div>':''}
+    <button class="btn blue" onclick="commitWh()">Done</button>
+  </div></div>`;
+}
+
+// ── FEEDBACK ──────────────────────────────────────────────────────────────────
+function renderFeedback(){
+  return`<div class="overlay" onclick="if(event.target===this)closeFeedback()"><div class="popup">
+    <div class="pop-name">✉️ Feedback for Leveler Mitch</div>
+    <div class="pop-meta" style="margin-bottom:10px;">Type your message. Tap Send to open your mail app — you can attach a photo there before sending.</div>
+    <textarea id="fbmsg" placeholder="What's going on? (bug, wrong part, idea…)" style="width:100%;min-height:120px;box-sizing:border-box;background:#0d1526;border:1px solid #24314d;border-radius:12px;color:#e2e8f0;font-size:15px;font-family:inherit;padding:12px;resize:vertical;margin-bottom:12px;"></textarea>
+    <button class="btn blue" onclick="sendFeedback()">Send</button>
+    <button class="btn ghost" style="margin-top:8px;" onclick="closeFeedback()">Cancel</button>
+  </div></div>`;
+}
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+function boot(){
+  if(!localStorage.getItem('geo_lastRefresh'))localStorage.setItem('geo_lastRefresh',String(Date.now()));
+  fetch(CFG.catalogFile).then(r=>{
+    if(!r.ok)throw new Error('catalog HTTP '+r.status);
+    return r.json();
+  }).then(env=>{
+    buildData(env.Parts||[]);
+    try{localStorage.setItem('geo_exportTs',env['Export Timestamp']||'');}catch(e){}
+    flushQueue();
+    startShop();
+    if(team){scr='loading';render();startListeners();setTimeout(()=>{if(scr==='loading'){scr='nav';render();}},4000);}
+    else{scr='team';render();}
+    setTimeout(maybeAutoRefresh,2500);
+  }).catch(e=>{
+    // Honest error surface: say WHAT broke — a startup throw is not a missing
+    // catalog (the dot-in-node-name bug hid behind exactly that lie, go night).
+    $('app').innerHTML='<div style="height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#ef4444;font-size:14px;padding:30px;">App failed to start:<br>'+h((e&&e.message)||e)+'</div>';
+  });
+}
+
+// ── LOGIN (real email/password auth — every screen in the app is gated behind this) ──
+let _booted=false;
+function bootOnce(){if(_booted)return;_booted=true;boot();}
+function showLoginErr(msg){const e=$('loginErrMsg');if(e){e.textContent=msg;e.style.display=msg?'block':'none';}}
+function doLogin(){
+  const email=(($('loginEmail')||{}).value||'').trim();
+  const pw=($('loginPassword')||{}).value||'';
+  if(!email||!pw){showLoginErr('Enter your email and password');return;}
+  showLoginErr('');
+  const btn=$('loginBtn');if(btn){btn.disabled=true;btn.textContent='Signing in…';}
+  firebase.auth().signInWithEmailAndPassword(email,pw).catch(()=>{
+    showLoginErr('Wrong email or password');
+    if(btn){btn.disabled=false;btn.textContent='Sign In';}
+  });
+  // on success, onAuthStateChanged below fires with a real user and proceeds into the app
+}
+function doSignOut(){
+  if(_usageRef){_usageRef.off();_usageRef=null;}
+  if(_shopRef){_shopRef.off();_shopRef=null;}
+  if(_stampRef){_stampRef.off();_stampRef=null;}
+  team=null;localStorage.removeItem('g_team');
+  allUsage={};allTeams={};shopFlags={};stamps={};searchQ='';whQ='';popup=null;repDetail=null;whDetail=null;pinDetail=null;grab=false;fbOpen=false;
+  _booted=false;
+  firebase.auth().signOut();
+  // onAuthStateChanged below fires with null and shows the login screen again
+}
+firebase.auth().onAuthStateChanged(u=>{
+  // Leftover anonymous sessions from before this login layer shipped are NOT valid logins —
+  // disabling Anonymous sign-in in Firebase only blocks NEW anonymous sessions, it doesn't
+  // retroactively sign out ones that already existed. Reject them explicitly and force real login.
+  if(u&&u.isAnonymous){firebase.auth().signOut();return;}
+  if(u){bootOnce();}
+  else{_booted=false;scr='login';render();}
+});
+setTimeout(()=>{if(!_booted&&scr!=='login'){scr='login';render();}},6000); // safety net: never leave the app stuck on a blank screen
+
+// service worker (offline caching of app shell, JSON, and images)
+if('serviceWorker' in navigator && location.protocol==='https:'){
+  navigator.serviceWorker.register('sw.js').catch(()=>{});
+}
+</script>
+</body>
+</html>
