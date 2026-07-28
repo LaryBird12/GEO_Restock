@@ -1,17 +1,9 @@
 // GEO Restock service worker — offline caching of app shell, catalog, and images.
 importScripts('config.js'); // one config for page and worker alike
 const CFG = self.GEO_CONFIG;
-const CACHE = 'geo-restock-2-0-v3'; // v2 (2026-07-26): drops the precached MP3 — the bump is what evicts it from crews' devices
-// AUDIO REMOVED 2026-07-26: the MP3 (6.5 MB) was precached here, so EVERY device
-// downloaded it on every service-worker install whether or not anyone played it.
-// That was the Netlify bandwidth bleed. The artwork still rides offline.
-// The artwork is fetched from GITHUB (CFG.assetBase), not Netlify — precaching
-// it here used to pull 1.27 MB off the hosting plan on every install. addAll is
-// wrapped in a .catch by the install handler, so a cross-origin hiccup can never
-// break the shell.
-const ASSET = n => (CFG.assetBase ? CFG.assetBase + encodeURIComponent(n) : './' + n);
+const CACHE = 'geo-restock-2-0-v1'; // 2.0 line — old 1.0 caches are swept on activate
 const SHELL = ['./', './index.html', './config.js', './' + CFG.catalogFile,
-  ASSET(CFG.krypton.image)];
+  './' + CFG.krypton.image, './' + CFG.krypton.audio]; // Krypton rides offline too
 // 2.0: the catalog carries no image URLs — derive them (base + Part ID + ext).
 const imageUrls = parts => [...new Set(parts.map(p => CFG.imageBase + p['Part ID'] + CFG.imageExt))];
 const IMAGE_FETCH_CONCURRENCY = 6; // avoid bursting ~350 requests at GitHub at once

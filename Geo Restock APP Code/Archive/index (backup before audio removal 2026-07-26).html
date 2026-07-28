@@ -337,9 +337,6 @@ let pendingWrites=0,refreshing=false,viewMode=(localStorage.getItem('geo_viewMod
 
 // ── HELPERS ───────────────────────────────────────────────────────────────────
 const $=id=>document.getElementById(id);
-// Big static assets come from GitHub (CFG.assetBase), never Netlify. Falls back
-// to the local copy if assetBase is ever missing, so this can't break the app.
-const assetUrl=n=>(self.GEO_CONFIG&&GEO_CONFIG.assetBase?GEO_CONFIG.assetBase+encodeURIComponent(n):'./'+n);
 const h=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const ti=()=>team?TEAMS[team]:{label:'',color:'#38bdf8',bg:'#0f172a',border:'#2a3a5c',icon:''};
 // Usage key — LOCKED 2026-07-24: aggregate by Part ID. Stored per team
@@ -809,22 +806,28 @@ function printReorder(){
 }
 function goGrab(){grab=true;navKey=null;searchQ='';scr='grabnav';render();}
 
-// ── DR. WHEELERS RADIO — artwork only ────────────────────────────────────────
-// AUDIO REMOVED 2026-07-26: streaming/precaching the 6.5 MB MP3 off Netlify was
-// burning bandwidth credits, so the whole player was cut — no Audio element, no
-// autoplay-unlock gesture, no playback state. "Coming Soon" flashes, then the
-// artwork. Audio returns later via an external embed (Suno share link) so it
-// never touches this hosting again. The MP3 stays in Soundtrack/ untouched.
-let kryptonPhase=0;
+// ── KRYPTON — under construction (the final add, 2026-07-24) ──────────────────
+// The button tap IS the audio-unlocking gesture: play()+pause() here unlocks
+// the element, so the resume at the artwork reveal is allowed without a fresh
+// gesture (iOS autoplay rules). "Coming Soon" for a moment, then the Delete
+// the Ceiling artwork with Query the Future playing.
+let kryptonPhase=0,kAudio=null;
 function goKrypton(){
   kryptonPhase=1;scr='krypton';render();
-  try{new Image().src=assetUrl(CFG.krypton.image);}catch(e){} // preload during the flash — instant reveal
+  try{new Image().src=CFG.krypton.image;}catch(e){} // preload during the flash — instant reveal
+  try{
+    if(!kAudio){kAudio=new Audio(CFG.krypton.audio);kAudio.loop=true;}
+    const pr=kAudio.play();
+    if(pr&&pr.then)pr.then(function(){kAudio.pause();kAudio.currentTime=0;}).catch(function(){});
+  }catch(e){}
   setTimeout(function(){
     if(scr!=='krypton')return;
     kryptonPhase=2;render();
+    try{if(kAudio)kAudio.play().catch(function(){});}catch(e){}
   },CFG.krypton.comingSoonMs||1600);
 }
 function leaveKrypton(){
+  try{if(kAudio){kAudio.pause();kAudio.currentTime=0;}}catch(e){}
   kryptonPhase=0;scr='team';render();
 }
 function goAdmin(){grab=false;scr='admin';render();}
@@ -1219,7 +1222,7 @@ function buildHTML(){
   // LOGIN — gates the entire app; nothing below this ever renders until signed in
   if(scr==='login')return`
     <div class="team-screen">
-      <img src="${assetUrl(CFG.logoFile||'Logo.png')}" alt="" class="team-logo" onerror="this.style.display='none'">
+      <img src="Logo.png" alt="" class="team-logo" onerror="this.style.display='none'">
       <div style="font-size:30px;font-weight:800;color:#e2e8f0;margin-bottom:6px;">GEO Restock</div>
       <div style="font-size:15px;color:#7a8fb5;margin-bottom:26px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;">Sign In</div>
       <div style="width:100%;max-width:340px;">
@@ -1237,7 +1240,7 @@ function buildHTML(){
   if(scr==='krypton'){
     if(kryptonPhase===1)return`<div style="height:100vh;display:flex;align-items:center;justify-content:center;background:#000;">
       <div class="krypton-coming">🚧 Coming Soon 🚧</div></div>`;
-    return`<div style="height:100vh;position:relative;background:#000 url('${h(assetUrl(CFG.krypton.image))}') center/cover no-repeat;">
+    return`<div style="height:100vh;position:relative;background:#000 url('${h(CFG.krypton.image)}') center/cover no-repeat;">
       <button class="back" onclick="leaveKrypton()" style="position:absolute;top:max(12px,env(safe-area-inset-top));left:12px;z-index:2;font-size:36px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.85);">‹</button>
     </div>`;
   }

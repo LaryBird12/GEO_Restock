@@ -40,15 +40,6 @@ self.GEO_CONFIG = {
   imageBase: "https://raw.githubusercontent.com/LaryBird12/GEO_Restock/main/Images/Parts/",
   imageExt: ".jpg",
 
-  // ── 2a. APP ASSETS SERVED FROM GITHUB (2026-07-26) ──────────────────────────
-  // Big static assets (logo, artwork) are pulled from the GitHub repo instead of
-  // Netlify, so they never touch the hosting bandwidth plan. Same mechanism as
-  // imageBase above, which already serves all 466 part images. Filenames are
-  // encoded at use-time, so keep them here as plain names with spaces.
-  // The files still live in the repo/deploy — only where they're FETCHED moved.
-  assetBase: "https://raw.githubusercontent.com/LaryBird12/GEO_Restock/main/Geo%20Restock%20APP%20Code/",
-  logoFile: "Logo.png",
-
   // Warehouse sections suppressed from the Warehouse Stock button because the
   // top-level tiles already cover them. Subtraction rule: everything under the
   // warehouse shows EXCEPT these subtrees. Add a new warehouse section and it
