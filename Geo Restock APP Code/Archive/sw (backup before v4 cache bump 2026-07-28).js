@@ -1,17 +1,7 @@
 // GEO Restock service worker — offline caching of app shell, catalog, and images.
 importScripts('config.js'); // one config for page and worker alike
 const CFG = self.GEO_CONFIG;
-// BUMP THIS ON EVERY PUSH THAT CHANGES config.js, index.html OR THE CATALOG.
-// Both config.js and the catalog file are in SHELL below, so they are precached
-// under this exact name. The activate sweep only deletes caches whose name is
-// DIFFERENT from this one — so if the name doesn't change, every device keeps
-// serving the OLD copies forever and a push appears to do nothing. A restart
-// does not help: the service worker answers from cache before the network is
-// ever consulted. That is not a theory; it is what happened twice.
-//   v2 (2026-07-26): dropped the precached MP3
-//   v3 (2026-07-26): moved logo + Krypton artwork to GitHub hosting
-//   v4 (2026-07-28): Solar/Krypton trailer tiles + parts 630-640 in the catalog
-const CACHE = 'geo-restock-2-0-v4';
+const CACHE = 'geo-restock-2-0-v3'; // v2 (2026-07-26): drops the precached MP3 — the bump is what evicts it from crews' devices
 // AUDIO REMOVED 2026-07-26: the MP3 (6.5 MB) was precached here, so EVERY device
 // downloaded it on every service-worker install whether or not anyone played it.
 // That was the Netlify bandwidth bleed. The artwork still rides offline.
