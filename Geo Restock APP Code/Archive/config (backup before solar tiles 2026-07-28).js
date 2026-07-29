@@ -95,21 +95,7 @@ self.GEO_CONFIG = {
       trailerLocationId: 67,
       warehouseLocationId: 68,
       warehouseHiddenSections: [],
-      // FILLED IN 2026-07-28. These were left [] when Solar was scaffolded,
-      // with the note "EMPTY until the import lands". The import landed on
-      // 2026-07-28 and nobody came back for this -- so Krypton had NO trailer
-      // tiles at all and could not reach 53 part-placements that were sitting
-      // right there. IDs verified against the live tree: Solar > Trailer (67)
-      // has exactly two compartments.
-      //   144 Trailer Stock -> 27 parts (Liquid Tight Fittings, Perishable Items)
-      //   136 Case Stock    -> 26 parts (Securing & Supports, Junction Box
-      //                        Fittings, Knockout Fittings)
-      // NO Tools tile: Solar's trailer has no Tools compartment. Geo's third
-      // tile is Geo's alone -- do not copy it across "to match".
-      tiles: [
-        { label: "Trailer Stock", icon: "🚛", locationId: 144, bg: "#152a45", border: "#2a4a6c" },
-        { label: "Case Stock",    icon: "🧰", locationId: 136, bg: "#0f2a3a", border: "#1a3a4a" }
-      ]
+      tiles: []
     }
   },
 
