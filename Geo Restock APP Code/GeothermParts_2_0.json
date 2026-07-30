@@ -1,7 +1,7 @@
 {
- "Export Timestamp": "2026-07-30T03:28:32+00:00",
- "Source Change ID": 5093,
- "Object Count": 984,
+ "Export Timestamp": "2026-07-30T03:36:12+00:00",
+ "Source Change ID": 5142,
+ "Object Count": 993,
  "Parts": [
   {
    "Part ID": 115,
@@ -50277,6 +50277,183 @@
    "Stock Class": "nonstock"
   },
   {
+   "Part ID": 1,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "DeOx (Anti-Ox) Grease",
+   "Size": "4 oz",
+   "Manufacturer": "IDEAL",
+   "MFG Part Number": "30-026",
+   "CAT 1": "Parts",
+   "CAT 2": "Electrical",
+   "CAT 3": "Connections",
+   "Location ID": 146,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 146,
+     "Node Name": "Perishable Items"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "202276208",
+   "VEN URL": "https://www.homedepot.com/p/Noalox-Anti-Oxidant-Compound-4-oz-Bottle-30-026/202276208",
+   "VEN Case QTY Txt": "Each",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 9.88,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 186,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Batteries - AAA",
+   "Size": "20 count",
+   "Manufacturer": "Energizer",
+   "MFG Part Number": "E92SBP30H",
+   "CAT 1": "Perishable Materials (trailer)",
+   "CAT 2": "Batteries",
+   "CAT 3": null,
+   "Location ID": 146,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 146,
+     "Node Name": "Perishable Items"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 12.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Battery",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "302292202",
+   "VEN URL": "https://www.homedepot.com/p/Energizer-MAX-AAA-Batteries-30-Pack-Triple-A-Alkaline-Batteries-E92SBP30H/302292202",
+   "VEN Case QTY Txt": "36 Batteries",
+   "VEN Case QTY #": 36,
+   "VEN Unit Description": "Batteries",
+   "Vendor Cost": 18.87,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 187,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Batteries - AA",
+   "Size": "20 count",
+   "Manufacturer": "Energizer",
+   "MFG Part Number": "E91SBP36H",
+   "CAT 1": "Perishable Materials (trailer)",
+   "CAT 2": "Batteries",
+   "CAT 3": null,
+   "Location ID": 146,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 146,
+     "Node Name": "Perishable Items"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 2.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "100232088",
+   "VEN URL": "https://www.homedepot.com/p/Energizer-MAX-AA-Batteries-36-Pack-Double-A-Alkaline-Batteries-E91SBP36H/100232088",
+   "VEN Case QTY Txt": "36 Batteries",
+   "VEN Case QTY #": 36,
+   "VEN Unit Description": "Batteries",
+   "Vendor Cost": 18.87,
+   "Stock Class": "trailer"
+  },
+  {
    "Part ID": 640,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
@@ -50572,6 +50749,124 @@
    "Stock Class": "trailer"
   },
   {
+   "Part ID": 635,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Crayons - Blue",
+   "Size": null,
+   "Manufacturer": "DEWALT",
+   "MFG Part Number": "DWHT72719",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 146,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 146,
+     "Node Name": "Perishable Items"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": 4.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "204624590",
+   "VEN URL": "https://www.homedepot.com/p/DEWALT-Mark-Lumber-Wax-Crayon-in-Blue-DWHT72719/204624590",
+   "VEN Case QTY Txt": "2-Pack",
+   "VEN Case QTY #": 2,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 4.97,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 634,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Crayons - Yellow",
+   "Size": null,
+   "Manufacturer": "DEWALT",
+   "MFG Part Number": "DWHT72721",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 146,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 146,
+     "Node Name": "Perishable Items"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": 4.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "204624591",
+   "VEN URL": "https://www.homedepot.com/p/DEWALT-Mark-Lumber-Wax-Crayon-in-Yellow-DWHT72721/204624591",
+   "VEN Case QTY Txt": "2 Pack",
+   "VEN Case QTY #": 2,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 4.97,
+   "Stock Class": "trailer"
+  },
+  {
    "Part ID": 206,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
@@ -50749,124 +51044,6 @@
    "Stock Class": "trailer"
   },
   {
-   "Part ID": 634,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Mark Lumber Wax Crayon in Yellow",
-   "Size": null,
-   "Manufacturer": "DEWALT",
-   "MFG Part Number": "DWHT72721",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 146,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 146,
-     "Node Name": "Perishable Items"
-    }
-   ],
-   "Stock Min": 2.0,
-   "Stock Max": 4.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "204624591",
-   "VEN URL": "https://www.homedepot.com/p/DEWALT-Mark-Lumber-Wax-Crayon-in-Yellow-DWHT72721/204624591",
-   "VEN Case QTY Txt": "2 Pack",
-   "VEN Case QTY #": 2,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 4.97,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 635,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Crayons - Blue",
-   "Size": null,
-   "Manufacturer": "DEWALT",
-   "MFG Part Number": "DWHT72719",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 146,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 146,
-     "Node Name": "Perishable Items"
-    }
-   ],
-   "Stock Min": 2.0,
-   "Stock Max": 4.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "204624590",
-   "VEN URL": "https://www.homedepot.com/p/DEWALT-Mark-Lumber-Wax-Crayon-in-Blue-DWHT72719/204624590",
-   "VEN Case QTY Txt": "2-Pack",
-   "VEN Case QTY #": 2,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 4.97,
-   "Stock Class": "trailer"
-  },
-  {
    "Part ID": 636,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
@@ -50985,15 +51162,15 @@
    "Stock Class": "trailer"
   },
   {
-   "Part ID": 639,
+   "Part ID": 214,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
-   "Description": "PVC Conduit Glue - 8 oz",
-   "Size": null,
-   "Manufacturer": "Oatey",
-   "MFG Part Number": "31040",
-   "CAT 1": null,
-   "CAT 2": null,
+   "Description": "Tape - Masking",
+   "Size": "1.41\" 6 Pack",
+   "Manufacturer": "3M",
+   "MFG Part Number": "2090-36QC6",
+   "CAT 1": "Perishable Materials (trailer)",
+   "CAT 2": "Tape",
    "CAT 3": null,
    "Location ID": 146,
    "Location Path": [
@@ -51028,19 +51205,19 @@
      "Node Name": "Perishable Items"
     }
    ],
-   "Stock Min": 2.0,
-   "Stock Max": 6.0,
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
    "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Can",
+   "Locations Unit Of Measure": "Roll",
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Home Depot",
-   "VEN Part Number": "206751887",
-   "VEN URL": "https://www.homedepot.com/p/Oatey-8-oz-Medium-Gray-Electrical-PVC-Pipe-Cement-31040/206751887",
-   "VEN Case QTY Txt": "Each",
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 6.53,
+   "VEN Part Number": "100149477",
+   "VEN URL": "https://www.homedepot.com/p/3M-ScotchBlue-1-41-in-x-60-yds-Original-Multi-Surface-Painter-s-Tape-6-Pack-2090-36QC6/100149477",
+   "VEN Case QTY Txt": "6 Rolls",
+   "VEN Case QTY #": 6,
+   "VEN Unit Description": "Rolls",
+   "Vendor Cost": 34.98,
    "Stock Class": "trailer"
   },
   {
@@ -51103,15 +51280,15 @@
    "Stock Class": "trailer"
   },
   {
-   "Part ID": 214,
+   "Part ID": 639,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
-   "Description": "Tape - Masking",
-   "Size": "1.41\" 6 Pack",
-   "Manufacturer": "3M",
-   "MFG Part Number": "2090-36QC6",
-   "CAT 1": "Perishable Materials (trailer)",
-   "CAT 2": "Tape",
+   "Description": "PVC Conduit Glue - 8 oz",
+   "Size": null,
+   "Manufacturer": "Oatey",
+   "MFG Part Number": "31040",
+   "CAT 1": null,
+   "CAT 2": null,
    "CAT 3": null,
    "Location ID": 146,
    "Location Path": [
@@ -51146,19 +51323,19 @@
      "Node Name": "Perishable Items"
     }
    ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
+   "Stock Min": 2.0,
+   "Stock Max": 6.0,
    "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Roll",
+   "Locations Unit Of Measure": "Can",
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Home Depot",
-   "VEN Part Number": "100149477",
-   "VEN URL": "https://www.homedepot.com/p/3M-ScotchBlue-1-41-in-x-60-yds-Original-Multi-Surface-Painter-s-Tape-6-Pack-2090-36QC6/100149477",
-   "VEN Case QTY Txt": "6 Rolls",
-   "VEN Case QTY #": 6,
-   "VEN Unit Description": "Rolls",
-   "Vendor Cost": 34.98,
+   "VEN Part Number": "206751887",
+   "VEN URL": "https://www.homedepot.com/p/Oatey-8-oz-Medium-Gray-Electrical-PVC-Pipe-Cement-31040/206751887",
+   "VEN Case QTY Txt": "Each",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 6.53,
    "Stock Class": "trailer"
   },
   {
@@ -51336,183 +51513,6 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Each",
    "Vendor Cost": 12.09,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 1,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "DeOx (Anti-Ox) Grease",
-   "Size": "4 oz",
-   "Manufacturer": "IDEAL",
-   "MFG Part Number": "30-026",
-   "CAT 1": "Parts",
-   "CAT 2": "Electrical",
-   "CAT 3": "Connections",
-   "Location ID": 146,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 146,
-     "Node Name": "Perishable Items"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "202276208",
-   "VEN URL": "https://www.homedepot.com/p/Noalox-Anti-Oxidant-Compound-4-oz-Bottle-30-026/202276208",
-   "VEN Case QTY Txt": "Each",
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 9.88,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 186,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Batteries - AAA",
-   "Size": "20 count",
-   "Manufacturer": "Energizer",
-   "MFG Part Number": "E92SBP30H",
-   "CAT 1": "Perishable Materials (trailer)",
-   "CAT 2": "Batteries",
-   "CAT 3": null,
-   "Location ID": 146,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 146,
-     "Node Name": "Perishable Items"
-    }
-   ],
-   "Stock Min": 6.0,
-   "Stock Max": 12.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Battery",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "302292202",
-   "VEN URL": "https://www.homedepot.com/p/Energizer-MAX-AAA-Batteries-30-Pack-Triple-A-Alkaline-Batteries-E92SBP30H/302292202",
-   "VEN Case QTY Txt": "36 Batteries",
-   "VEN Case QTY #": 36,
-   "VEN Unit Description": "Batteries",
-   "Vendor Cost": 18.87,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 187,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Batteries - AA",
-   "Size": "20 count",
-   "Manufacturer": "Energizer",
-   "MFG Part Number": "E91SBP36H",
-   "CAT 1": "Perishable Materials (trailer)",
-   "CAT 2": "Batteries",
-   "CAT 3": null,
-   "Location ID": 146,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 146,
-     "Node Name": "Perishable Items"
-    }
-   ],
-   "Stock Min": 4.0,
-   "Stock Max": 2.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "100232088",
-   "VEN URL": "https://www.homedepot.com/p/Energizer-MAX-AA-Batteries-36-Pack-Double-A-Alkaline-Batteries-E91SBP36H/100232088",
-   "VEN Case QTY Txt": "36 Batteries",
-   "VEN Case QTY #": 36,
-   "VEN Unit Description": "Batteries",
-   "Vendor Cost": 18.87,
    "Stock Class": "trailer"
   },
   {
@@ -55154,7 +55154,7 @@
     }
    ],
    "Stock Min": 6.0,
-   "Stock Max": null,
+   "Stock Max": 10.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": null,
    "Component Quantity": null,
@@ -55166,6 +55166,492 @@
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
    "Vendor Cost": 3.44,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 686,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" EMT Waterproof Male Adapter",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "652SRT",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 10.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "652SRT",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-652SRT-3-4-Steel-EMT-Raintight-Compression-Type-Connector?_br_psugg_q=652srt",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 2.29,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 687,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" Close Nipple",
+   "Size": "3/4\"",
+   "Manufacturer": "Bluefin",
+   "MFG Part Number": "GVN075C",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 8.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "GVN075C",
+   "VEN URL": "https://www.supplyhouse.com/Bluefin-GVN075C-3-4-x-Close-Galv-Nipple?_br_psugg_q=gvn075c",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.02,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 688,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" Rigid Steel Coupling",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "52",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 8.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "52",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-52-3-4-Rigid-Steel-Coupling",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.56,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 689,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" EMT LB",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "LB2SSCG",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 8.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "LB2SSCG",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-LB2SSCG-3-4-EMT-Rigid-LB-Type-Combination-Conduit-Body-w-Cover-and-Gasket-Aluminum?_br_psugg_q=lb2sscg",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 7.9,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 690,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" EMT Compression Coupling",
+   "Size": "1\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "663SRT",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 10.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "663SRT",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-663SRT-1-Steel-Compression-Type-Raintight-Coupling",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 4.86,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 691,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" EMT Waterproof Male Adapter",
+   "Size": "1\"",
+   "Manufacturer": "Commercial Electric",
+   "MFG Part Number": "FECRS-100-1",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 6.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "316096405",
+   "VEN URL": "https://www.homedepot.com/p/Commercial-Electric-1-in-Electrical-Metallic-Tubing-EMT-Raintight-Compression-Connector-FECRS-100-1/316096405",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 2.98,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 692,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Close Nipple",
+   "Size": "1\"",
+   "Manufacturer": "Bluefin",
+   "MFG Part Number": "GVN100C",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": 4.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "GVN100C",
+   "VEN URL": "https://www.supplyhouse.com/Bluefin-GVN100C-1-x-Close-Galv-Nipple",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.46,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 693,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Threaded Coupling",
+   "Size": "1\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "53-SOUTHWIRE",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": 4.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "53-SOUTHWIRE",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-53-SOUTHWIRE-1-Rigid-Steel-Coupling",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 2.93,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 694,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" EMT LB",
+   "Size": "1\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "LB3SSCG",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": 4.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "LB3SSCG",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-LB3SSCG-1-EMT-Rigid-LB-Combination-Conduit-Body-w-Cover-and-Gasket-Aluminum",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 12.32,
    "Stock Class": "trailer"
   },
   {
@@ -56647,7 +57133,7 @@
    "Part ID": 634,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
-   "Description": "Mark Lumber Wax Crayon in Yellow",
+   "Description": "Crayons - Yellow",
    "Size": null,
    "Manufacturer": "DEWALT",
    "MFG Part Number": "DWHT72721",
