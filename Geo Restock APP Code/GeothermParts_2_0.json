@@ -1,7 +1,7 @@
 {
- "Export Timestamp": "2026-07-30T20:14:42+00:00",
- "Source Change ID": 5350,
- "Object Count": 1026,
+ "Export Timestamp": "2026-07-30T22:26:57+00:00",
+ "Source Change ID": 5382,
+ "Object Count": 1040,
  "Parts": [
   {
    "Part ID": 115,
@@ -55764,6 +55764,419 @@
    "Stock Class": "trailer"
   },
   {
+   "Part ID": 704,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC Conduit Clamp",
+   "Size": "3/4",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E977EC",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 160,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 160,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Clamps",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E977EC",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E977EC-3-4-PVC-Conduit-Clamp-Box-of-100?_br_psugg_q=e977ec",
+   "VEN Case QTY Txt": "Box of 100",
+   "VEN Case QTY #": 100,
+   "VEN Unit Description": "Clamps",
+   "Vendor Cost": 52.57,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 705,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" Conduit Hanger (#1) - Mini",
+   "Size": "3/4",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "602TZ",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 160,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 160,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "602TZ",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-602TZ-3-4-Steel-Conduit-Hanger",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 0.75,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 706,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Conduit Hanger (#2) - Mini",
+   "Size": "1\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "603TZ",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 160,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 160,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "603TZ",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-603TZ-1-Steel-Conduit-Hanger",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Clamp",
+   "Vendor Cost": 0.72,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 707,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC Conduit Clamp",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E977FC",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 160,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 160,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E977FC",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E977FC-1-PVC-Conduit-Clamp-Box-of-100?_br_psugg_q=e977fc",
+   "VEN Case QTY Txt": "Box of 100",
+   "VEN Case QTY #": 100,
+   "VEN Unit Description": "Clamp",
+   "Vendor Cost": 65.09,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 710,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Solar Panel Clips",
+   "Size": null,
+   "Manufacturer": "Heyco",
+   "MFG Part Number": "008019S",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 160,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 160,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 50.0,
+   "Stock Max": 100.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 708,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Zip Tie - 11\"",
+   "Size": "11\"",
+   "Manufacturer": "Commercial Electric",
+   "MFG Part Number": "GT-280STB(500)",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 160,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 160,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Bag of 500",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "203531928",
+   "VEN URL": "https://www.homedepot.com/p/Commercial-Electric-11in-Standard-50lb-Tensile-Strength-UL-21S-Rated-Cable-Zip-Ties-500-Pack-UV-Black-GT-280STB-500/203531928",
+   "VEN Case QTY Txt": "Bag of 500",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Tie",
+   "Vendor Cost": 50.88,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 709,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Zip Tie - 14\"",
+   "Size": "14\"",
+   "Manufacturer": "K Tool International",
+   "MFG Part Number": "KTI78140",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 160,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 160,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 5.0,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Bag of 100",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "207024118",
+   "VEN URL": "https://www.homedepot.com/p/K-Tool-International-14-in-Black-Nylon-Wire-Tie-50-lb-Tensile-100-Pack-KTI78140/207024118",
+   "VEN Case QTY Txt": "Bag of 100",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 7.14,
+   "Stock Class": "trailer"
+  },
+  {
    "Part ID": 15,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
@@ -60599,6 +61012,419 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Each",
    "Vendor Cost": 21.32,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 704,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC Conduit Clamp",
+   "Size": "3/4",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E977EC",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 159,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 159,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": 1.0,
+   "Locations Unit Of Measure": "Clamps",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E977EC",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E977EC-3-4-PVC-Conduit-Clamp-Box-of-100?_br_psugg_q=e977ec",
+   "VEN Case QTY Txt": "Box of 100",
+   "VEN Case QTY #": 100,
+   "VEN Unit Description": "Clamps",
+   "Vendor Cost": 52.57,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 705,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" Conduit Hanger (#1) - Mini",
+   "Size": "3/4",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "602TZ",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 159,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 159,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": 50.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "602TZ",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-602TZ-3-4-Steel-Conduit-Hanger",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 0.75,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 706,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Conduit Hanger (#2) - Mini",
+   "Size": "1\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "603TZ",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 159,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 159,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": 50.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "603TZ",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-603TZ-1-Steel-Conduit-Hanger",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Clamp",
+   "Vendor Cost": 0.72,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 707,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC Conduit Clamp",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E977FC",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 159,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 159,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": 50.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E977FC",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E977FC-1-PVC-Conduit-Clamp-Box-of-100?_br_psugg_q=e977fc",
+   "VEN Case QTY Txt": "Box of 100",
+   "VEN Case QTY #": 100,
+   "VEN Unit Description": "Clamp",
+   "Vendor Cost": 65.09,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 710,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Solar Panel Clips",
+   "Size": null,
+   "Manufacturer": "Heyco",
+   "MFG Part Number": "008019S",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 159,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 159,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 100.0,
+   "Stock Max": null,
+   "Reorder Quantity": 200.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 708,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Zip Tie - 11\"",
+   "Size": "11\"",
+   "Manufacturer": "Commercial Electric",
+   "MFG Part Number": "GT-280STB(500)",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 159,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 159,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": null,
+   "Reorder Quantity": 5.0,
+   "Locations Unit Of Measure": "Bag of 500",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "203531928",
+   "VEN URL": "https://www.homedepot.com/p/Commercial-Electric-11in-Standard-50lb-Tensile-Strength-UL-21S-Rated-Cable-Zip-Ties-500-Pack-UV-Black-GT-280STB-500/203531928",
+   "VEN Case QTY Txt": "Bag of 500",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Tie",
+   "Vendor Cost": 50.88,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 709,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Zip Tie - 14\"",
+   "Size": "14\"",
+   "Manufacturer": "K Tool International",
+   "MFG Part Number": "KTI78140",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 159,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 159,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 5.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": "Bag of 100",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "207024118",
+   "VEN URL": "https://www.homedepot.com/p/K-Tool-International-14-in-Black-Nylon-Wire-Tie-50-lb-Tensile-100-Pack-KTI78140/207024118",
+   "VEN Case QTY Txt": "Bag of 100",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 7.14,
    "Stock Class": "shop"
   },
   {
