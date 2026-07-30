@@ -1,7 +1,7 @@
 {
- "Export Timestamp": "2026-07-30T19:50:03+00:00",
- "Source Change ID": 5342,
- "Object Count": 1026,
+ "Export Timestamp": "2026-07-30T18:59:41+00:00",
+ "Source Change ID": 5273,
+ "Object Count": 999,
  "Parts": [
   {
    "Part ID": 115,
@@ -2262,7 +2262,7 @@
    "VEN URL": "https://www.supplyhouse.com/DiversiTech-750-34100-3-4-Liquid-Tite-Flexible-Conduit-Non-Metallic-100-ft",
    "VEN Case QTY Txt": "Each",
    "VEN Case QTY #": 1,
-   "VEN Unit Description": "100' Role",
+   "VEN Unit Description": "Each",
    "Vendor Cost": 127.41,
    "Stock Class": "trailer"
   },
@@ -32517,7 +32517,7 @@
    "Stock Min": 3.0,
    "Stock Max": null,
    "Reorder Quantity": 3.0,
-   "Locations Unit Of Measure": "ach",
+   "Locations Unit Of Measure": "Rolls",
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Supply House",
@@ -32525,7 +32525,7 @@
    "VEN URL": "https://www.supplyhouse.com/DiversiTech-750-34100-3-4-Liquid-Tite-Flexible-Conduit-Non-Metallic-100-ft",
    "VEN Case QTY Txt": "Each",
    "VEN Case QTY #": 1,
-   "VEN Unit Description": "100' Role",
+   "VEN Unit Description": "Each",
    "Vendor Cost": 127.41,
    "Stock Class": "shop"
   },
@@ -53624,10 +53624,10 @@
      "Node Name": "Conduit"
     }
    ],
-   "Stock Min": 25.0,
-   "Stock Max": 125.0,
+   "Stock Min": 0.0,
+   "Stock Max": null,
    "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Feet",
+   "Locations Unit Of Measure": null,
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Supply House",
@@ -53637,2130 +53637,6 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "One 100' Roll",
    "Vendor Cost": 129.85,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 696,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" PVC Conduit",
-   "Size": "3/4\"",
-   "Manufacturer": "Cantex",
-   "MFG Part Number": "A52AG12H",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 154,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 154,
-     "Node Name": "Conduit"
-    }
-   ],
-   "Stock Min": 60.0,
-   "Stock Max": 120.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Feet",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "202352534",
-   "VEN URL": "https://www.homedepot.com/p/Cantex-3-4-in-x-10-ft-Gray-Non-Metallic-PVC-Schedule-40-Conduit-A52AG12H/202352534",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "One 10' Pipe",
-   "Vendor Cost": 7.91,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 697,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" EMT Conduit",
-   "Size": "3/4\"",
-   "Manufacturer": null,
-   "MFG Part Number": "0550110000",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 154,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 154,
-     "Node Name": "Conduit"
-    }
-   ],
-   "Stock Min": 50.0,
-   "Stock Max": 100.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Feet",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "202068040",
-   "VEN URL": "https://www.homedepot.com/p/3-4-in-x-10-ft-Electrical-Metallic-Tubing-EMT-Conduit-0550110000/202068040",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "One 10' Section",
-   "Vendor Cost": 12.68,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 698,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" Liquidtight Flexible Conduit",
-   "Size": "1\"",
-   "Manufacturer": "DiversiTech",
-   "MFG Part Number": "750-10100",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 154,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 154,
-     "Node Name": "Conduit"
-    }
-   ],
-   "Stock Min": 25.0,
-   "Stock Max": 125.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Feet",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "750-10100",
-   "VEN URL": "https://www.supplyhouse.com/DiversiTech-750-10100-1-Liquid-Tite-Flexible-Conduit-Non-Metallic-100-ft",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "100' Roll",
-   "Vendor Cost": 244.28,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 699,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" Metallic Liquidtight Conduit",
-   "Size": "1\"",
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "6103",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 154,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 154,
-     "Node Name": "Conduit"
-    }
-   ],
-   "Stock Min": 25.0,
-   "Stock Max": 125.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Feet",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "6103",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-6103-1-Flexible-Liquidtight-Metallic-Conduit-100-Coil",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "100' Roll",
-   "Vendor Cost": 224.3,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 700,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" PVC Conduit",
-   "Size": "1\"",
-   "Manufacturer": null,
-   "MFG Part Number": "67462",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 154,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 154,
-     "Node Name": "Conduit"
-    }
-   ],
-   "Stock Min": 60.0,
-   "Stock Max": 120.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Feet",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "202295893",
-   "VEN URL": "https://www.homedepot.com/p/1-in-x-10-ft-PVC-Schedule-40-Conduit-67462/202295893",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "10' Stick",
-   "Vendor Cost": 10.98,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 701,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" EMT Conduit",
-   "Size": "1\"",
-   "Manufacturer": null,
-   "MFG Part Number": "550210000",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 154,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 154,
-     "Node Name": "Conduit"
-    }
-   ],
-   "Stock Min": 40.0,
-   "Stock Max": 60.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Feet",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "304229415",
-   "VEN URL": "https://www.homedepot.com/p/1-in-x-10-ft-Electrical-Metallic-Tubing-EMT-Conduit-550210000/304229415",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "10' Stick",
-   "Vendor Cost": 21.92,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 685,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" EMT Compression Coupling",
-   "Size": "3/4\"",
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "662SRT",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 152,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 152,
-     "Node Name": "EMT Fittings"
-    }
-   ],
-   "Stock Min": 6.0,
-   "Stock Max": 10.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "662SRT",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-662SRT-3-4-Steel-EMT-Raintight-Compression-Type-Coupling?_br_psugg_q=662srt",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 3.44,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 686,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" EMT Waterproof Male Adapter",
-   "Size": "3/4\"",
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "652SRT",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 152,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 152,
-     "Node Name": "EMT Fittings"
-    }
-   ],
-   "Stock Min": 6.0,
-   "Stock Max": 10.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "652SRT",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-652SRT-3-4-Steel-EMT-Raintight-Compression-Type-Connector?_br_psugg_q=652srt",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 2.29,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 687,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" Close Nipple",
-   "Size": "3/4\"",
-   "Manufacturer": "Bluefin",
-   "MFG Part Number": "GVN075C",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 152,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 152,
-     "Node Name": "EMT Fittings"
-    }
-   ],
-   "Stock Min": 4.0,
-   "Stock Max": 8.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "GVN075C",
-   "VEN URL": "https://www.supplyhouse.com/Bluefin-GVN075C-3-4-x-Close-Galv-Nipple?_br_psugg_q=gvn075c",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 1.02,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 688,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" Rigid Steel Coupling",
-   "Size": "3/4\"",
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "52",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 152,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 152,
-     "Node Name": "EMT Fittings"
-    }
-   ],
-   "Stock Min": 4.0,
-   "Stock Max": 8.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "52",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-52-3-4-Rigid-Steel-Coupling",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 1.56,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 689,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" EMT LB",
-   "Size": "3/4\"",
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "LB2SSCG",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 152,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 152,
-     "Node Name": "EMT Fittings"
-    }
-   ],
-   "Stock Min": 4.0,
-   "Stock Max": 8.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "LB2SSCG",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-LB2SSCG-3-4-EMT-Rigid-LB-Type-Combination-Conduit-Body-w-Cover-and-Gasket-Aluminum?_br_psugg_q=lb2sscg",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 7.9,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 690,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" EMT Compression Coupling",
-   "Size": "1\"",
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "663SRT",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 152,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 152,
-     "Node Name": "EMT Fittings"
-    }
-   ],
-   "Stock Min": 6.0,
-   "Stock Max": 10.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "663SRT",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-663SRT-1-Steel-Compression-Type-Raintight-Coupling",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 4.86,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 691,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" EMT Waterproof Male Adapter",
-   "Size": "1\"",
-   "Manufacturer": "Commercial Electric",
-   "MFG Part Number": "FECRS-100-1",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 152,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 152,
-     "Node Name": "EMT Fittings"
-    }
-   ],
-   "Stock Min": 4.0,
-   "Stock Max": 6.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "316096405",
-   "VEN URL": "https://www.homedepot.com/p/Commercial-Electric-1-in-Electrical-Metallic-Tubing-EMT-Raintight-Compression-Connector-FECRS-100-1/316096405",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 2.98,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 692,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" Close Nipple",
-   "Size": "1\"",
-   "Manufacturer": "Bluefin",
-   "MFG Part Number": "GVN100C",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 152,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 152,
-     "Node Name": "EMT Fittings"
-    }
-   ],
-   "Stock Min": 2.0,
-   "Stock Max": 4.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "GVN100C",
-   "VEN URL": "https://www.supplyhouse.com/Bluefin-GVN100C-1-x-Close-Galv-Nipple",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 1.46,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 693,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" Threaded Coupling",
-   "Size": "1\"",
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "53-SOUTHWIRE",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 152,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 152,
-     "Node Name": "EMT Fittings"
-    }
-   ],
-   "Stock Min": 2.0,
-   "Stock Max": 4.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "53-SOUTHWIRE",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-53-SOUTHWIRE-1-Rigid-Steel-Coupling",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 2.93,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 694,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" EMT LB",
-   "Size": "1\"",
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "LB3SSCG",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 152,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 152,
-     "Node Name": "EMT Fittings"
-    }
-   ],
-   "Stock Min": 2.0,
-   "Stock Max": 4.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "LB3SSCG",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-LB3SSCG-1-EMT-Rigid-LB-Combination-Conduit-Body-w-Cover-and-Gasket-Aluminum",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 12.32,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 702,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "15A Double Pole Breaker - Eaton",
-   "Size": "15A",
-   "Manufacturer": "Eaton",
-   "MFG Part Number": "BR215",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 156,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 156,
-     "Node Name": "Circuit Breakers"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "100193182",
-   "VEN URL": "https://www.homedepot.com/p/Eaton-BR-15-Amp-120-240-Volts-2-Pole-Circuit-Breaker-BR215/100193182",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 21.32,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 703,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "20A Double Pole Breaker - Eaton",
-   "Size": "20A",
-   "Manufacturer": "Eaton",
-   "MFG Part Number": "BR220",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 156,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 156,
-     "Node Name": "Circuit Breakers"
-    }
-   ],
-   "Stock Min": 4.0,
-   "Stock Max": 8.0,
-   "Reorder Quantity": 10.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "100207223",
-   "VEN URL": "https://www.homedepot.com/p/Eaton-BR-20-Amp-120-240-Volts-2-Pole-Circuit-Breaker-BR220/100207223",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 21.32,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 106,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Carpet Shield Roll",
-   "Size": "24 x 50",
-   "Manufacturer": "SURFACE SHIELDS",
-   "MFG Part Number": "CS2450",
-   "CAT 1": "Cleanliness",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 157,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 157,
-     "Node Name": "Cleanliness Supplies"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "205187255",
-   "VEN URL": "https://www.homedepot.com/p/SURFACE-SHIELDS-24-in-x-50-ft-Carpet-Protection-Self-Adhesive-Film-CS2450/205187255",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 22.0,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 107,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Tub-O-Towel",
-   "Size": null,
-   "Manufacturer": "Tub O' Towels",
-   "MFG Part Number": "TW90",
-   "CAT 1": "Cleanliness",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 157,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 157,
-     "Node Name": "Cleanliness Supplies"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "204393927",
-   "VEN URL": "https://www.homedepot.com/p/Tub-O-Towels-90-Count-Citrus-Scent-Heavy-Duty-All-Purpose-Wipes-6-Pack-TW90/204393927",
-   "VEN Case QTY Txt": "6",
-   "VEN Case QTY #": 6,
-   "VEN Unit Description": "Tubs",
-   "Vendor Cost": 89.64,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 108,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Garbage Bags",
-   "Size": "Husky",
-   "Manufacturer": "Husky",
-   "MFG Part Number": "HK42WC050B",
-   "CAT 1": "Cleanliness",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 157,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 157,
-     "Node Name": "Cleanliness Supplies"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 2.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Rolls",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "202973825",
-   "VEN URL": "https://www.homedepot.com/p/Husky-42-Gal-Contractor-Bags-50-Count-HK42WC050B/202973825",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 29.97,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 109,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Glass Cleaner",
-   "Size": "Sprayway",
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Cleanliness",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 157,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 157,
-     "Node Name": "Cleanliness Supplies"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 2.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "BJ's",
-   "VEN Part Number": "SW0504CLUB",
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 1.99,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 110,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Goo Gone",
-   "Size": "Bottle",
-   "Manufacturer": "Goo Gone",
-   "MFG Part Number": "2037",
-   "CAT 1": "Cleanliness",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 157,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 157,
-     "Node Name": "Cleanliness Supplies"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "205188154",
-   "VEN URL": "https://www.homedepot.com/p/Goo-Gone-8-oz-Pro-Power-Adhesive-Remover-2037/205188154",
-   "VEN Case QTY Txt": "50 Bags",
-   "VEN Case QTY #": 50,
-   "VEN Unit Description": "Bags",
-   "Vendor Cost": 4.98,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 113,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Box of Paper Towels",
-   "Size": null,
-   "Manufacturer": "TOOLBOX",
-   "MFG Part Number": "5820208",
-   "CAT 1": "Cleanliness",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 157,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 157,
-     "Node Name": "Cleanliness Supplies"
-    }
-   ],
-   "Stock Min": 0.5,
-   "Stock Max": 1.5,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Box",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "203776822",
-   "VEN URL": "https://www.homedepot.com/p/TOOLBOX-Professional-White-Rags-200-Sheets-10-in-W-x-11-in-L-Sheet-Size-Disposable-Painter-s-Rags-Natural-Fibers-5820208/203776822",
-   "VEN Case QTY Txt": "1 Box",
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Box",
-   "Vendor Cost": 9.98,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 236,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Alcohol Prep Pad",
-   "Size": "Equate",
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Wal-Mart",
-   "VEN Part Number": null,
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 237,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Antibiotic",
-   "Size": null,
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Wal-Mart",
-   "VEN Part Number": null,
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 238,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Bandaides",
-   "Size": null,
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Wal-Mart",
-   "VEN Part Number": null,
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 239,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Bug Spray",
-   "Size": "6 oz.",
-   "Manufacturer": "OFF!",
-   "MFG Part Number": "SCJ333242",
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "203187950",
-   "VEN URL": "https://www.homedepot.com/p/OFF-Deep-Woods-Mosquito-Repellent-V-up-to-8-Hours-of-Protection-from-Mosquitoes-6-oz-SCJ333242/203187950",
-   "VEN Case QTY Txt": "Each",
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 6.87,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 240,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Dust Mask",
-   "Size": "10 Pack",
-   "Manufacturer": "HDX",
-   "MFG Part Number": "H950",
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "315303672",
-   "VEN URL": "https://www.homedepot.com/p/HDX-N95-Disposable-Adult-Respirator-Mask-10-Pack-H950/315303672",
-   "VEN Case QTY Txt": "10 Masks",
-   "VEN Case QTY #": 10,
-   "VEN Unit Description": "Masks",
-   "Vendor Cost": 17.97,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 241,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Ear Plugs",
-   "Size": "10 Pack",
-   "Manufacturer": "3M",
-   "MFG Part Number": "90716-3-10DC",
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 2.0,
-   "Stock Max": 6.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Pair",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "205951097",
-   "VEN URL": "https://www.homedepot.com/p/3M-Corded-Reusable-Earplugs-3-Pairs-Case-of-10-90716-3-10DC/205951097",
-   "VEN Case QTY Txt": "3 Pairs (Case of 10)",
-   "VEN Case QTY #": 10,
-   "VEN Unit Description": "Containers",
-   "Vendor Cost": 25.42,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 243,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Particulate Filter - P95",
-   "Size": "3M 2071",
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 2.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Amazon",
-   "VEN Part Number": "4MH55",
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 8.5,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 244,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Poison Ivy Itch Spray",
-   "Size": "3.4 oz",
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Amazon",
-   "VEN Part Number": "Ivarest",
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 245,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Safety Glasses (6-pack)",
-   "Size": "6 Pack",
-   "Manufacturer": "HDX",
-   "MFG Part Number": "VS-108",
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 2.0,
-   "Stock Max": 6.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Pair",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "309028884",
-   "VEN URL": "https://www.homedepot.com/p/HDX-Indoor-Safety-Clear-Glasses-6-Pack-VS-108/309028884",
-   "VEN Case QTY Txt": "6 Pair",
-   "VEN Case QTY #": 6,
-   "VEN Unit Description": "Pair",
-   "Vendor Cost": 23.78,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 246,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Sunscreen",
-   "Size": null,
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Wal-Mart",
-   "VEN Part Number": null,
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 247,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Terri Strips",
-   "Size": null,
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Wal-Mart",
-   "VEN Part Number": null,
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 248,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "XL All Purpose Painters Coverall",
-   "Size": null,
-   "Manufacturer": "HDX",
-   "MFG Part Number": "14153/12HD",
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 2.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "203555476",
-   "VEN URL": "https://www.homedepot.com/p/HDX-XL-All-Purpose-Painters-Coverall-14153-12HD/203555476",
-   "VEN Case QTY Txt": "Each",
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 12.98,
    "Stock Class": "trailer"
   },
   {
@@ -57296,6 +55172,1667 @@
    "VEN Unit Description": "Each",
    "Vendor Cost": 5.39,
    "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 685,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" EMT Compression Coupling",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "662SRT",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 10.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "662SRT",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-662SRT-3-4-Steel-EMT-Raintight-Compression-Type-Coupling?_br_psugg_q=662srt",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 3.44,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 686,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" EMT Waterproof Male Adapter",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "652SRT",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 10.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "652SRT",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-652SRT-3-4-Steel-EMT-Raintight-Compression-Type-Connector?_br_psugg_q=652srt",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 2.29,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 687,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" Close Nipple",
+   "Size": "3/4\"",
+   "Manufacturer": "Bluefin",
+   "MFG Part Number": "GVN075C",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 8.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "GVN075C",
+   "VEN URL": "https://www.supplyhouse.com/Bluefin-GVN075C-3-4-x-Close-Galv-Nipple?_br_psugg_q=gvn075c",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.02,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 688,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" Rigid Steel Coupling",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "52",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 8.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "52",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-52-3-4-Rigid-Steel-Coupling",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.56,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 689,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" EMT LB",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "LB2SSCG",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 8.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "LB2SSCG",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-LB2SSCG-3-4-EMT-Rigid-LB-Type-Combination-Conduit-Body-w-Cover-and-Gasket-Aluminum?_br_psugg_q=lb2sscg",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 7.9,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 690,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" EMT Compression Coupling",
+   "Size": "1\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "663SRT",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 10.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "663SRT",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-663SRT-1-Steel-Compression-Type-Raintight-Coupling",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 4.86,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 691,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" EMT Waterproof Male Adapter",
+   "Size": "1\"",
+   "Manufacturer": "Commercial Electric",
+   "MFG Part Number": "FECRS-100-1",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 6.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "316096405",
+   "VEN URL": "https://www.homedepot.com/p/Commercial-Electric-1-in-Electrical-Metallic-Tubing-EMT-Raintight-Compression-Connector-FECRS-100-1/316096405",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 2.98,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 692,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Close Nipple",
+   "Size": "1\"",
+   "Manufacturer": "Bluefin",
+   "MFG Part Number": "GVN100C",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": 4.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "GVN100C",
+   "VEN URL": "https://www.supplyhouse.com/Bluefin-GVN100C-1-x-Close-Galv-Nipple",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.46,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 693,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Threaded Coupling",
+   "Size": "1\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "53-SOUTHWIRE",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": 4.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "53-SOUTHWIRE",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-53-SOUTHWIRE-1-Rigid-Steel-Coupling",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 2.93,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 694,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" EMT LB",
+   "Size": "1\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "LB3SSCG",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": 4.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "LB3SSCG",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-LB3SSCG-1-EMT-Rigid-LB-Combination-Conduit-Body-w-Cover-and-Gasket-Aluminum",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 12.32,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 622,
+   "DB Entry Type": "Part",
+   "Stock Type": "Nonstock",
+   "Description": "3/4\" Locknut",
+   "Size": null,
+   "Manufacturer": "Halex",
+   "MFG Part Number": "26197",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 132,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 132,
+     "Node Name": "Knockout Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 3.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "100111071",
+   "VEN URL": "https://www.homedepot.com/p/Halex-3-4-in-Rigid-Conduit-Locknuts-4-Pack-26197/100111071?source=shoppingads&locale=en-US&fp=ggl",
+   "VEN Case QTY Txt": "4-Pack",
+   "VEN Case QTY #": 4,
+   "VEN Unit Description": "Locknuts",
+   "Vendor Cost": 1.85,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 623,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" Grounding Bushing",
+   "Size": null,
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "332",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 132,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 132,
+     "Node Name": "Knockout Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "332",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-332-3-4-Zinc-Die-Cast-Insulated-Ground-Bushing-w-Lug",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Bushing",
+   "Vendor Cost": 5.56,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 626,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" Locknut - Waterproof",
+   "Size": null,
+   "Manufacturer": "Halex",
+   "MFG Part Number": "96182",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 132,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 132,
+     "Node Name": "Knockout Fittings"
+    }
+   ],
+   "Stock Min": 0.0,
+   "Stock Max": null,
+   "Reorder Quantity": 1.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "100156358",
+   "VEN URL": "https://www.homedepot.com/p/Halex-3-4-in-Rigid-Sealer-Conduit-Locknuts-2-Pack-96182/100156358#overlay",
+   "VEN Case QTY Txt": "2-Pack",
+   "VEN Case QTY #": 2,
+   "VEN Unit Description": "Locknuts",
+   "Vendor Cost": 2.43,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 624,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Locknut",
+   "Size": null,
+   "Manufacturer": "Halex",
+   "MFG Part Number": "96193",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 132,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 132,
+     "Node Name": "Knockout Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": null,
+   "Reorder Quantity": 5.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "100192483",
+   "VEN URL": "https://www.homedepot.com/p/Halex-1-in-Rigid-Conduit-Locknut-2-Pack-96193/100192483",
+   "VEN Case QTY Txt": "2-Pack",
+   "VEN Case QTY #": 2,
+   "VEN Unit Description": "Locknuts",
+   "Vendor Cost": 1.31,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 612,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Knock Out Seal",
+   "Size": null,
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "KO52",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 132,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 132,
+     "Node Name": "Knockout Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": null,
+   "Reorder Quantity": 6.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "KO52",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-KO52-1-Knock-out-Seal-Electrical-Connector",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Knockout",
+   "Vendor Cost": 0.67,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 627,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Locknut - Waterproof",
+   "Size": null,
+   "Manufacturer": "Halex",
+   "MFG Part Number": "96183",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 132,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 132,
+     "Node Name": "Knockout Fittings"
+    }
+   ],
+   "Stock Min": 0.0,
+   "Stock Max": null,
+   "Reorder Quantity": 1.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "100113589",
+   "VEN URL": "https://www.homedepot.com/p/Halex-1-in-Rigid-Sealer-Conduit-Locknuts-2-Pack-96183/100113589",
+   "VEN Case QTY Txt": "2-Pack",
+   "VEN Case QTY #": 2,
+   "VEN Unit Description": "Locknuts",
+   "Vendor Cost": 3.56,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 628,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Grounding Bushing",
+   "Size": null,
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "333",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 132,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 132,
+     "Node Name": "Knockout Fittings"
+    }
+   ],
+   "Stock Min": 0.0,
+   "Stock Max": null,
+   "Reorder Quantity": 4.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "333",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-333-1-Zinc-Die-Cast-Insulated-Ground-Bushing-w-Lug",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Bushing",
+   "Vendor Cost": 6.75,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 629,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1-1/2\" x 1 Reducing Washer",
+   "Size": null,
+   "Manufacturer": "Halex",
+   "MFG Part Number": "26853",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 132,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 132,
+     "Node Name": "Knockout Fittings"
+    }
+   ],
+   "Stock Min": 0.0,
+   "Stock Max": null,
+   "Reorder Quantity": 2.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "100200741",
+   "VEN URL": "https://www.homedepot.com/p/Halex-1-1-2-in-x-1-in-Rigid-Conduit-Reducing-Washer-4-Pack-26853/100200741",
+   "VEN Case QTY Txt": "4-Pack",
+   "VEN Case QTY #": 4,
+   "VEN Unit Description": "Washers",
+   "Vendor Cost": 2.86,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 95,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" One Hole Strap (rigid)",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "532",
+   "CAT 1": "Parts",
+   "CAT 2": "Hardware",
+   "CAT 3": "Securing & Supports",
+   "Location ID": 135,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 135,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 50.0,
+   "Stock Max": null,
+   "Reorder Quantity": 25.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "532",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-532-3-4-One-Hole-Steel-Rigid-Snap-On-Strap",
+   "VEN Case QTY Txt": "50 Pack",
+   "VEN Case QTY #": 50,
+   "VEN Unit Description": "Pack",
+   "Vendor Cost": 18.0,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 613,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" One Hole Strap (EMT)",
+   "Size": null,
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "512-SOUTHWIRE",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 135,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 135,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 25.0,
+   "Stock Max": null,
+   "Reorder Quantity": 50.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "512-SOUTHWIRE",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-512-SOUTHWIRE-3-4-One-Hole-Steel-EMT-Snap-On-Strap",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.19,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 614,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" One Hole Strap (rigid)",
+   "Size": null,
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "533-SOUTHWIRE",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 135,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 135,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 40.0,
+   "Stock Max": null,
+   "Reorder Quantity": 100.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "533-SOUTHWIRE",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-533-SOUTHWIRE-1-One-Hole-Steel-Rigid-Snap-On-Strap",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.46,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 615,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" One Hole Strap (EMT)",
+   "Size": null,
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "513",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 135,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 135,
+     "Node Name": "Securing & Supports"
+    }
+   ],
+   "Stock Min": 40.0,
+   "Stock Max": null,
+   "Reorder Quantity": 100.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "513",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-513-1-One-Hole-Steel-EMT-Snap-On-Strap",
+   "VEN Case QTY Txt": "Box of 50",
+   "VEN Case QTY #": 50,
+   "VEN Unit Description": "Straps",
+   "Vendor Cost": 0.27,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 616,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Wire Nuts - Waterproof (blue) - large",
+   "Size": null,
+   "Manufacturer": "DryConn",
+   "MFG Part Number": "62324",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 140,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 140,
+     "Node Name": "Junction Box Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 1.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "202889880",
+   "VEN URL": "https://www.homedepot.com/p/DryConn-Large-Waterproof-Wire-Connectors-Aqua-Blue-20-Pack-62324/202889880",
+   "VEN Case QTY Txt": "20-Pack",
+   "VEN Case QTY #": 20,
+   "VEN Unit Description": "Wire Nuts",
+   "Vendor Cost": 24.22,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 617,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Wire Nuts - Waterproof (red) - medium",
+   "Size": null,
+   "Manufacturer": "DryConn",
+   "MFG Part Number": "62214",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 140,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 140,
+     "Node Name": "Junction Box Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 1.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "202889876",
+   "VEN URL": "https://www.homedepot.com/p/DryConn-Medium-Waterproof-Wire-Connectors-Aqua-Red-20-Pack-62214/202889876",
+   "VEN Case QTY Txt": "Pack of 20",
+   "VEN Case QTY #": 20,
+   "VEN Unit Description": "Wire Nuts",
+   "Vendor Cost": 18.87,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 11,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Wire Nuts (red)",
+   "Size": null,
+   "Manufacturer": "Ideal",
+   "MFG Part Number": "30-076",
+   "CAT 1": "Parts",
+   "CAT 2": "Electrical",
+   "CAT 3": "Connections",
+   "Location ID": 140,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 140,
+     "Node Name": "Junction Box Fittings"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": 1.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "30-076",
+   "VEN URL": "https://www.supplyhouse.com/Ideal-30-076-76B-Red-Wire-Nut-Wire-Connector-Box-of-100",
+   "VEN Case QTY Txt": "Box of 100",
+   "VEN Case QTY #": 100,
+   "VEN Unit Description": "Box",
+   "Vendor Cost": 16.46,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 618,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" Enphase Cable Grid - HEYCO",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 140,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 140,
+     "Node Name": "Junction Box Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 20.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": null,
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 619,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1/2\" Gland Fitting (round)",
+   "Size": null,
+   "Manufacturer": "Halex",
+   "MFG Part Number": "27693",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 140,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 140,
+     "Node Name": "Junction Box Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": null,
+   "Reorder Quantity": 4.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "202077093",
+   "VEN URL": "https://www.homedepot.com/p/Halex-1-2-in-ACC-Non-Metallic-Strain-Relief-Cord-Connector-27693/202077093",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 2.43,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 620,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" EMT Insulating Bushing",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": "27502",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 140,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 140,
+     "Node Name": "Junction Box Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 13.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "100189830",
+   "VEN URL": "https://www.homedepot.com/p/3-4-in-Electrical-Metallic-Tube-EMT-Insulating-Bushing-4-Pack-27502/100189830",
+   "VEN Case QTY Txt": "4-Pack",
+   "VEN Case QTY #": 2,
+   "VEN Unit Description": "Bushings",
+   "Vendor Cost": 1.3,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 621,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" EMT Insulating Bushing",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": "27503",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 140,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 140,
+     "Node Name": "Junction Box Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 13.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "202077081",
+   "VEN URL": "https://www.homedepot.com/p/1-in-Electrical-Metallic-Tube-EMT-Insulating-Bushing-27503/202077081",
+   "VEN Case QTY Txt": "Pack of 2",
+   "VEN Case QTY #": 2,
+   "VEN Unit Description": "Bushings",
+   "Vendor Cost": 1.36,
+   "Stock Class": "shop"
   },
   {
    "Part ID": 630,
@@ -60175,7 +59712,7 @@
    ],
    "Stock Min": 0.0,
    "Stock Max": null,
-   "Reorder Quantity": 1.0,
+   "Reorder Quantity": 10.0,
    "Locations Unit Of Measure": null,
    "Component Quantity": null,
    "Component Unit Description": null,
@@ -60350,9 +59887,9 @@
      "Node Name": "Conduit"
     }
    ],
-   "Stock Min": 1.0,
+   "Stock Min": 10.0,
    "Stock Max": null,
-   "Reorder Quantity": 1.0,
+   "Reorder Quantity": 10.0,
    "Locations Unit Of Measure": "Each",
    "Component Quantity": null,
    "Component Unit Description": null,
@@ -60409,9 +59946,9 @@
      "Node Name": "Conduit"
     }
    ],
-   "Stock Min": 1.0,
+   "Stock Min": 10.0,
    "Stock Max": null,
-   "Reorder Quantity": 1.0,
+   "Reorder Quantity": 10.0,
    "Locations Unit Of Measure": "Each",
    "Component Quantity": null,
    "Component Unit Description": null,
@@ -60540,1186 +60077,6 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "10' Stick",
    "Vendor Cost": 21.92,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 702,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "15A Double Pole Breaker - Eaton",
-   "Size": "15A",
-   "Manufacturer": "Eaton",
-   "MFG Part Number": "BR215",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 155,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 133,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 155,
-     "Node Name": "Circuit Breakers"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": null,
-   "Reorder Quantity": 3.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "100193182",
-   "VEN URL": "https://www.homedepot.com/p/Eaton-BR-15-Amp-120-240-Volts-2-Pole-Circuit-Breaker-BR215/100193182",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 21.32,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 622,
-   "DB Entry Type": "Part",
-   "Stock Type": "Nonstock",
-   "Description": "3/4\" Locknut",
-   "Size": null,
-   "Manufacturer": "Halex",
-   "MFG Part Number": "26197",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 132,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 132,
-     "Node Name": "Knockout Fittings"
-    }
-   ],
-   "Stock Min": 10.0,
-   "Stock Max": null,
-   "Reorder Quantity": 3.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "100111071",
-   "VEN URL": "https://www.homedepot.com/p/Halex-3-4-in-Rigid-Conduit-Locknuts-4-Pack-26197/100111071?source=shoppingads&locale=en-US&fp=ggl",
-   "VEN Case QTY Txt": "4-Pack",
-   "VEN Case QTY #": 4,
-   "VEN Unit Description": "Locknuts",
-   "Vendor Cost": 1.85,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 623,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" Grounding Bushing",
-   "Size": null,
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "332",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 132,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 132,
-     "Node Name": "Knockout Fittings"
-    }
-   ],
-   "Stock Min": 4.0,
-   "Stock Max": null,
-   "Reorder Quantity": 10.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "332",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-332-3-4-Zinc-Die-Cast-Insulated-Ground-Bushing-w-Lug",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Bushing",
-   "Vendor Cost": 5.56,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 626,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" Locknut - Waterproof",
-   "Size": null,
-   "Manufacturer": "Halex",
-   "MFG Part Number": "96182",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 132,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 132,
-     "Node Name": "Knockout Fittings"
-    }
-   ],
-   "Stock Min": 0.0,
-   "Stock Max": null,
-   "Reorder Quantity": 1.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "100156358",
-   "VEN URL": "https://www.homedepot.com/p/Halex-3-4-in-Rigid-Sealer-Conduit-Locknuts-2-Pack-96182/100156358#overlay",
-   "VEN Case QTY Txt": "2-Pack",
-   "VEN Case QTY #": 2,
-   "VEN Unit Description": "Locknuts",
-   "Vendor Cost": 2.43,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 624,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" Locknut",
-   "Size": null,
-   "Manufacturer": "Halex",
-   "MFG Part Number": "96193",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 132,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 132,
-     "Node Name": "Knockout Fittings"
-    }
-   ],
-   "Stock Min": 6.0,
-   "Stock Max": null,
-   "Reorder Quantity": 5.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "100192483",
-   "VEN URL": "https://www.homedepot.com/p/Halex-1-in-Rigid-Conduit-Locknut-2-Pack-96193/100192483",
-   "VEN Case QTY Txt": "2-Pack",
-   "VEN Case QTY #": 2,
-   "VEN Unit Description": "Locknuts",
-   "Vendor Cost": 1.31,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 612,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" Knock Out Seal",
-   "Size": null,
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "KO52",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 132,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 132,
-     "Node Name": "Knockout Fittings"
-    }
-   ],
-   "Stock Min": 4.0,
-   "Stock Max": null,
-   "Reorder Quantity": 6.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "KO52",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-KO52-1-Knock-out-Seal-Electrical-Connector",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Knockout",
-   "Vendor Cost": 0.67,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 627,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" Locknut - Waterproof",
-   "Size": null,
-   "Manufacturer": "Halex",
-   "MFG Part Number": "96183",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 132,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 132,
-     "Node Name": "Knockout Fittings"
-    }
-   ],
-   "Stock Min": 0.0,
-   "Stock Max": null,
-   "Reorder Quantity": 1.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "100113589",
-   "VEN URL": "https://www.homedepot.com/p/Halex-1-in-Rigid-Sealer-Conduit-Locknuts-2-Pack-96183/100113589",
-   "VEN Case QTY Txt": "2-Pack",
-   "VEN Case QTY #": 2,
-   "VEN Unit Description": "Locknuts",
-   "Vendor Cost": 3.56,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 628,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" Grounding Bushing",
-   "Size": null,
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "333",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 132,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 132,
-     "Node Name": "Knockout Fittings"
-    }
-   ],
-   "Stock Min": 0.0,
-   "Stock Max": null,
-   "Reorder Quantity": 4.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "333",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-333-1-Zinc-Die-Cast-Insulated-Ground-Bushing-w-Lug",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Bushing",
-   "Vendor Cost": 6.75,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 629,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1-1/2\" x 1 Reducing Washer",
-   "Size": null,
-   "Manufacturer": "Halex",
-   "MFG Part Number": "26853",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 132,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 132,
-     "Node Name": "Knockout Fittings"
-    }
-   ],
-   "Stock Min": 0.0,
-   "Stock Max": null,
-   "Reorder Quantity": 2.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "100200741",
-   "VEN URL": "https://www.homedepot.com/p/Halex-1-1-2-in-x-1-in-Rigid-Conduit-Reducing-Washer-4-Pack-26853/100200741",
-   "VEN Case QTY Txt": "4-Pack",
-   "VEN Case QTY #": 4,
-   "VEN Unit Description": "Washers",
-   "Vendor Cost": 2.86,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 95,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" One Hole Strap (rigid)",
-   "Size": "3/4\"",
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "532",
-   "CAT 1": "Parts",
-   "CAT 2": "Hardware",
-   "CAT 3": "Securing & Supports",
-   "Location ID": 135,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 135,
-     "Node Name": "Securing & Supports"
-    }
-   ],
-   "Stock Min": 50.0,
-   "Stock Max": null,
-   "Reorder Quantity": 25.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "532",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-532-3-4-One-Hole-Steel-Rigid-Snap-On-Strap",
-   "VEN Case QTY Txt": "50 Pack",
-   "VEN Case QTY #": 50,
-   "VEN Unit Description": "Pack",
-   "Vendor Cost": 18.0,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 613,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" One Hole Strap (EMT)",
-   "Size": null,
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "512-SOUTHWIRE",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 135,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 135,
-     "Node Name": "Securing & Supports"
-    }
-   ],
-   "Stock Min": 25.0,
-   "Stock Max": null,
-   "Reorder Quantity": 50.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "512-SOUTHWIRE",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-512-SOUTHWIRE-3-4-One-Hole-Steel-EMT-Snap-On-Strap",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 0.19,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 614,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" One Hole Strap (rigid)",
-   "Size": null,
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "533-SOUTHWIRE",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 135,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 135,
-     "Node Name": "Securing & Supports"
-    }
-   ],
-   "Stock Min": 40.0,
-   "Stock Max": null,
-   "Reorder Quantity": 100.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "533-SOUTHWIRE",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-533-SOUTHWIRE-1-One-Hole-Steel-Rigid-Snap-On-Strap",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 0.46,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 615,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" One Hole Strap (EMT)",
-   "Size": null,
-   "Manufacturer": "Southwire",
-   "MFG Part Number": "513",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 135,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 135,
-     "Node Name": "Securing & Supports"
-    }
-   ],
-   "Stock Min": 40.0,
-   "Stock Max": null,
-   "Reorder Quantity": 100.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "513",
-   "VEN URL": "https://www.supplyhouse.com/Southwire-513-1-One-Hole-Steel-EMT-Snap-On-Strap",
-   "VEN Case QTY Txt": "Box of 50",
-   "VEN Case QTY #": 50,
-   "VEN Unit Description": "Straps",
-   "Vendor Cost": 0.27,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 616,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Wire Nuts - Waterproof (blue) - large",
-   "Size": null,
-   "Manufacturer": "DryConn",
-   "MFG Part Number": "62324",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 140,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 140,
-     "Node Name": "Junction Box Fittings"
-    }
-   ],
-   "Stock Min": 10.0,
-   "Stock Max": null,
-   "Reorder Quantity": 1.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "202889880",
-   "VEN URL": "https://www.homedepot.com/p/DryConn-Large-Waterproof-Wire-Connectors-Aqua-Blue-20-Pack-62324/202889880",
-   "VEN Case QTY Txt": "20-Pack",
-   "VEN Case QTY #": 20,
-   "VEN Unit Description": "Wire Nuts",
-   "Vendor Cost": 24.22,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 617,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Wire Nuts - Waterproof (red) - medium",
-   "Size": null,
-   "Manufacturer": "DryConn",
-   "MFG Part Number": "62214",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 140,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 140,
-     "Node Name": "Junction Box Fittings"
-    }
-   ],
-   "Stock Min": 10.0,
-   "Stock Max": null,
-   "Reorder Quantity": 1.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "202889876",
-   "VEN URL": "https://www.homedepot.com/p/DryConn-Medium-Waterproof-Wire-Connectors-Aqua-Red-20-Pack-62214/202889876",
-   "VEN Case QTY Txt": "Pack of 20",
-   "VEN Case QTY #": 20,
-   "VEN Unit Description": "Wire Nuts",
-   "Vendor Cost": 18.87,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 11,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Wire Nuts (red)",
-   "Size": null,
-   "Manufacturer": "Ideal",
-   "MFG Part Number": "30-076",
-   "CAT 1": "Parts",
-   "CAT 2": "Electrical",
-   "CAT 3": "Connections",
-   "Location ID": 140,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 140,
-     "Node Name": "Junction Box Fittings"
-    }
-   ],
-   "Stock Min": 20.0,
-   "Stock Max": null,
-   "Reorder Quantity": 1.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Supply House",
-   "VEN Part Number": "30-076",
-   "VEN URL": "https://www.supplyhouse.com/Ideal-30-076-76B-Red-Wire-Nut-Wire-Connector-Box-of-100",
-   "VEN Case QTY Txt": "Box of 100",
-   "VEN Case QTY #": 100,
-   "VEN Unit Description": "Box",
-   "Vendor Cost": 16.46,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 618,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" Enphase Cable Grid - HEYCO",
-   "Size": null,
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 140,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 140,
-     "Node Name": "Junction Box Fittings"
-    }
-   ],
-   "Stock Min": 10.0,
-   "Stock Max": null,
-   "Reorder Quantity": 20.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": null,
-   "VEN Part Number": null,
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 619,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1/2\" Gland Fitting (round)",
-   "Size": null,
-   "Manufacturer": "Halex",
-   "MFG Part Number": "27693",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 140,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 140,
-     "Node Name": "Junction Box Fittings"
-    }
-   ],
-   "Stock Min": 4.0,
-   "Stock Max": null,
-   "Reorder Quantity": 4.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "202077093",
-   "VEN URL": "https://www.homedepot.com/p/Halex-1-2-in-ACC-Non-Metallic-Strain-Relief-Cord-Connector-27693/202077093",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 2.43,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 620,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "3/4\" EMT Insulating Bushing",
-   "Size": null,
-   "Manufacturer": null,
-   "MFG Part Number": "27502",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 140,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 140,
-     "Node Name": "Junction Box Fittings"
-    }
-   ],
-   "Stock Min": 10.0,
-   "Stock Max": null,
-   "Reorder Quantity": 13.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "100189830",
-   "VEN URL": "https://www.homedepot.com/p/3-4-in-Electrical-Metallic-Tube-EMT-Insulating-Bushing-4-Pack-27502/100189830",
-   "VEN Case QTY Txt": "4-Pack",
-   "VEN Case QTY #": 2,
-   "VEN Unit Description": "Bushings",
-   "Vendor Cost": 1.3,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 621,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "1\" EMT Insulating Bushing",
-   "Size": null,
-   "Manufacturer": null,
-   "MFG Part Number": "27503",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 140,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 131,
-     "Node Name": "Case Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 140,
-     "Node Name": "Junction Box Fittings"
-    }
-   ],
-   "Stock Min": 10.0,
-   "Stock Max": null,
-   "Reorder Quantity": 13.0,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "202077081",
-   "VEN URL": "https://www.homedepot.com/p/1-in-Electrical-Metallic-Tube-EMT-Insulating-Bushing-27503/202077081",
-   "VEN Case QTY Txt": "Pack of 2",
-   "VEN Case QTY #": 2,
-   "VEN Unit Description": "Bushings",
-   "Vendor Cost": 1.36,
    "Stock Class": "shop"
   }
  ]
