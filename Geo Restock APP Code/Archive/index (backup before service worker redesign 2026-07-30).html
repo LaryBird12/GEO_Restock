@@ -502,172 +502,28 @@ function submitAdminPw(){
 }
 function hideSyncInfo(){const e=$('syncinfo');if(e)e.style.display='none';}
 
-// ── FRESHNESS ─────────────────────────────────────────────────────────────────
-// REBUILT 2026-07-30. There is no clock here any more. The trigger is APP OPEN,
-// every launch, after the screen has already rendered. Online and a stamp moved:
-// pull that one thing, silently. Online and everything matches: do nothing.
-// Offline: run on cache, no error, no message. Full design and the measurements
-// behind it: md/GEO_Catalog_Architecture.md, 2026-07-30.
-//
-// THE CATALOG COMES FROM GITHUB, NOT NETLIFY. It is 1.39 MB and serving it off
-// the hosting plan was the same bandwidth shape that bit Mitch on the radio
-// station. version.json is the one file that stays on Netlify, deliberately —
-// co-located with the shell it describes, so the stamp can never promise a shell
-// Netlify is not yet handing over.
-const CATALOG_URL=(CFG.assetBase?CFG.assetBase+encodeURIComponent(CFG.catalogFile):'./'+CFG.catalogFile);
-const VK={shell:'geo_v_shell',worker:'geo_v_worker',data:'geo_v_data',pending:'geo_shell_pending'};
-const NOTICE_DELAY_MS=500;
-// LOCKED WORDING (Mitch, 2026-07-30). Third person is deliberate and is shared
-// with the eviction notice — the app talks ABOUT Mitch, never as him. Do not
-// paraphrase either message and do not merge them; they answer two different
-// situations.
-const MSG_UPDATED='App just updated to the most recent version. Because Mitch refuses to leave well enough alone.';
-const MSG_FIRSTRUN='Setting up your app, one moment.';
-const MSG_EVICTED="Data unavailable. Please reconnect to the internet to refresh. Sorry for the inconvenience, and don't hesitate to bust Doctor Wheeler's balls about this the next time you see him.";
-
-function blockingNotice(text,color){
-  const el=$('app');if(!el)return;
-  el.innerHTML='<div id="bootnotice" style="height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:'+color+';font-size:15px;line-height:1.6;padding:34px;">'+h(text)+'</div>';
-}
-function showFirstRunNotice(){blockingNotice(MSG_FIRSTRUN,'#7a8fb5');}
-function showEvictedNotice(){blockingNotice(MSG_EVICTED,'#e2e8f0');}
-function hideBlockingNotice(){const n=$('bootnotice');if(n)n.remove();}
-// Announced on the launch that actually USES the new shell, not on the one that
-// downloaded it — that is what "just updated" means to the man holding the phone.
-function announceShellUpdate(){
-  if(localStorage.getItem(VK.pending)!=='1')return;
-  localStorage.removeItem(VK.pending);
-  toast(MSG_UPDATED);
-}
-
-async function freshnessCheck(){
-  if(!navigator.onLine)return;                       // silent, retry next launch
-  let v=null;
-  try{
-    const r=await fetch(CFG.versionFile,{cache:'no-store'});
-    if(!r.ok)return;
-    v=await r.json();
-  }catch(e){return;}                                 // silent, retry next launch
-  if(!v)return;
-  await pullData(v);
-  await pullShell(v);
-  await pullWorker(v);
-  swPost({type:'SWEEP'});
-  topUpImages();
-}
-
-// DATA. The verify step below is not defensive padding — it is the mechanism
-// that makes an ordinary push work. MEASURED 2026-07-30: Netlify publishes the
-// new version.json about seven seconds BEFORE GitHub raw starts serving the
-// matching catalog, so "stamp says new, file is still old" is the NORMAL opening
-// of every data push, not a rare edge case. The stamp lives INSIDE the catalog
-// file, so the phone checks the bytes it actually received instead of trusting
-// two servers to be in step. NEVER RECORD A STAMP YOU HAVE NOT VERIFIED.
-async function pullData(v){
-  if(v.data==null||String(v.data)===localStorage.getItem(VK.data))return;
-  try{
-    const r=await fetch(CATALOG_URL,{cache:'no-store'});
-    if(!r.ok)return;
-    const env=await r.json();
-    if(String(env['Source Change ID'])!==String(v.data))return;   // stale — drop it, no stamp
-    const name='geo-data-'+v.data;
-    const c=await caches.open(name);
-    await c.put(CATALOG_URL,new Response(JSON.stringify(env),{headers:{'Content-Type':'application/json'}}));
-    await setPointer({data:String(v.data)});
-    localStorage.setItem(VK.data,String(v.data));
-    localStorage.setItem('geo_lastRefresh',String(Date.now()));
-  }catch(e){/* silent — next launch */}
-}
-
-// SHELL. Cached now, APPLIED NEXT LAUNCH — never swapped under a technician
-// mid-job. The shell is NOT verified by hashing what comes back: Netlify can
-// inject into HTML responses (it injected a 525-byte tracking script until RUM
-// was switched off 2026-07-30), so a hash check would fail on the platform's
-// behaviour rather than on ours. Co-location is what makes the shell safe.
-async function pullShell(v){
-  if(v.shell==null||String(v.shell)===localStorage.getItem(VK.shell))return;
-  // A brand-new phone has no previous shell, and a first install is not an
-  // update — it must never greet a tech with "App just updated".
-  const hadOne=!!localStorage.getItem(VK.shell);
-  try{
-    const name='geo-shell-'+v.shell;
-    const c=await caches.open(name);
-    for(const u of ['./','./index.html','./config.js']){
-      const r=await fetch(u,{cache:'no-store'});
-      if(!r||!r.ok)return;                            // partial shell is worse than none
-      await c.put(u,r.clone());
-    }
-    await setPointer({shell:String(v.shell)});
-    localStorage.setItem(VK.shell,String(v.shell));
-    if(hadOne)localStorage.setItem(VK.pending,'1');   // announce it on the NEXT launch
-  }catch(e){/* silent — next launch */}
-}
-
-// WORKER. Let the browser do its own job rather than hand-rolling a swap; two
-// update mechanisms arguing is how you get two workers.
-async function pullWorker(v){
-  if(v.worker==null||String(v.worker)===localStorage.getItem(VK.worker))return;
-  try{
-    if(!navigator.serviceWorker)return;
-    const reg=await navigator.serviceWorker.getRegistration();
-    if(!reg)return;
-    await reg.update();
-    localStorage.setItem(VK.worker,String(v.worker));
-  }catch(e){/* silent — next launch */}
-}
-
-function swPost(msg){
-  try{
-    if(navigator.serviceWorker&&navigator.serviceWorker.controller)
-      navigator.serviceWorker.controller.postMessage(msg);
-  }catch(e){}
-}
-// The pointer tells the worker which shell/data cache is live. Written from the
-// page because the page is the only thing that knows a pull actually succeeded.
-async function setPointer(patch){
-  try{
-    const c=await caches.open('geo-meta');
-    let cur={};
-    const hit=await c.match('/__geo_current');
-    if(hit)cur=await hit.json();
-    Object.assign(cur,patch);
-    await c.put('/__geo_current',new Response(JSON.stringify(cur),{headers:{'Content-Type':'application/json'}}));
-  }catch(e){}
-}
-// Images are never versioned and never swept, so this is a one-time cost per
-// part for the life of the phone. A device that is already full does ~570 cache
-// lookups and downloads nothing. This is what keeps a tech's photos working in a
-// dead zone without a code push ever costing 11 MB.
-function topUpImages(){
-  if(!navigator.onLine||!PARTS.length)return;
-  swPost({type:'TOPUP_IMAGES',ids:PARTS.map(p=>p.id)});
-}
-
-// MANUAL OVERRIDE. Kept deliberately — but no technician is ever told to press
-// it any more. That was the whole point.
+// ── CACHE REFRESH (manual button + weekly auto) ───────────────────────────────
 function refreshCache(){
   if(refreshing)return;
   if(!navigator.onLine){toast('Offline — connect to refresh');return;}
   refreshing=true;render();
-  fetch(CATALOG_URL,{cache:'no-store'})
+  if(navigator.serviceWorker&&navigator.serviceWorker.controller){
+    try{navigator.serviceWorker.controller.postMessage({type:'REFRESH'});}catch(e){}
+  }
+  fetch(CFG.catalogFile+'?v='+Date.now(),{cache:'no-store'})
     .then(r=>{if(!r.ok)throw 0;return r.json();})
-    .then(async env=>{
+    .then(env=>{
       buildData(env.Parts||[]);
       try{localStorage.setItem('geo_exportTs',env['Export Timestamp']||'');}catch(e){}
-      const scid=env['Source Change ID'];
-      if(scid!=null){
-        const c=await caches.open('geo-data-'+scid);
-        await c.put(CATALOG_URL,new Response(JSON.stringify(env),{headers:{'Content-Type':'application/json'}}));
-        await setPointer({data:String(scid)});
-        localStorage.setItem(VK.data,String(scid));
-        swPost({type:'SWEEP'});
-      }
       localStorage.setItem('geo_lastRefresh',String(Date.now()));
       refreshing=false;render();
       toast('Data refreshed · '+PARTS.length+' parts');
-      topUpImages();
     })
     .catch(()=>{refreshing=false;render();toast('Refresh failed — try again');});
+}
+function maybeAutoRefresh(){
+  const last=Number(localStorage.getItem('geo_lastRefresh'))||0;
+  if(navigator.onLine && last && (Date.now()-last)>=CFG.autoRefreshDays*864e5)refreshCache();
 }
 
 // ── SEARCH (any-order word match) ─────────────────────────────────────────────
@@ -1833,35 +1689,18 @@ function renderFeedback(){
 // ── INIT ──────────────────────────────────────────────────────────────────────
 function boot(){
   if(!localStorage.getItem('geo_lastRefresh'))localStorage.setItem('geo_lastRefresh',String(Date.now()));
-  // FIRST-RUN NOTICE. Held back half a second so a healthy launch never flashes
-  // it (Mitch, locked 2026-07-30): a message that blinks past on every open
-  // rebuilds the "something is happening to my app" feeling this whole redesign
-  // exists to kill. It only ever appears when there is genuinely something to
-  // wait for — a brand-new phone with nothing cached yet.
-  const firstRun=!localStorage.getItem(VK.data);
-  const noticeTimer=firstRun?setTimeout(showFirstRunNotice,NOTICE_DELAY_MS):null;
-  fetch(CATALOG_URL).then(r=>{
+  fetch(CFG.catalogFile).then(r=>{
     if(!r.ok)throw new Error('catalog HTTP '+r.status);
     return r.json();
   }).then(env=>{
-    if(noticeTimer)clearTimeout(noticeTimer);
-    hideBlockingNotice();
     buildData(env.Parts||[]);
     try{localStorage.setItem('geo_exportTs',env['Export Timestamp']||'');}catch(e){}
     flushQueue();
     startShop();
     if(team){scr='loading';render();startListeners();setTimeout(()=>{if(scr==='loading'){scr='nav';render();}},4000);}
     else{scr='team';render();}
-    // The screen is up. NOW ask whether anything changed — never before first
-    // paint, and never on a timer. This is the only freshness trigger in the app.
-    setTimeout(freshnessCheck,1200);
-    setTimeout(announceShellUpdate,900);
+    setTimeout(maybeAutoRefresh,2500);
   }).catch(e=>{
-    if(noticeTimer)clearTimeout(noticeTimer);
-    // OFFLINE WITH NOTHING CACHED is the one failure this app does not suffer in
-    // silence — the tech is looking at a blank phone and deserves to know why.
-    // Wording is Mitch's, locked, and must not be paraphrased.
-    if(!navigator.onLine){showEvictedNotice();return;}
     // Honest error surface: say WHAT broke — a startup throw is not a missing
     // catalog (the dot-in-node-name bug hid behind exactly that lie, go night).
     $('app').innerHTML='<div style="height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#ef4444;font-size:14px;padding:30px;">App failed to start:<br>'+h((e&&e.message)||e)+'</div>';

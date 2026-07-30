@@ -29,19 +29,10 @@ self.GEO_CONFIG = {
   // a catalog-load failure.
   rootNode: "geo restock 2-0",
 
-  // Catalog source. MOVED TO GITHUB 2026-07-30 — it is fetched from assetBase
-  // below, NOT from Netlify. It is 1.39 MB, by far the heaviest thing the app
-  // downloads, and serving it from the hosting plan was the same bandwidth shape
-  // that bit Mitch on the radio station. The file still SITS in the deploy
-  // folder; only where it is FETCHED moved. Same move, same reason, as the
-  // images and the logo before it.
+  // Catalog source. Today: the local export sitting next to index.html.
+  // When the GitHub export repo is chosen (open question #7), this becomes
+  // that repo's raw URL — one-line change.
   catalogFile: "GeothermParts_2_0.json",
-
-  // Freshness manifest. Deliberately RELATIVE — this one file is served by
-  // NETLIFY, co-located with the shell it describes, so the stamp can never
-  // promise a shell Netlify is not yet handing over. See the service-worker
-  // entry in md/GEO_Catalog_Architecture.md. ~120 bytes.
-  versionFile: "version.json",
 
   // ── 2. THE IMAGE RULE ───────────────────────────────────────────────────────
   // Image URL is NOT in the export. The app builds every link:
@@ -195,9 +186,8 @@ self.GEO_CONFIG = {
   currency: "$",
   // Stock Type routing — how a part flows when it hits the reorder pipeline.
   stockTypeRouting: { Consumable: "shelf-pull", Nonstock: "purchase-line" },
-  // autoRefreshDays REMOVED 2026-07-30. There is no clock in this app any more.
-  // The catalog refreshes when its STAMP moves, checked at every app open — not
-  // on a cadence. Do not reintroduce a time-based refresh of any kind.
+  // Catalog auto-refresh cadence (was hardcoded 7 days in 1.0).
+  autoRefreshDays: 7,
   // Feedback recipient (was hardcoded in 1.0 at line 434).
   levelerEmail: "conklinm1@yahoo.com",
   // Admin room password (was hardcoded in 1.0).
