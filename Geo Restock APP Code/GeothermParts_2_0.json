@@ -1,6 +1,6 @@
 {
- "Export Timestamp": "2026-07-30T14:55:43+00:00",
- "Source Change ID": 5190,
+ "Export Timestamp": "2026-07-30T15:48:15+00:00",
+ "Source Change ID": 5198,
  "Object Count": 991,
  "Parts": [
   {
@@ -28019,8 +28019,8 @@
      "Node Name": "Socket Fusion"
     }
    ],
-   "Stock Min": null,
-   "Stock Max": null,
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": null,
    "Component Quantity": null,
@@ -28083,8 +28083,8 @@
      "Node Name": "Socket Fusion"
     }
    ],
-   "Stock Min": null,
-   "Stock Max": null,
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": null,
    "Component Quantity": null,
@@ -28211,8 +28211,8 @@
      "Node Name": "Socket Fusion"
     }
    ],
-   "Stock Min": null,
-   "Stock Max": null,
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": null,
    "Component Quantity": null,
@@ -30095,8 +30095,8 @@
      "Node Name": "Securing & Strapping"
     }
    ],
-   "Stock Min": null,
-   "Stock Max": null,
+   "Stock Min": 6.0,
+   "Stock Max": 6.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": null,
    "Component Quantity": null,
