@@ -1,6 +1,6 @@
 {
- "Export Timestamp": "2026-07-30T19:50:03+00:00",
- "Source Change ID": 5342,
+ "Export Timestamp": "2026-07-30T20:14:42+00:00",
+ "Source Change ID": 5350,
  "Object Count": 1026,
  "Parts": [
   {
@@ -51516,6 +51516,714 @@
    "Stock Class": "trailer"
   },
   {
+   "Part ID": 236,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Alcohol Prep Pad",
+   "Size": "Equate",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Wal-Mart",
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 237,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Antibiotic",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Wal-Mart",
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 238,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Bandaides",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Wal-Mart",
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 239,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Bug Spray",
+   "Size": "6 oz.",
+   "Manufacturer": "OFF!",
+   "MFG Part Number": "SCJ333242",
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "203187950",
+   "VEN URL": "https://www.homedepot.com/p/OFF-Deep-Woods-Mosquito-Repellent-V-up-to-8-Hours-of-Protection-from-Mosquitoes-6-oz-SCJ333242/203187950",
+   "VEN Case QTY Txt": "Each",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 6.87,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 240,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Dust Mask",
+   "Size": "10 Pack",
+   "Manufacturer": "HDX",
+   "MFG Part Number": "H950",
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "315303672",
+   "VEN URL": "https://www.homedepot.com/p/HDX-N95-Disposable-Adult-Respirator-Mask-10-Pack-H950/315303672",
+   "VEN Case QTY Txt": "10 Masks",
+   "VEN Case QTY #": 10,
+   "VEN Unit Description": "Masks",
+   "Vendor Cost": 17.97,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 241,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Ear Plugs",
+   "Size": "10 Pack",
+   "Manufacturer": "3M",
+   "MFG Part Number": "90716-3-10DC",
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": 6.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Pair",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "205951097",
+   "VEN URL": "https://www.homedepot.com/p/3M-Corded-Reusable-Earplugs-3-Pairs-Case-of-10-90716-3-10DC/205951097",
+   "VEN Case QTY Txt": "3 Pairs (Case of 10)",
+   "VEN Case QTY #": 10,
+   "VEN Unit Description": "Containers",
+   "Vendor Cost": 25.42,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 243,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Particulate Filter - P95",
+   "Size": "3M 2071",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 2.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Amazon",
+   "VEN Part Number": "4MH55",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 8.5,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 244,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Poison Ivy Itch Spray",
+   "Size": "3.4 oz",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Amazon",
+   "VEN Part Number": "Ivarest",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 245,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Safety Glasses (6-pack)",
+   "Size": "6 Pack",
+   "Manufacturer": "HDX",
+   "MFG Part Number": "VS-108",
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": 6.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Pair",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "309028884",
+   "VEN URL": "https://www.homedepot.com/p/HDX-Indoor-Safety-Clear-Glasses-6-Pack-VS-108/309028884",
+   "VEN Case QTY Txt": "6 Pair",
+   "VEN Case QTY #": 6,
+   "VEN Unit Description": "Pair",
+   "Vendor Cost": 23.78,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 246,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Sunscreen",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Wal-Mart",
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 247,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Terri Strips",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Wal-Mart",
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 248,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "XL All Purpose Painters Coverall",
+   "Size": null,
+   "Manufacturer": "HDX",
+   "MFG Part Number": "14153/12HD",
+   "CAT 1": "Safety Gear",
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 158,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 158,
+     "Node Name": "Safety Gear"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 2.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "203555476",
+   "VEN URL": "https://www.homedepot.com/p/HDX-XL-All-Purpose-Painters-Coverall-14153-12HD/203555476",
+   "VEN Case QTY Txt": "Each",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 12.98,
+   "Stock Class": "trailer"
+  },
+  {
    "Part ID": 22,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
@@ -55053,714 +55761,6 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Box",
    "Vendor Cost": 9.98,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 236,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Alcohol Prep Pad",
-   "Size": "Equate",
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Wal-Mart",
-   "VEN Part Number": null,
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 237,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Antibiotic",
-   "Size": null,
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Wal-Mart",
-   "VEN Part Number": null,
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 238,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Bandaides",
-   "Size": null,
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Wal-Mart",
-   "VEN Part Number": null,
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 239,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Bug Spray",
-   "Size": "6 oz.",
-   "Manufacturer": "OFF!",
-   "MFG Part Number": "SCJ333242",
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "203187950",
-   "VEN URL": "https://www.homedepot.com/p/OFF-Deep-Woods-Mosquito-Repellent-V-up-to-8-Hours-of-Protection-from-Mosquitoes-6-oz-SCJ333242/203187950",
-   "VEN Case QTY Txt": "Each",
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 6.87,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 240,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Dust Mask",
-   "Size": "10 Pack",
-   "Manufacturer": "HDX",
-   "MFG Part Number": "H950",
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "315303672",
-   "VEN URL": "https://www.homedepot.com/p/HDX-N95-Disposable-Adult-Respirator-Mask-10-Pack-H950/315303672",
-   "VEN Case QTY Txt": "10 Masks",
-   "VEN Case QTY #": 10,
-   "VEN Unit Description": "Masks",
-   "Vendor Cost": 17.97,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 241,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Ear Plugs",
-   "Size": "10 Pack",
-   "Manufacturer": "3M",
-   "MFG Part Number": "90716-3-10DC",
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 2.0,
-   "Stock Max": 6.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Pair",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "205951097",
-   "VEN URL": "https://www.homedepot.com/p/3M-Corded-Reusable-Earplugs-3-Pairs-Case-of-10-90716-3-10DC/205951097",
-   "VEN Case QTY Txt": "3 Pairs (Case of 10)",
-   "VEN Case QTY #": 10,
-   "VEN Unit Description": "Containers",
-   "Vendor Cost": 25.42,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 243,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Particulate Filter - P95",
-   "Size": "3M 2071",
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 2.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Amazon",
-   "VEN Part Number": "4MH55",
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 8.5,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 244,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Poison Ivy Itch Spray",
-   "Size": "3.4 oz",
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Amazon",
-   "VEN Part Number": "Ivarest",
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 245,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Safety Glasses (6-pack)",
-   "Size": "6 Pack",
-   "Manufacturer": "HDX",
-   "MFG Part Number": "VS-108",
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 2.0,
-   "Stock Max": 6.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Pair",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "309028884",
-   "VEN URL": "https://www.homedepot.com/p/HDX-Indoor-Safety-Clear-Glasses-6-Pack-VS-108/309028884",
-   "VEN Case QTY Txt": "6 Pair",
-   "VEN Case QTY #": 6,
-   "VEN Unit Description": "Pair",
-   "Vendor Cost": 23.78,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 246,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Sunscreen",
-   "Size": null,
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Wal-Mart",
-   "VEN Part Number": null,
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 247,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Terri Strips",
-   "Size": null,
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Wal-Mart",
-   "VEN Part Number": null,
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
-   "Stock Class": "trailer"
-  },
-  {
-   "Part ID": 248,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "XL All Purpose Painters Coverall",
-   "Size": null,
-   "Manufacturer": "HDX",
-   "MFG Part Number": "14153/12HD",
-   "CAT 1": "Safety Gear",
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 158,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 158,
-     "Node Name": "Safety Gear"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 2.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "203555476",
-   "VEN URL": "https://www.homedepot.com/p/HDX-XL-All-Purpose-Painters-Coverall-14153-12HD/203555476",
-   "VEN Case QTY Txt": "Each",
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 12.98,
    "Stock Class": "trailer"
   },
   {

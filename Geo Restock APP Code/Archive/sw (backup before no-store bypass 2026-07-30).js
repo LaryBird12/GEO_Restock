@@ -197,25 +197,6 @@ self.addEventListener('fetch', e => {
 
   if (!isCatalog && !isImage && !isShell) return;
 
-  // DELIBERATE NETWORK REQUESTS ARE NEVER ANSWERED FROM CACHE (fix, 2026-07-30).
-  // cache:'no-store' is the page saying "I am checking freshness, do not hand me
-  // what I already have." A service worker intercepts regardless of that flag, so
-  // without this the catalog is served from cache to the very code whose job is to
-  // find out whether the cache is stale.
-  //
-  // THAT WAS A DEADLOCK, not an inconvenience. Once a phone held any cached
-  // catalog: the stamp moves -> pullData fetches -> this worker returns the OLD
-  // catalog -> the Source Change ID inside it fails the verify check -> nothing is
-  // recorded -> the same thing happens on every launch, forever. Data updates
-  // could never land again on that device. It also silently disabled the manual
-  // Refresh Data button, which is how it was found.
-  //
-  // Not intercepting is the whole fix: the browser then performs a real no-store
-  // fetch. Offline it simply fails, and every caller already treats a failed pull
-  // as "silent, try next launch". boot() uses a PLAIN fetch, so opening the app
-  // offline still reads the cache exactly as before.
-  if (req.cache === 'no-store' || req.cache === 'reload') return;
-
   e.respondWith((async () => {
     if (isImage) {
       const cache = await caches.open(IMAGES);
