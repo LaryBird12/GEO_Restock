@@ -1658,18 +1658,9 @@ function renderWhDetail(){
     <div class="pop-meta">${isTool?'🛠️ Tool':''}${isTool&&p.vendor?' · ':''}${p.vendor?h(p.vendor):(isTool?'':'Warehouse item')}${(!isTool&&shopWhere(p))?' · '+h(shopWhere(p)):''}</div>
     ${isTool
       ?`<div class="chk${whRestock?' on':''}" onclick="toggleWhRestock()"><div class="box">${whRestock?'✓':''}</div><div class="lbl">Broken / Lost<small>Flag this tool for replacement</small></div></div>`
-      // THE MINIMUM RIDES ON THE CHECKBOX (Mitch, 2026-07-30). Same `chk big` + `chk-qty`
-      // shape as the reset report's bottom row, deliberately — Part & Dart must look and
-      // behave exactly like the trailer flow so a tech never learns a second interface.
-      // The tech has to see the minimum to make an informed call; a bare checkbox is
-      // useless to him. The number MOVED here off its own stat row rather than being
-      // duplicated. Reorder quantity keeps its row: it is what Carson buys, not what the
-      // tech judges the shelf against.
-      :`<div class="detail-stat" style="margin-bottom:16px;"><span class="k">Reorder quantity</span><span class="v">${p.shopOrderQty==null?'—':h(fmtQ(p.shopOrderQty))}</span></div>
-    <div class="chk big${whRestock?' on':''}" onclick="toggleWhRestock()">
-      <div class="chk-top"><div class="box">${whRestock?'✓':''}</div><div class="lbl">Below Shop Minimum<small>Add to the weekly reorder list</small></div></div>
-      <div class="chk-qty">${myShopMin(p)==null?'—':h(fmtQ(myShopMin(p)))}</div>
-    </div>`}
+      :`<div class="detail-stat"><span class="k">Shop minimum</span><span class="v">${myShopMin(p)==null?'—':h(fmtQ(myShopMin(p)))}</span></div>
+    <div class="detail-stat" style="margin-bottom:16px;"><span class="k">Reorder quantity</span><span class="v">${p.shopOrderQty==null?'—':h(fmtQ(p.shopOrderQty))}</span></div>
+    <div class="chk${whRestock?' on':''}" onclick="toggleWhRestock()"><div class="box">${whRestock?'✓':''}</div><div class="lbl">Below Shop Minimum<small>Add to the weekly reorder list</small></div></div>`}
     ${isTest()?'<div style="font-size:12px;color:#a78bfa;text-align:center;margin:2px 0 12px;">🧪 Test mode — this will not be saved</div>':''}
     <button class="btn blue" onclick="commitWh()">Done</button>
   </div></div>`;

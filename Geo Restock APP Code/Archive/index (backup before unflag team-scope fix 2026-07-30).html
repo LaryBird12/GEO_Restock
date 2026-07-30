@@ -662,12 +662,8 @@ function reorderRows(){
     // r.teams is a map of every team that has flagged this item, e.g. {gold:true,titanium:true}.
     // Legacy entries only ever had a single r.team string — treat that as a one-team set so old,
     // not-yet-cleared flags still display correctly instead of showing blank.
-    const teamsObj=teamsOf(r);
-    // Names in config order, then DART LAST — it is the fifth source, and it is appended
-    // rather than sorted in because it is not a team and has no place in that order.
-    const names=teamOrder.filter(t=>teamsObj[t]).map(t=>TEAMS[t].label);
-    if(teamsObj[DART])names.push(DART_LABEL);
-    const teamLabel=names.join(', ');
+    const teamsObj=r.teams||(r.team?{[r.team]:true}:{});
+    const teamLabel=teamOrder.filter(t=>teamsObj[t]).map(t=>TEAMS[t].label).join(', ');
     return{id:id,name:info.name||p.name||'',vendor:info.vendor||p.vendor||'',teamLabel,
       vendorPart:(info.vendorPart!=null?info.vendorPart:(p.vendorPart!=null?p.vendorPart:'')),
       shopMin:(info.shopMin!=null?info.shopMin:(myShopMin(p)!=null?myShopMin(p):'')),
@@ -970,57 +966,29 @@ function commitWh(){
 // Flagging an item writes to two separate sub-paths instead of overwriting the whole node:
 // /info holds the latest snapshot (name/shopMin/vendor/vendorPart/ts), /teams/{team}=true accumulates
 // every team that has flagged it, so a second team flagging the same item adds their name instead of
-// replacing the first team's. Unflagging is PER-TEAM (see unflagReorder): it removes only the
-// clearing team's name, and the row itself survives until the last flagger leaves. The 1.0 rule that
-// used to sit here — "unflagging deletes the whole node for everyone" — was corrected 2026-07-30.
+// replacing the first team's. Unflagging (see callers above) still deletes the whole node — clearing
+// it removes it for everyone, by design (confirmed with Mitch: no per-team partial-clear).
 function shopInfo(p){return{ts:Date.now(),name:p.name,shopMin:(p.shopMin==null?null:p.shopMin),vendor:p.vendor||null,vendorPart:(p.vendorPart==null?null:p.vendorPart)};}
-// DART — the FIFTH name source (Mitch, locked 2026-07-30). A Part & Dart pull comes off
-// the shop shelf and has no team: who took it is irrelevant, so the flag is team-agnostic
-// and reads simply "Dart" on Carson's report. It says the shop shelf is what tripped the
-// line, nothing more. DART IS DELIBERATELY NOT A TEAM — it is not in CFG.teams, it has no
-// division, no homeLocationId and no tiles, and it must never enter the Order Qty division
-// maths (see reorderRows: `divs` walks teamOrder, which cannot contain it). It is a LABEL.
-const DART='dart', DART_LABEL='Dart';
-// The attribution map, in one place. Current shape is r.teams; a legacy entry only ever had
-// a single r.team string. Read through this everywhere so the two shapes never drift apart.
-function teamsOf(r){return (r&&r.teams)||(r&&r.team?{[r.team]:true}:{});}
-// Whoever is doing the clearing: a team if one is picked, otherwise Dart.
-function flagActor(){return team||DART;}
-// Did I flag this? The reorder ROW is global (one warehouse, one PO) but each flagger's
-// attribution is its own entry, so the checkbox must reflect MY flag — not merely that
-// somebody else already raised the line.
+// Did MY team flag this? The reorder ROW is global (one warehouse, one PO) but
+// each team's attribution is its own entry, so the checkbox must reflect this
+// team's flag — not merely that some other team already raised the line.
+// Teamless (Part & Dart) falls back to row existence, as before.
 function flaggedByMe(id){
   const r=shopFlags[id]||{};
-  const to=teamsOf(r);
-  // LEGACY: a teamless flag raised before Dart existed produced a row with NO attribution
-  // at all. Those rows are Dart's by origin — a teamless clear could always remove them and
-  // still can. Same spirit as the r.team fallback above.
-  if(!team&&!Object.keys(to).length)return !!shopFlags[id];
-  return !!to[flagActor()];
+  const to=r.teams||(r.team?{[r.team]:true}:{});
+  return team?!!to[team]:!!shopFlags[id];
 }
 // Remove ONLY this team's attribution. The row survives while any other team
 // still has it flagged, and only disappears when the last one clears — so a
 // second team can never wipe the first team's request.
-// NOT MY FLAG = NO-OP (Mitch, locked 2026-07-30). Below Shop Minimum is committed on
-// every Done whether or not anyone touched the box, so a team that never flagged the
-// item arrived here with an untouched, unticked box and fell straight through to the
-// whole-row delete — erasing every other team's flag. That fall-through is inherited
-// from 1.0, where clearing was global on purpose; 2.0 made the TICK per-team and left
-// the global CLEAR sitting underneath it. A team whose name is not on the list now
-// removes nothing at all. An unattributed row (a Part & Dart flag, which credits no
-// team) is likewise untouchable by any team — only a teamless clear or Carson's Clear
-// Weekly Reorder removes it. DO NOT restore the fall-through.
 function unflagReorder(p){
   const r=shopFlags[p.id]||{};
-  const to=teamsOf(r);
-  const me=flagActor();                        // a team, or Dart when nobody is picked
-  // LEGACY teamless row (no attribution at all): Dart's by origin, so a teamless clear still
-  // takes the whole row. A TEAM never gets this branch — it falls to the guard below.
-  if(!team&&!Object.keys(to).length){dbWrite(ROOT+'/shopReorder/'+p.id,null);return;}
-  if(!to[me])return;                           // not mine to clear — leave every other name standing
-  const remaining=Object.keys(to).filter(t=>t!==me&&to[t]);
-  if(remaining.length){dbWrite(ROOT+'/shopReorder/'+p.id+'/teams/'+me,null);return;}
-  dbWrite(ROOT+'/shopReorder/'+p.id,null);     // last flagger out — Dart counts as one
+  const to=r.teams||(r.team?{[r.team]:true}:{});
+  if(team&&to[team]){
+    const remaining=Object.keys(to).filter(t=>t!==team&&to[t]);
+    if(remaining.length){dbWrite(ROOT+'/shopReorder/'+p.id+'/teams/'+team,null);return;}
+  }
+  dbWrite(ROOT+'/shopReorder/'+p.id,null); // last team, or an unattributed row
 }
 function flagReorder(p){
   // HARD GUARD + DISPATCH: an assembly is a grouping mechanism, never a purchase
@@ -1028,9 +996,7 @@ function flagReorder(p){
   // assembly explodes it into constituent parts instead, silently.
   if(p&&p.entryType==='Assembly'){flagAssemblyNow(p);return;}
   dbWrite(ROOT+'/shopReorder/'+p.id+'/info', shopInfo(p));
-  // ALWAYS attributed now. A teamless Part & Dart flag credits DART rather than nobody —
-  // before 2026-07-30 the if(team) guard here left the row with a blank "Flagged By".
-  dbWrite(ROOT+'/shopReorder/'+p.id+'/teams/'+flagActor(), true);
+  if(team)dbWrite(ROOT+'/shopReorder/'+p.id+'/teams/'+team, true); // Part & Dart with no team picked: no team credited
 }
 
 // ── TOOL FLAG (locked 2026-07-24) ─────────────────────────────────────────────
@@ -1357,7 +1323,7 @@ function buildHTML(){
     return`
     <div class="hdr"><div class="hdr-row">
       <button class="back" onclick="goBack()">‹</button>
-      <div style="flex:1;min-width:0;"><div class="hdr-title">🎯 Part &amp; Dart</div><div class="hdr-sub" style="color:${team?t.color:'#d94b4b'};">${team?t.icon+' '+h(t.label):'🎯 '+DART_LABEL} · flag below-minimums</div></div>
+      <div style="flex:1;min-width:0;"><div class="hdr-title">🎯 Part &amp; Dart</div><div class="hdr-sub" style="color:${t.color};">${t.icon} ${t.label} · flag below-minimums</div></div>
       ${sdot()}
     </div></div>
     <div class="scroll"><div style="padding:16px 20px 4px;">
@@ -1658,18 +1624,9 @@ function renderWhDetail(){
     <div class="pop-meta">${isTool?'🛠️ Tool':''}${isTool&&p.vendor?' · ':''}${p.vendor?h(p.vendor):(isTool?'':'Warehouse item')}${(!isTool&&shopWhere(p))?' · '+h(shopWhere(p)):''}</div>
     ${isTool
       ?`<div class="chk${whRestock?' on':''}" onclick="toggleWhRestock()"><div class="box">${whRestock?'✓':''}</div><div class="lbl">Broken / Lost<small>Flag this tool for replacement</small></div></div>`
-      // THE MINIMUM RIDES ON THE CHECKBOX (Mitch, 2026-07-30). Same `chk big` + `chk-qty`
-      // shape as the reset report's bottom row, deliberately — Part & Dart must look and
-      // behave exactly like the trailer flow so a tech never learns a second interface.
-      // The tech has to see the minimum to make an informed call; a bare checkbox is
-      // useless to him. The number MOVED here off its own stat row rather than being
-      // duplicated. Reorder quantity keeps its row: it is what Carson buys, not what the
-      // tech judges the shelf against.
-      :`<div class="detail-stat" style="margin-bottom:16px;"><span class="k">Reorder quantity</span><span class="v">${p.shopOrderQty==null?'—':h(fmtQ(p.shopOrderQty))}</span></div>
-    <div class="chk big${whRestock?' on':''}" onclick="toggleWhRestock()">
-      <div class="chk-top"><div class="box">${whRestock?'✓':''}</div><div class="lbl">Below Shop Minimum<small>Add to the weekly reorder list</small></div></div>
-      <div class="chk-qty">${myShopMin(p)==null?'—':h(fmtQ(myShopMin(p)))}</div>
-    </div>`}
+      :`<div class="detail-stat"><span class="k">Shop minimum</span><span class="v">${myShopMin(p)==null?'—':h(fmtQ(myShopMin(p)))}</span></div>
+    <div class="detail-stat" style="margin-bottom:16px;"><span class="k">Reorder quantity</span><span class="v">${p.shopOrderQty==null?'—':h(fmtQ(p.shopOrderQty))}</span></div>
+    <div class="chk${whRestock?' on':''}" onclick="toggleWhRestock()"><div class="box">${whRestock?'✓':''}</div><div class="lbl">Below Shop Minimum<small>Add to the weekly reorder list</small></div></div>`}
     ${isTest()?'<div style="font-size:12px;color:#a78bfa;text-align:center;margin:2px 0 12px;">🧪 Test mode — this will not be saved</div>':''}
     <button class="btn blue" onclick="commitWh()">Done</button>
   </div></div>`;

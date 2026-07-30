@@ -1,7 +1,7 @@
 {
- "Export Timestamp": "2026-07-30T03:37:26+00:00",
- "Source Change ID": 5165,
- "Object Count": 993,
+ "Export Timestamp": "2026-07-30T14:55:43+00:00",
+ "Source Change ID": 5190,
+ "Object Count": 991,
  "Parts": [
   {
    "Part ID": 115,
@@ -209,10 +209,10 @@
      "Node Name": "Perishable Items"
     }
    ],
-   "Stock Min": null,
-   "Stock Max": null,
+   "Stock Min": 10.0,
+   "Stock Max": 50.0,
    "Reorder Quantity": null,
-   "Locations Unit Of Measure": null,
+   "Locations Unit Of Measure": "Each",
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Amazon",
@@ -50379,8 +50379,8 @@
      "Node Name": "Perishable Items"
     }
    ],
-   "Stock Min": 4.0,
-   "Stock Max": 2.0,
+   "Stock Min": 2.0,
+   "Stock Max": 4.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": "Each",
    "Component Quantity": null,
@@ -50438,8 +50438,8 @@
      "Node Name": "Perishable Items"
     }
    ],
-   "Stock Min": 4.0,
-   "Stock Max": 2.0,
+   "Stock Min": 2.0,
+   "Stock Max": 4.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": "Battery",
    "Component Quantity": null,
@@ -50674,8 +50674,8 @@
      "Node Name": "Perishable Items"
     }
    ],
-   "Stock Min": 6.0,
-   "Stock Max": 2.0,
+   "Stock Min": 2.0,
+   "Stock Max": 6.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": "Pencils",
    "Component Quantity": null,
@@ -51854,8 +51854,8 @@
      "Node Name": "Liquid Tight Fittings"
     }
    ],
-   "Stock Min": 6.0,
-   "Stock Max": 2.0,
+   "Stock Min": 2.0,
+   "Stock Max": 6.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": "Fitting",
    "Component Quantity": null,
@@ -52149,8 +52149,8 @@
      "Node Name": "Roof Mount Hardware"
     }
    ],
-   "Stock Min": 10.0,
-   "Stock Max": null,
+   "Stock Min": 5.0,
+   "Stock Max": 10.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": null,
    "Component Quantity": null,
@@ -52562,8 +52562,8 @@
      "Node Name": "Roof Mount Hardware"
     }
    ],
-   "Stock Min": 60.0,
-   "Stock Max": 40.0,
+   "Stock Min": 40.0,
+   "Stock Max": 60.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": "Each",
    "Component Quantity": null,
@@ -56776,124 +56776,6 @@
    "Stock Class": "shop"
   },
   {
-   "Part ID": 135,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "#6 THHN (black)",
-   "Size": "#6 x 500'",
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Parts",
-   "CAT 2": "Electrical",
-   "CAT 3": "Wire & Conduit",
-   "Location ID": 134,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 133,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 134,
-     "Node Name": "Wire"
-    }
-   ],
-   "Stock Min": 0.0,
-   "Stock Max": null,
-   "Reorder Quantity": 0.0,
-   "Locations Unit Of Measure": "Rolls",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Cooper Electric",
-   "VEN Part Number": "615344",
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 0.76,
-   "Stock Class": "shop"
-  },
-  {
-   "Part ID": 136,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "#6 THHN (red)",
-   "Size": "#6 x 500'",
-   "Manufacturer": null,
-   "MFG Part Number": null,
-   "CAT 1": "Parts",
-   "CAT 2": "Electrical",
-   "CAT 3": "Wire & Conduit",
-   "Location ID": 134,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 68,
-     "Node Name": "Warehouse"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 133,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 134,
-     "Node Name": "Wire"
-    }
-   ],
-   "Stock Min": 0.0,
-   "Stock Max": null,
-   "Reorder Quantity": 0.0,
-   "Locations Unit Of Measure": "Rolls",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Cooper Electric",
-   "VEN Part Number": "72135",
-   "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 0.76,
-   "Stock Class": "shop"
-  },
-  {
    "Part ID": 630,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
@@ -58178,7 +58060,7 @@
    ],
    "Stock Min": 10.0,
    "Stock Max": null,
-   "Reorder Quantity": 10.0,
+   "Reorder Quantity": 20.0,
    "Locations Unit Of Measure": null,
    "Component Quantity": null,
    "Component Unit Description": null,

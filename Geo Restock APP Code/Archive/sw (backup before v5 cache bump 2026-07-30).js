@@ -11,7 +11,7 @@ const CFG = self.GEO_CONFIG;
 //   v2 (2026-07-26): dropped the precached MP3
 //   v3 (2026-07-26): moved logo + Krypton artwork to GitHub hosting
 //   v4 (2026-07-28): Solar/Krypton trailer tiles + parts 630-640 in the catalog
-const CACHE = 'geo-restock-2-0-v5';
+const CACHE = 'geo-restock-2-0-v4';
 // AUDIO REMOVED 2026-07-26: the MP3 (6.5 MB) was precached here, so EVERY device
 // downloaded it on every service-worker install whether or not anyone played it.
 // That was the Netlify bandwidth bleed. The artwork still rides offline.
