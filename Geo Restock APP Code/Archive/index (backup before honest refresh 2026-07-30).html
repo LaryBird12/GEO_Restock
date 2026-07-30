@@ -540,23 +540,20 @@ function announceShellUpdate(){
   toast(MSG_UPDATED);
 }
 
-// Returns what happened so the manual button can report it truthfully. At launch
-// the return value is ignored — the check stays silent there, by design.
 async function freshnessCheck(){
-  if(!navigator.onLine)return{data:'offline'};       // silent, retry next launch
+  if(!navigator.onLine)return;                       // silent, retry next launch
   let v=null;
   try{
     const r=await fetch(CFG.versionFile,{cache:'no-store'});
-    if(!r.ok)return{data:'unreachable'};
+    if(!r.ok)return;
     v=await r.json();
-  }catch(e){return{data:'unreachable'};}             // silent, retry next launch
-  if(!v)return{data:'unreachable'};
-  const data=await pullData(v);
+  }catch(e){return;}                                 // silent, retry next launch
+  if(!v)return;
+  await pullData(v);
   await pullShell(v);
   await pullWorker(v);
   swPost({type:'SWEEP'});
   topUpImages();
-  return data;
 }
 
 // DATA. The verify step below is not defensive padding — it is the mechanism
@@ -566,29 +563,20 @@ async function freshnessCheck(){
 // of every data push, not a rare edge case. The stamp lives INSIDE the catalog
 // file, so the phone checks the bytes it actually received instead of trusting
 // two servers to be in step. NEVER RECORD A STAMP YOU HAVE NOT VERIFIED.
-// Returns {data:'current'|'updated'|'pending'|'unreachable', env?}. 'pending' is
-// the measured seven-second window — the stamp has moved but GitHub is still
-// serving the previous catalog. That is a SUCCESS IN TRANSIT, not a failure, and
-// the button must not describe it as one.
 async function pullData(v){
-  if(v.data==null||String(v.data)===localStorage.getItem(VK.data))return{data:'current'};
+  if(v.data==null||String(v.data)===localStorage.getItem(VK.data))return;
   try{
     const r=await fetch(CATALOG_URL,{cache:'no-store'});
-    if(!r.ok)return{data:'unreachable'};
+    if(!r.ok)return;
     const env=await r.json();
-    if(String(env['Source Change ID'])!==String(v.data))return{data:'pending'}; // stale — drop it, no stamp
+    if(String(env['Source Change ID'])!==String(v.data))return;   // stale — drop it, no stamp
     const name='geo-data-'+v.data;
     const c=await caches.open(name);
     await c.put(CATALOG_URL,new Response(JSON.stringify(env),{headers:{'Content-Type':'application/json'}}));
     await setPointer({data:String(v.data)});
     localStorage.setItem(VK.data,String(v.data));
-    // geo_lastRefresh is stamped HERE and ONLY here — the one place we know for
-    // certain that new data actually arrived. The panel's "Catalog updated N ago"
-    // reads this, and it used to be stamped on the button press instead, so it
-    // reported an update after doing nothing at all.
     localStorage.setItem('geo_lastRefresh',String(Date.now()));
-    return{data:'updated',env:env};
-  }catch(e){return{data:'unreachable'};}             // silent — next launch
+  }catch(e){/* silent — next launch */}
 }
 
 // SHELL. Cached now, APPLIED NEXT LAUNCH — never swapped under a technician
@@ -655,54 +643,31 @@ function topUpImages(){
   swPost({type:'TOPUP_IMAGES',ids:PARTS.map(p=>p.id)});
 }
 
-// MANUAL OVERRIDE. Kept deliberately — it is the ONE escape hatch on a system
-// whose whole premise is that it needs no attention, and on 2026-07-30 it was the
-// only thing Mitch could press to discover something was wrong. No technician is
-// ever told to press it; it exists for the day the automatic path fails.
-//
-// IT OWNS NO STALENESS LOGIC OF ITS OWN. It runs the SAME freshnessCheck the
-// launch path runs and reports what came back. Two independent implementations of
-// "is the data stale" drifting apart is exactly what produced the deadlock — the
-// button and the automatic path already disagreed about whether anything had
-// happened. One brain, two callers.
-//
-// The one thing it does that a launch does not: rebuild the screen NOW from the
-// catalog just cached, instead of waiting for the next launch. That is its entire
-// reason to exist.
-//
-// WORDING RULES, learned the hard way and not to be undone:
-//   * NO INVENTED NUMBER. The old toast said "Data refreshed · N parts", where N
-//     was PARTS.length — every distinct Part ID in the whole catalog, both
-//     divisions, warehouse and trailer, visible to this team or not (597 today).
-//     It never described the update, only the catalog's size. A confidently wrong
-//     number is the same defect class as a lie about timing; it just fails
-//     quieter. If no number can be stated precisely, state none.
-//   * 'pending' AND THE FAILURES MUST NOT SOUND ALIKE. One is success arriving,
-//     the others are nothing happening. A man scanning his phone in a trailer
-//     cannot tell "try again in a minute" from "try again shortly", and they mean
-//     opposite things. 'pending' also lands by itself on the next launch, so it
-//     must not ask him to do work the app already does.
-//   * PLAIN. Field techs, not executives. Short sentences that sound like a
-//     person talking. The personality lives in the locked messages, not here.
-const MSG_REFRESH={
-  updated:     'Catalog updated',
-  current:     'Already up to date',
-  pending:     "New data's on the way — it'll load next time you open the app",
-  offline:     'No connection — nothing changed',
-  unreachable: "Couldn't reach the catalog — nothing changed"
-};
-async function refreshCache(){
+// MANUAL OVERRIDE. Kept deliberately — but no technician is ever told to press
+// it any more. That was the whole point.
+function refreshCache(){
   if(refreshing)return;
+  if(!navigator.onLine){toast('Offline — connect to refresh');return;}
   refreshing=true;render();
-  let res;
-  try{res=await freshnessCheck();}catch(e){res={data:'unreachable'};}
-  refreshing=false;
-  if(res&&res.data==='updated'&&res.env){
-    buildData(res.env.Parts||[]);
-    try{localStorage.setItem('geo_exportTs',res.env['Export Timestamp']||'');}catch(e){}
-  }
-  render();
-  toast(MSG_REFRESH[(res&&res.data)||'unreachable']||MSG_REFRESH.unreachable);
+  fetch(CATALOG_URL,{cache:'no-store'})
+    .then(r=>{if(!r.ok)throw 0;return r.json();})
+    .then(async env=>{
+      buildData(env.Parts||[]);
+      try{localStorage.setItem('geo_exportTs',env['Export Timestamp']||'');}catch(e){}
+      const scid=env['Source Change ID'];
+      if(scid!=null){
+        const c=await caches.open('geo-data-'+scid);
+        await c.put(CATALOG_URL,new Response(JSON.stringify(env),{headers:{'Content-Type':'application/json'}}));
+        await setPointer({data:String(scid)});
+        localStorage.setItem(VK.data,String(scid));
+        swPost({type:'SWEEP'});
+      }
+      localStorage.setItem('geo_lastRefresh',String(Date.now()));
+      refreshing=false;render();
+      toast('Data refreshed · '+PARTS.length+' parts');
+      topUpImages();
+    })
+    .catch(()=>{refreshing=false;render();toast('Refresh failed — try again');});
 }
 
 // ── SEARCH (any-order word match) ─────────────────────────────────────────────
