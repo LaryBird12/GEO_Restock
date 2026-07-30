@@ -1,7 +1,7 @@
 {
- "Export Timestamp": "2026-07-29T11:53:11+00:00",
- "Source Change ID": 4601,
- "Object Count": 901,
+ "Export Timestamp": "2026-07-30T03:28:32+00:00",
+ "Source Change ID": 5093,
+ "Object Count": 984,
  "Parts": [
   {
    "Part ID": 115,
@@ -4688,7 +4688,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 3.21,
+   "Vendor Cost": 3.07,
    "Stock Class": "trailer"
   },
   {
@@ -4988,7 +4988,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 7.14,
+   "Vendor Cost": 7.5,
    "Stock Class": "trailer"
   },
   {
@@ -5052,7 +5052,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "Vendor Cost": 13.5,
    "Stock Class": "trailer"
   },
   {
@@ -5997,7 +5997,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "Vendor Cost": 1.5,
    "Stock Class": "trailer"
   },
   {
@@ -6056,7 +6056,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 2.19,
+   "Vendor Cost": 1.73,
    "Stock Class": "trailer"
   },
   {
@@ -6115,7 +6115,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 2.59,
+   "Vendor Cost": 2.26,
    "Stock Class": "trailer"
   },
   {
@@ -6174,7 +6174,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "Vendor Cost": 5.26,
    "Stock Class": "trailer"
   },
   {
@@ -6228,12 +6228,12 @@
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Phoenix",
-   "VEN Part Number": "GL5PES",
+   "VEN Part Number": "GF2911",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "VEN Case QTY Txt": "2 Pack",
+   "VEN Case QTY #": 2,
+   "VEN Unit Description": "Fittings",
+   "Vendor Cost": 13.65,
    "Stock Class": "trailer"
   },
   {
@@ -6292,7 +6292,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "Vendor Cost": 13.5,
    "Stock Class": "trailer"
   },
   {
@@ -6351,7 +6351,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 2.29,
+   "Vendor Cost": 2.4,
    "Stock Class": "trailer"
   },
   {
@@ -6463,13 +6463,13 @@
    "Locations Unit Of Measure": "Each",
    "Component Quantity": null,
    "Component Unit Description": null,
-   "Vendor Name": "Geo Supply Co.",
-   "VEN Part Number": "SPE77-45",
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "SP45E77",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "Vendor Cost": 6.76,
    "Stock Class": "trailer"
   },
   {
@@ -6523,12 +6523,12 @@
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Phoenix",
-   "VEN Part Number": "SPS77",
+   "VEN Part Number": "SPCP7",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 3.19,
+   "Vendor Cost": 2.77,
    "Stock Class": "trailer"
   },
   {
@@ -6587,7 +6587,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 7.14,
+   "Vendor Cost": 7.5,
    "Stock Class": "trailer"
   },
   {
@@ -6643,10 +6643,10 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "BMH747P",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "VEN Case QTY Txt": "1 Manifold",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 74.03,
    "Stock Class": "trailer"
   },
   {
@@ -6702,10 +6702,10 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "BMH746P",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 55.04,
+   "VEN Case QTY Txt": "1 Manifold",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 58.96,
    "Stock Class": "trailer"
   },
   {
@@ -6761,9 +6761,9 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "BMH745P",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
+   "VEN Case QTY Txt": "1 Manifold ",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
    "Vendor Cost": 52.09,
    "Stock Class": "trailer"
   },
@@ -6818,12 +6818,12 @@
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Phoenix",
-   "VEN Part Number": "GF3447",
+   "VEN Part Number": "RGSE10025",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 18.99,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 14.83,
    "Stock Class": "trailer"
   },
   {
@@ -6879,10 +6879,10 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "GF3263",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 51.5,
+   "VEN Case QTY Txt": "2-Pack",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 60.5,
    "Stock Class": "trailer"
   },
   {
@@ -6938,10 +6938,10 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "GF2913",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 30.0,
+   "VEN Case QTY Txt": "2-Pack",
+   "VEN Case QTY #": 2,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 50.0,
    "Stock Class": "trailer"
   },
   {
@@ -6998,9 +6998,9 @@
    "VEN Part Number": "GFPFA54HB",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 18.35,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 15.61,
    "Stock Class": "trailer"
   },
   {
@@ -7057,9 +7057,9 @@
    "VEN Part Number": "HK-1HS",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 3.36,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Per Foot",
+   "Vendor Cost": 2.77,
    "Stock Class": "trailer"
   },
   {
@@ -7116,9 +7116,9 @@
    "VEN Part Number": "N76-02",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 3.19,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 3.47,
    "Stock Class": "trailer"
   },
   {
@@ -7234,9 +7234,9 @@
    "VEN Part Number": "HK-Clamp",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 0.76,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 0.79,
    "Stock Class": "trailer"
   },
   {
@@ -8354,10 +8354,10 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "PS06C-0020",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 22.86,
+   "VEN Case QTY Txt": "20 Foot Stick",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 21.71,
    "Stock Class": "trailer"
   },
   {
@@ -8413,9 +8413,9 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "PS07C-0020",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
+   "VEN Case QTY Txt": "20 Foot Stick",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
    "Vendor Cost": 27.43,
    "Stock Class": "trailer"
   },
@@ -24840,12 +24840,12 @@
    "Component Quantity": 1.0,
    "Component Unit Description": null,
    "Vendor Name": "Phoenix",
-   "VEN Part Number": null,
+   "VEN Part Number": "GA80-02",
    "VEN URL": null,
    "VEN Case QTY Txt": "Each",
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Fitting",
-   "Vendor Cost": null,
+   "Vendor Cost": 18.87,
    "Stock Class": "trailer"
   },
   {
@@ -27968,6 +27968,966 @@
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
    "Vendor Cost": 39.98,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 641,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "3/4\" Chamfer Tool",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "CTDG4",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 63.85,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 642,
+   "DB Entry Type": "Part",
+   "Stock Type": "Nonstock",
+   "Description": "1\" Chamfer Tool",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "CTDG5",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 74.05,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 643,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "1-1/4\" Chamfer Tool",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "CTDG6",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 75.65,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 644,
+   "DB Entry Type": "Part",
+   "Stock Type": "Nonstock",
+   "Description": "1-1/2\" Chamfer Tool",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "CTDG7",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 76.14,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 645,
+   "DB Entry Type": "Part",
+   "Stock Type": "Nonstock",
+   "Description": "2\" Chamfer Tool",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "CTDG8",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 80.33,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 646,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "3/4\" Socket Fusion Heater Face",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "SHP4",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 101.31,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 647,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "1\" Socket Fusion Heater Face",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "SHP5",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 101.31,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 648,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "1-1/4\" Socket Fusion Heater Face",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "SHP6",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 116.73,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 649,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "1-1/2\" Socket Fusion Heater Face",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "SHP7",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 116.73,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 650,
+   "DB Entry Type": "Part",
+   "Stock Type": "Nonstock",
+   "Description": "2\" Socket Fusion Heater Face",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "SHP8",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 116.73,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 651,
+   "DB Entry Type": "Part",
+   "Stock Type": "Nonstock",
+   "Description": "3/4\" Cold Ring",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "CRT4",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 86.04,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 652,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "1\" Cold Ring",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "CRT5",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 86.04,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 653,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "1-1/4\" Cold Ring",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "CRT6",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 92.63,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 654,
+   "DB Entry Type": "Part",
+   "Stock Type": "Nonstock",
+   "Description": "1-1/2\" Cold Ring",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "CRT7",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 92.63,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 655,
+   "DB Entry Type": "Part",
+   "Stock Type": "Nonstock",
+   "Description": "2\" Cold Ring",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 128,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 49,
+     "Node Name": "Tool Boxes"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 128,
+     "Node Name": "Socket Fusion"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "CRT8",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 92.63,
    "Stock Class": "trailer"
   },
   {
@@ -32215,7 +33175,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 3.21,
+   "Vendor Cost": 3.07,
    "Stock Class": "shop"
   },
   {
@@ -32333,7 +33293,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "Vendor Cost": 1.5,
    "Stock Class": "shop"
   },
   {
@@ -32392,7 +33352,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 2.19,
+   "Vendor Cost": 1.73,
    "Stock Class": "shop"
   },
   {
@@ -32451,7 +33411,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 2.59,
+   "Vendor Cost": 2.26,
    "Stock Class": "shop"
   },
   {
@@ -32510,7 +33470,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "Vendor Cost": 5.26,
    "Stock Class": "shop"
   },
   {
@@ -32564,12 +33524,12 @@
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Phoenix",
-   "VEN Part Number": "GL5PES",
+   "VEN Part Number": "GF2911",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "VEN Case QTY Txt": "2 Pack",
+   "VEN Case QTY #": 2,
+   "VEN Unit Description": "Fittings",
+   "Vendor Cost": 13.65,
    "Stock Class": "shop"
   },
   {
@@ -32628,7 +33588,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "Vendor Cost": 13.5,
    "Stock Class": "shop"
   },
   {
@@ -32687,7 +33647,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 2.29,
+   "Vendor Cost": 2.4,
    "Stock Class": "shop"
   },
   {
@@ -32799,13 +33759,13 @@
    "Locations Unit Of Measure": null,
    "Component Quantity": null,
    "Component Unit Description": null,
-   "Vendor Name": "Geo Supply Co.",
-   "VEN Part Number": "SPE77-45",
+   "Vendor Name": "Phoenix",
+   "VEN Part Number": "SP45E77",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "Vendor Cost": 6.76,
    "Stock Class": "shop"
   },
   {
@@ -32859,12 +33819,12 @@
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Phoenix",
-   "VEN Part Number": "SPS77",
+   "VEN Part Number": "SPCP7",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 3.19,
+   "Vendor Cost": 2.77,
    "Stock Class": "shop"
   },
   {
@@ -32923,7 +33883,7 @@
    "VEN Case QTY Txt": null,
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
-   "Vendor Cost": 7.14,
+   "Vendor Cost": 7.5,
    "Stock Class": "shop"
   },
   {
@@ -32979,10 +33939,10 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "BMH747P",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": null,
+   "VEN Case QTY Txt": "1 Manifold",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 74.03,
    "Stock Class": "shop"
   },
   {
@@ -33038,10 +33998,10 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "BMH746P",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 55.04,
+   "VEN Case QTY Txt": "1 Manifold",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 58.96,
    "Stock Class": "shop"
   },
   {
@@ -33097,9 +34057,9 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "BMH745P",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
+   "VEN Case QTY Txt": "1 Manifold ",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
    "Vendor Cost": 52.09,
    "Stock Class": "shop"
   },
@@ -33154,12 +34114,12 @@
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Phoenix",
-   "VEN Part Number": "GF3447",
+   "VEN Part Number": "RGSE10025",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 18.99,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 14.83,
    "Stock Class": "shop"
   },
   {
@@ -33215,10 +34175,10 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "GF3263",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 51.5,
+   "VEN Case QTY Txt": "2-Pack",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 60.5,
    "Stock Class": "shop"
   },
   {
@@ -33274,10 +34234,10 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "GF2913",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 30.0,
+   "VEN Case QTY Txt": "2-Pack",
+   "VEN Case QTY #": 2,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 50.0,
    "Stock Class": "shop"
   },
   {
@@ -33334,9 +34294,9 @@
    "VEN Part Number": "GFPFA54HB",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 18.35,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 15.61,
    "Stock Class": "shop"
   },
   {
@@ -33393,9 +34353,9 @@
    "VEN Part Number": "HK-1HS",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 3.36,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Per Foot",
+   "Vendor Cost": 2.77,
    "Stock Class": "shop"
   },
   {
@@ -33452,9 +34412,9 @@
    "VEN Part Number": "N76-02",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 3.19,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 3.47,
    "Stock Class": "shop"
   },
   {
@@ -33570,9 +34530,9 @@
    "VEN Part Number": "HK-Clamp",
    "VEN URL": null,
    "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 0.76,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 0.79,
    "Stock Class": "shop"
   },
   {
@@ -37168,10 +38128,10 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "PS06C-0020",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 22.86,
+   "VEN Case QTY Txt": "20 Foot Stick",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 21.71,
    "Stock Class": "shop"
   },
   {
@@ -37227,9 +38187,9 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "PS07C-0020",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
+   "VEN Case QTY Txt": "20 Foot Stick",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
    "Vendor Cost": 27.43,
    "Stock Class": "shop"
   },
@@ -45959,10 +46919,10 @@
    "Vendor Name": "Phoenix",
    "VEN Part Number": "PC04C-0600",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 244.3,
+   "VEN Case QTY Txt": "600 Ft Role",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 297.14,
    "Stock Class": "shop"
   },
   {
@@ -46016,12 +46976,12 @@
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Phoenix",
-   "VEN Part Number": "PC07C-0200",
+   "VEN Part Number": "PC07D-0200",
    "VEN URL": null,
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": null,
-   "VEN Unit Description": null,
-   "Vendor Cost": 214.29,
+   "VEN Case QTY Txt": "200' Role",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 211.43,
    "Stock Class": "shop"
   },
   {
@@ -49259,12 +50219,12 @@
    "Component Quantity": null,
    "Component Unit Description": null,
    "Vendor Name": "Phoenix",
-   "VEN Part Number": null,
+   "VEN Part Number": "GA80-02",
    "VEN URL": null,
    "VEN Case QTY Txt": "Each",
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Fitting",
-   "Vendor Cost": null,
+   "Vendor Cost": 18.87,
    "Stock Class": "nonstock"
   },
   {
@@ -50910,6 +51870,1717 @@
    "Stock Class": "trailer"
   },
   {
+   "Part ID": 671,
+   "DB Entry Type": "Part",
+   "Stock Type": "Nonstock",
+   "Description": "ChemLink M1 (black)",
+   "Size": "BLack",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 2.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Indcon Supply",
+   "VEN Part Number": null,
+   "VEN URL": "https://www.indconsupply.com/chemlink-m1-marine-sealant-10-1oz-cartridge-black-case-12-f1274",
+   "VEN Case QTY Txt": "12 Tubes",
+   "VEN Case QTY #": 12,
+   "VEN Unit Description": "Tube",
+   "Vendor Cost": 258.82,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 657,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Halo Ultra Grip (black)",
+   "Size": "Black",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 40.0,
+   "Stock Max": 60.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "QM-HUG-01-B1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 659,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR RD Structural Screw",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 200.0,
+   "Stock Max": 300.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Screw",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "HW-RD1430-01-M1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 669,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR BUG",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 10.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "XR-100-BOSS-01-B2",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 668,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Boss Splice",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "XR-100-BOSS-01-B1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 662,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR CAMO Module Clamp (clear)",
+   "Size": "Clear",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": 20.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "CAMO-01-M1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 665,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Rail Caps - XR-100 (pair) ",
+   "Size": "XR-100",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": 30.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "RL Pair",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "XR-100-CAP",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 672,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IronRidge Rail Caps - XR-1000 (pair) ",
+   "Size": null,
+   "Manufacturer": "IronRidge",
+   "MFG Part Number": "XR-1000-CAP",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": 30.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "1 Pair",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "XR-1000-CAP",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 670,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR J-box (rail mounted)",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 656,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IronRidge J-box (flash)",
+   "Size": null,
+   "Manufacturer": "IronRidge",
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Box",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 660,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Universal Module Clamp (black)",
+   "Size": "Black",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 40.0,
+   "Stock Max": 40.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "UFO-CL-01-B1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 661,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Universal Module Clamp (clear)",
+   "Size": "Clear",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 60.0,
+   "Stock Max": 40.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "UFO-CL-01-A1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 664,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR End Clamp (30-40mm Clear)",
+   "Size": "Clear",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": 40.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Clamps",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "UFO-END-01-A1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 663,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR End Clamp (30-40mm Black)",
+   "Size": "Black",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": 40.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Clamp",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "UFO-END-01-B1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 658,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Rail Bolts - Square",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 40.0,
+   "Stock Max": 80.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "BHW-SQ-03-A1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 666,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Microinverter Bonding T-bolt",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 40.0,
+   "Stock Max": 80.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "BHW-M1-01-A1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 667,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Ground Lug",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 148,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 148,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": 30.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "XR-LUG-03-A1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 673,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC 90° Elbow",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "UA9AE",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": 20.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "UA9AE",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-UA9AE-3-4-90-Degree-40-PVC-Elbow",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.74,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 674,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC 45° Elbow",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "UA7AE",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 12.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "UA7AE",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-UA7AE-3-4-45-Degree-Schedule-40-PVC-Elbow",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.56,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 675,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC Coupling",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E940E",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": 20.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E940E",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E940E-3-4-PVC-Standard-Coupling",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.39,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 676,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC Male Adapter",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E943E",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 8.0,
+   "Stock Max": 16.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E943E",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E943E-3-4-PVC-Schedule-40-Male-Adapter?_br_psugg_q=e943e",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.84,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 677,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC Female Adapter",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E942E",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 8.0,
+   "Stock Max": 16.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E942E",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E942E-3-4-PVC-Schedule-40-Female-Adapter?_br_psugg_q=e942e",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.75,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 678,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC LB",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E986E",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 12.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E986E",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E986E-3-4-LB-PVC-Conduit-Body?_br_psugg_q=e986e",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 4.54,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 679,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC 90° Elbow",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "UA9AFB-CTN",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 12.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "UA9AFB-CTN",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-UA9AFB-CTN-1-PVC-Schedule-40-90-Degree-Elbow-Bell-End?_br_psugg_q=ua9afb-ctn",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 3.02,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 680,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC 45° Elbow",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "UA7AF",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 8.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "UA7AF",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-UA7AF-1-45-Degree-Schedule-40-PVC-Elbow?_br_psugg_q=ua7af",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 2.17,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 681,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC Coupling",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E940F",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 8.0,
+   "Stock Max": 16.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E940F",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E940F-1-PVC-Standard-Coupling?_br_psugg_q=e940f",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.72,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 682,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC Male Adapter",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E943F",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 12.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E943F",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E943F-1-PVC-Schedule-40-Male-Adapter?_br_psugg_q=e943f",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.99,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 683,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC Female Adapter",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E942F",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": 12.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E942F",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E942F-1-PVC-Schedule-40-Female-Adapter?_br_psugg_q=e942f",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.69,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 684,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC LB",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E986F",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 150,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 150,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": 8.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E986F",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E986F-1-LB-PVC-Conduit-Body?_br_psugg_q=e986f",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 5.19,
+   "Stock Class": "trailer"
+  },
+  {
    "Part ID": 15,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
@@ -52441,6 +55112,60 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Each",
    "Vendor Cost": 5.39,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 685,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" EMT Compression Coupling",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "662SRT",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 152,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 152,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "662SRT",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-662SRT-3-4-Steel-EMT-Raintight-Compression-Type-Coupling?_br_psugg_q=662srt",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 3.44,
    "Stock Class": "trailer"
   },
   {
@@ -54270,6 +56995,2248 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Each",
    "Vendor Cost": 6.53,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 657,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Halo Ultra Grip (black)",
+   "Size": "Black",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 40.0,
+   "Stock Max": null,
+   "Reorder Quantity": 40.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "QM-HUG-01-B1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 658,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Rail Bolts - Square",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 40.0,
+   "Stock Max": null,
+   "Reorder Quantity": 40.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "BHW-SQ-03-A1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 659,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR RD Structural Screw",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 50.0,
+   "Stock Max": null,
+   "Reorder Quantity": 200.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "HW-RD1430-01-M1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 660,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Universal Module Clamp (black)",
+   "Size": "Black",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 50.0,
+   "Stock Max": null,
+   "Reorder Quantity": 50.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "UFO-CL-01-B1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 661,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Universal Module Clamp (clear)",
+   "Size": "Clear",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 50.0,
+   "Stock Max": null,
+   "Reorder Quantity": 50.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "UFO-CL-01-A1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 662,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR CAMO Module Clamp (clear)",
+   "Size": "Clear",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 50.0,
+   "Stock Max": null,
+   "Reorder Quantity": 50.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "CAMO-01-M1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 663,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR End Clamp (30-40mm Black)",
+   "Size": "Black",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": 20.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "UFO-END-01-B1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 664,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR End Clamp (30-40mm Clear)",
+   "Size": "Clear",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": 20.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "UFO-END-01-A1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 665,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Rail Caps - XR-100 (pair) ",
+   "Size": "XR-100",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "XR-100-CAP",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 666,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Microinverter Bonding T-bolt",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 40.0,
+   "Stock Max": null,
+   "Reorder Quantity": 40.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "BHW-M1-01-A1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 667,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Ground Lug",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "XR-LUG-03-A1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 668,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR Boss Splice",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "XR-100-BOSS-01-B1",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 669,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR BUG",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 20.0,
+   "Stock Max": null,
+   "Reorder Quantity": 20.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": "XR-100-BOSS-01-B2",
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 670,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IR J-box (rail mounted)",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": null,
+   "Reorder Quantity": 2.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 656,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "IronRidge J-box (flash)",
+   "Size": null,
+   "Manufacturer": "IronRidge",
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": null,
+   "Reorder Quantity": 2.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "CED",
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 671,
+   "DB Entry Type": "Part",
+   "Stock Type": "Nonstock",
+   "Description": "ChemLink M1 (black)",
+   "Size": "BLack",
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 147,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 147,
+     "Node Name": "Roof Mount Hardware"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": null,
+   "Reorder Quantity": 12.0,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Indcon Supply",
+   "VEN Part Number": null,
+   "VEN URL": "https://www.indconsupply.com/chemlink-m1-marine-sealant-10-1oz-cartridge-black-case-12-f1274",
+   "VEN Case QTY Txt": "12 Tubes",
+   "VEN Case QTY #": 12,
+   "VEN Unit Description": "Tube",
+   "Vendor Cost": 258.82,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 673,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC 90° Elbow",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "UA9AE",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "UA9AE",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-UA9AE-3-4-90-Degree-40-PVC-Elbow",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.74,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 674,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC 45° Elbow",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "UA7AE",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "UA7AE",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-UA7AE-3-4-45-Degree-Schedule-40-PVC-Elbow",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.56,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 675,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC Coupling",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E940E",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 20.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E940E",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E940E-3-4-PVC-Standard-Coupling",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.39,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 676,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC Male Adapter",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E943E",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E943E",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E943E-3-4-PVC-Schedule-40-Male-Adapter?_br_psugg_q=e943e",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.84,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 677,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC Female Adapter",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E942E",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E942E",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E942E-3-4-PVC-Schedule-40-Female-Adapter?_br_psugg_q=e942e",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.75,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 678,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" PVC LB",
+   "Size": "3/4\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E986E",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": null,
+   "Reorder Quantity": 8.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E986E",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E986E-3-4-LB-PVC-Conduit-Body?_br_psugg_q=e986e",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 4.54,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 679,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC 90° Elbow",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "UA9AFB-CTN",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "UA9AFB-CTN",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-UA9AFB-CTN-1-PVC-Schedule-40-90-Degree-Elbow-Bell-End?_br_psugg_q=ua9afb-ctn",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 3.02,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 680,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC 45° Elbow",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "UA7AF",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": null,
+   "Reorder Quantity": 6.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "UA7AF",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-UA7AF-1-45-Degree-Schedule-40-PVC-Elbow?_br_psugg_q=ua7af",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 2.17,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 681,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC Coupling",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E940F",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 10.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E940F",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E940F-1-PVC-Standard-Coupling?_br_psugg_q=e940f",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.72,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 682,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC Male Adapter",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E943F",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E943F",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E943F-1-PVC-Schedule-40-Male-Adapter?_br_psugg_q=e943f",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.99,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 683,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC Female Adapter",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E942F",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E942F",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E942F-1-PVC-Schedule-40-Female-Adapter?_br_psugg_q=e942f",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 0.69,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 684,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" PVC LB",
+   "Size": "1\"",
+   "Manufacturer": "Carlon",
+   "MFG Part Number": "E986F",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 149,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 149,
+     "Node Name": "PVC Conduit Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": null,
+   "Reorder Quantity": 4.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "E986F",
+   "VEN URL": "https://www.supplyhouse.com/Carlon-E986F-1-LB-PVC-Conduit-Body?_br_psugg_q=e986f",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 5.19,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 685,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" EMT Compression Coupling",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "662SRT",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 151,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 151,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "662SRT",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-662SRT-3-4-Steel-EMT-Raintight-Compression-Type-Coupling?_br_psugg_q=662srt",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 3.44,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 686,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" EMT Waterproof Male Adapter",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "652SRT",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 151,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 151,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "652SRT",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-652SRT-3-4-Steel-EMT-Raintight-Compression-Type-Connector?_br_psugg_q=652srt",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 2.29,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 687,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" Close Nipple",
+   "Size": "3/4\"",
+   "Manufacturer": "Bluefin",
+   "MFG Part Number": "GVN075C",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 151,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 151,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": null,
+   "Reorder Quantity": 8.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "GVN075C",
+   "VEN URL": "https://www.supplyhouse.com/Bluefin-GVN075C-3-4-x-Close-Galv-Nipple?_br_psugg_q=gvn075c",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.02,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 688,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" Rigid Steel Coupling",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "52",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 151,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 151,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": null,
+   "Reorder Quantity": 8.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "52",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-52-3-4-Rigid-Steel-Coupling",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.56,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 689,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "3/4\" EMT LB",
+   "Size": "3/4\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "LB2SSCG",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 151,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 151,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": null,
+   "Reorder Quantity": 8.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "LB2SSCG",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-LB2SSCG-3-4-EMT-Rigid-LB-Type-Combination-Conduit-Body-w-Cover-and-Gasket-Aluminum?_br_psugg_q=lb2sscg",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 7.9,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 690,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" EMT Compression Coupling",
+   "Size": "1\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "663SRT",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 151,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 151,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 6.0,
+   "Stock Max": null,
+   "Reorder Quantity": 10.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "663SRT",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-663SRT-1-Steel-Compression-Type-Raintight-Coupling",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 4.86,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 691,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" EMT Waterproof Male Adapter",
+   "Size": "1\"",
+   "Manufacturer": "Commercial Electric",
+   "MFG Part Number": "FECRS-100-1",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 151,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 151,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 4.0,
+   "Stock Max": null,
+   "Reorder Quantity": 6.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "316096405",
+   "VEN URL": "https://www.homedepot.com/p/Commercial-Electric-1-in-Electrical-Metallic-Tubing-EMT-Raintight-Compression-Connector-FECRS-100-1/316096405",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 2.98,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 692,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Close Nipple",
+   "Size": "1\"",
+   "Manufacturer": "Bluefin",
+   "MFG Part Number": "GVN100C",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 151,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 151,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": null,
+   "Reorder Quantity": 4.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "GVN100C",
+   "VEN URL": "https://www.supplyhouse.com/Bluefin-GVN100C-1-x-Close-Galv-Nipple",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 1.46,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 693,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" Threaded Coupling",
+   "Size": "1\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "53-SOUTHWIRE",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 151,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 151,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": null,
+   "Reorder Quantity": 4.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "53-SOUTHWIRE",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-53-SOUTHWIRE-1-Rigid-Steel-Coupling",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 2.93,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 694,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "1\" EMT LB",
+   "Size": "1\"",
+   "Manufacturer": "Southwire",
+   "MFG Part Number": "LB3SSCG",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 151,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 133,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 151,
+     "Node Name": "EMT Fittings"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": null,
+   "Reorder Quantity": 4.0,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Supply House",
+   "VEN Part Number": "LB3SSCG",
+   "VEN URL": "https://www.supplyhouse.com/Southwire-LB3SSCG-1-EMT-Rigid-LB-Combination-Conduit-Body-w-Cover-and-Gasket-Aluminum",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": 12.32,
    "Stock Class": "shop"
   }
  ]
