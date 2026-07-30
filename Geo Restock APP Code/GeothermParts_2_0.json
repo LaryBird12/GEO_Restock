@@ -1,6 +1,6 @@
 {
- "Export Timestamp": "2026-07-30T03:36:12+00:00",
- "Source Change ID": 5142,
+ "Export Timestamp": "2026-07-30T03:37:26+00:00",
+ "Source Change ID": 5165,
  "Object Count": 993,
  "Parts": [
   {
@@ -50277,65 +50277,6 @@
    "Stock Class": "nonstock"
   },
   {
-   "Part ID": 1,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "DeOx (Anti-Ox) Grease",
-   "Size": "4 oz",
-   "Manufacturer": "IDEAL",
-   "MFG Part Number": "30-026",
-   "CAT 1": "Parts",
-   "CAT 2": "Electrical",
-   "CAT 3": "Connections",
-   "Location ID": 146,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 146,
-     "Node Name": "Perishable Items"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "202276208",
-   "VEN URL": "https://www.homedepot.com/p/Noalox-Anti-Oxidant-Compound-4-oz-Bottle-30-026/202276208",
-   "VEN Case QTY Txt": "Each",
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Each",
-   "Vendor Cost": 9.88,
-   "Stock Class": "trailer"
-  },
-  {
    "Part ID": 186,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
@@ -50513,65 +50454,6 @@
    "Stock Class": "trailer"
   },
   {
-   "Part ID": 197,
-   "DB Entry Type": "Part",
-   "Stock Type": "Consumable",
-   "Description": "Marker -Black",
-   "Size": "108 Pack",
-   "Manufacturer": "Milwaukee",
-   "MFG Part Number": "48-22-3100x108",
-   "CAT 1": "Perishable Materials (trailer)",
-   "CAT 2": "Stationary",
-   "CAT 3": null,
-   "Location ID": 146,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 2,
-     "Node Name": "Solar"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 67,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 144,
-     "Node Name": "Trailer Stock"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 146,
-     "Node Name": "Perishable Items"
-    }
-   ],
-   "Stock Min": 2.0,
-   "Stock Max": 6.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Markers",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "313610646",
-   "VEN URL": "https://www.homedepot.com/p/Milwaukee-INKZALL-Black-Fine-Point-Jobsite-Permanent-Marker-108-Pack-48-22-3100x108/313610646",
-   "VEN Case QTY Txt": "108 Markers",
-   "VEN Case QTY #": 108,
-   "VEN Unit Description": "Markers",
-   "Vendor Cost": 117.72,
-   "Stock Class": "trailer"
-  },
-  {
    "Part ID": 198,
    "DB Entry Type": "Part",
    "Stock Type": "Consumable",
@@ -50628,6 +50510,65 @@
    "VEN Case QTY #": null,
    "VEN Unit Description": null,
    "Vendor Cost": null,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 197,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Marker -Black",
+   "Size": "108 Pack",
+   "Manufacturer": "Milwaukee",
+   "MFG Part Number": "48-22-3100x108",
+   "CAT 1": "Perishable Materials (trailer)",
+   "CAT 2": "Stationary",
+   "CAT 3": null,
+   "Location ID": 146,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 146,
+     "Node Name": "Perishable Items"
+    }
+   ],
+   "Stock Min": 2.0,
+   "Stock Max": 6.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Markers",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "313610646",
+   "VEN URL": "https://www.homedepot.com/p/Milwaukee-INKZALL-Black-Fine-Point-Jobsite-Permanent-Marker-108-Pack-48-22-3100x108/313610646",
+   "VEN Case QTY Txt": "108 Markers",
+   "VEN Case QTY #": 108,
+   "VEN Unit Description": "Markers",
+   "Vendor Cost": 117.72,
    "Stock Class": "trailer"
   },
   {
@@ -51513,6 +51454,65 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Each",
    "Vendor Cost": 12.09,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 1,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "DeOx (Anti-Ox) Grease",
+   "Size": "4 oz",
+   "Manufacturer": "IDEAL",
+   "MFG Part Number": "30-026",
+   "CAT 1": "Parts",
+   "CAT 2": "Electrical",
+   "CAT 3": "Connections",
+   "Location ID": 146,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 67,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 144,
+     "Node Name": "Trailer Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 146,
+     "Node Name": "Perishable Items"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "202276208",
+   "VEN URL": "https://www.homedepot.com/p/Noalox-Anti-Oxidant-Compound-4-oz-Bottle-30-026/202276208",
+   "VEN Case QTY Txt": "Each",
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Each",
+   "Vendor Cost": 9.88,
    "Stock Class": "trailer"
   },
   {
