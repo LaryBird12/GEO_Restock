@@ -1,7 +1,7 @@
 {
- "Export Timestamp": "2026-07-30T22:26:57+00:00",
- "Source Change ID": 5382,
- "Object Count": 1040,
+ "Export Timestamp": "2026-07-31T01:49:30+00:00",
+ "Source Change ID": 5394,
+ "Object Count": 1047,
  "Parts": [
   {
    "Part ID": 115,
@@ -24399,7 +24399,7 @@
    "Part ID": 549,
    "DB Entry Type": "Tool",
    "Stock Type": "Nonstock",
-   "Description": "9-Pocket Black Maintenance Tool Belt Pouch",
+   "Description": "Tool Belt Pouch",
    "Size": null,
    "Manufacturer": "Husky",
    "MFG Part Number": "HD893876-TH",
@@ -24457,6 +24457,454 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Pouch",
    "Vendor Cost": 15.98,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 711,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "Leather Work Tool Belt",
+   "Size": null,
+   "Manufacturer": "BUCKET BOSS",
+   "MFG Part Number": "55134",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 54,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 8,
+     "Node Name": "Tool Bags"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 54,
+     "Node Name": "Drill Bag"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "202332329",
+   "VEN URL": "https://www.homedepot.com/p/BUCKET-BOSS-2-in-Classic-Series-Saddle-Leather-Extra-Large-Work-Tool-Belt-Waists-37-in-to-46-in-55134/202332329",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Belt",
+   "Vendor Cost": 20.93,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 712,
+   "DB Entry Type": "Part",
+   "Stock Type": "Nonstock",
+   "Description": "DEWALT 13 Pocket Polyester Belt clip Drill holder",
+   "Size": null,
+   "Manufacturer": "DEWALT",
+   "MFG Part Number": "DWST540502",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 54,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 8,
+     "Node Name": "Tool Bags"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 54,
+     "Node Name": "Drill Bag"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Lowe's",
+   "VEN Part Number": "5263275",
+   "VEN URL": "https://www.lowes.com/pd/DEWALT-Polyester-Belt-Clip-Drill-Holder/5014030823",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Holster",
+   "Vendor Cost": 19.98,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 713,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "20V Impact Driver",
+   "Size": null,
+   "Manufacturer": "DEWALT",
+   "MFG Part Number": "DCF845B",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 54,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 8,
+     "Node Name": "Tool Bags"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 54,
+     "Node Name": "Drill Bag"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "325543967",
+   "VEN URL": "https://www.homedepot.com/p/DEWALT-20V-MAX-XR-Cordless-Brushless-1-4-in-3-Speed-Impact-Driver-Tool-Only-DCF845B/325543967",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Drill",
+   "Vendor Cost": 169.0,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 714,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "20V Compact Drill/Driver",
+   "Size": null,
+   "Manufacturer": "DEWALT",
+   "MFG Part Number": "DCD777D1",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 54,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 8,
+     "Node Name": "Tool Bags"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 54,
+     "Node Name": "Drill Bag"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "341365513",
+   "VEN URL": "https://www.homedepot.com/p/DEWALT-20-Volt-MAX-Lithium-Ion-Cordless-1-2-in-Compact-Drill-Driver-Kit-with-2-0-Ah-Battery-and-Charger-DCD777D1/341365513",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Drill",
+   "Vendor Cost": 119.0,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 715,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "1/4 in. x 18 in. Installer Drill Bit",
+   "Size": null,
+   "Manufacturer": "DIABLO",
+   "MFG Part Number": "DIB1050",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 54,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 8,
+     "Node Name": "Tool Bags"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 54,
+     "Node Name": "Drill Bag"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "313022473",
+   "VEN URL": "https://www.homedepot.com/p/DIABLO-1-4-in-x-18-in-Installer-Drill-Bit-DIB1050/313022473",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Drill",
+   "Vendor Cost": 12.97,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 716,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "Full Face Respirator",
+   "Size": null,
+   "Manufacturer": "3M",
+   "MFG Part Number": "6800",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 54,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 8,
+     "Node Name": "Tool Bags"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 54,
+     "Node Name": "Drill Bag"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Amazon",
+   "VEN Part Number": "B007JZ1LG6",
+   "VEN URL": "https://www.amazon.com/dp/B007JZ1LG6",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Mask",
+   "Vendor Cost": 120.0,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 717,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "1/4\" x 12\" Quick Release Extension",
+   "Size": null,
+   "Manufacturer": "DIABLO",
+   "MFG Part Number": "DXT1020",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 54,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 8,
+     "Node Name": "Tool Bags"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 54,
+     "Node Name": "Drill Bag"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "313022577",
+   "VEN URL": "https://www.homedepot.com/p/DIABLO-1-4-in-x-12-in-Universal-Quick-Release-Extension-DXT1020/313022577",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Extension",
+   "Vendor Cost": 12.97,
    "Stock Class": "trailer"
   },
   {
@@ -29760,7 +30208,7 @@
    "Part ID": 605,
    "DB Entry Type": "Tool",
    "Stock Type": "Nonstock",
-   "Description": "1/2 HP Cast Iron, Portable Transfer Utility Pump",
+   "Description": "1/2 HP Transfer Utility Pump",
    "Size": null,
    "Manufacturer": null,
    "MFG Part Number": null,
