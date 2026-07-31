@@ -517,21 +517,6 @@ function hideSyncInfo(){const e=$('syncinfo');if(e)e.style.display='none';}
 const CATALOG_URL=(CFG.assetBase?CFG.assetBase+encodeURIComponent(CFG.catalogFile):'./'+CFG.catalogFile);
 const VK={shell:'geo_v_shell',worker:'geo_v_worker',data:'geo_v_data',pending:'geo_shell_pending'};
 const NOTICE_DELAY_MS=500;
-// THE VERSION THE SCREEN IS ACTUALLY SHOWING. Not a fourth stamp -- it is
-// deliberately NOT persisted and NOT written anywhere except inside
-// applyCatalog(), the single function that builds the screen. It cannot drift,
-// because the only way to set it is to have just rebuilt from that catalog.
-// (version.json froze this morning precisely because the thing that was supposed
-// to write it was not the thing doing the work.)
-let pageDataScid = null;
-// The ONLY path that puts a catalog on screen. boot() and Refresh Data both go
-// through here so "what is displayed" has exactly one definition.
-function applyCatalog(env){
-  buildData(env.Parts||[]);
-  const scid = env['Source Change ID'];
-  pageDataScid = (scid == null) ? null : String(scid);
-  try{localStorage.setItem('geo_exportTs',env['Export Timestamp']||'');}catch(e){}
-}
 // LOCKED WORDING (Mitch, 2026-07-30). Third person is deliberate and is shared
 // with the eviction notice — the app talks ABOUT Mitch, never as him. Do not
 // paraphrase either message and do not merge them; they answer two different
@@ -706,47 +691,18 @@ const MSG_REFRESH={
   offline:     'No connection — nothing changed',
   unreachable: "Couldn't reach the catalog — nothing changed"
 };
-// "IS THIS CURRENT?" HAS THREE ANSWERS -- the server's, the cache's and the
-// SCREEN's -- and the user pressing this button is asking about the screen.
-// This reported the CACHE's answer until 2026-07-30 and so could say "Already up
-// to date" while showing yesterday's parts: the automatic check at launch pulls
-// the new catalog, caches it and records the stamp WITHOUT rebuilding (correct --
-// the automatic path stays deliberately dumb, changes land next launch), so by
-// the time the button ran, server and cache already agreed and it had nothing
-// left to notice. Comparing against what the screen was built from is what makes
-// the answer true of the pixels.
 async function refreshCache(){
   if(refreshing)return;
   refreshing=true;render();
   let res;
-  // Same freshnessCheck the launch path runs -- this adds a comparison, NOT a
-  // second idea of what "current" means.
   try{res=await freshnessCheck();}catch(e){res={data:'unreachable'};}
-  let outcome=(res&&res.data)||'unreachable';
-  if(res&&res.data==='updated'&&res.env){
-    applyCatalog(res.env);                       // it pulled just now
-  }else if(res&&(res.data==='current'||res.data==='updated')){
-    // Nothing new to pull, but the screen may still be behind the cache -- this
-    // is the case the button existed for and used to miss. A PLAIN fetch on
-    // purpose: that is the reader path, so the worker serves the cached catalog
-    // the freshness check already verified. No network, no second download.
-    const cached=localStorage.getItem(VK.data);
-    if(cached!==null&&String(cached)!==String(pageDataScid)){
-      try{
-        const r=await fetch(CATALOG_URL);
-        if(r.ok){
-          const env=await r.json();
-          if(String(env['Source Change ID'])===String(cached)){
-            applyCatalog(env);
-            outcome='updated';                   // the screen genuinely changed
-          }
-        }
-      }catch(e){/* leave the screen as it is; next launch applies it anyway */}
-    }
-  }
   refreshing=false;
+  if(res&&res.data==='updated'&&res.env){
+    buildData(res.env.Parts||[]);
+    try{localStorage.setItem('geo_exportTs',res.env['Export Timestamp']||'');}catch(e){}
+  }
   render();
-  toast(MSG_REFRESH[outcome]||MSG_REFRESH.unreachable);
+  toast(MSG_REFRESH[(res&&res.data)||'unreachable']||MSG_REFRESH.unreachable);
 }
 
 // ── SEARCH (any-order word match) ─────────────────────────────────────────────
@@ -1925,7 +1881,8 @@ function boot(){
   }).then(env=>{
     if(noticeTimer)clearTimeout(noticeTimer);
     hideBlockingNotice();
-    applyCatalog(env);   // records the version the screen is now showing
+    buildData(env.Parts||[]);
+    try{localStorage.setItem('geo_exportTs',env['Export Timestamp']||'');}catch(e){}
     flushQueue();
     startShop();
     if(team){scr='loading';render();startListeners();setTimeout(()=>{if(scr==='loading'){scr='nav';render();}},4000);}
