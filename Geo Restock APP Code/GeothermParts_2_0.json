@@ -1,7 +1,7 @@
 {
- "Export Timestamp": "2026-07-31T02:03:54+00:00",
- "Source Change ID": 5402,
- "Object Count": 1047,
+ "Export Timestamp": "2026-07-31T17:30:18+00:00",
+ "Source Change ID": 5413,
+ "Object Count": 1057,
  "Parts": [
   {
    "Part ID": 115,
@@ -62994,6 +62994,596 @@
    "VEN Case QTY #": 2,
    "VEN Unit Description": "Bushings",
    "Vendor Cost": 1.36,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 718,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "AC Disconnect Combo",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 161,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 161,
+     "Node Name": "Stickers"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": null,
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 719,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "AC Disconnect",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 161,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 161,
+     "Node Name": "Stickers"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": null,
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 720,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "AC Disconnect w/ Ratings",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 161,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 161,
+     "Node Name": "Stickers"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": null,
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 721,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Circuit Breaker - Do Not Relocate",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 161,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 161,
+     "Node Name": "Stickers"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": null,
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 722,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Consumable",
+   "Description": "Combiner Panel",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 161,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 161,
+     "Node Name": "Stickers"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": null,
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 723,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Dual Power Supply",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 161,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 161,
+     "Node Name": "Stickers"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": null,
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 724,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Rapid Shutdown",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 161,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 161,
+     "Node Name": "Stickers"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": null,
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 725,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Rapid Shutdown w/ Diagram",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 161,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 161,
+     "Node Name": "Stickers"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": null,
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 726,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Photovoltaic Source - Conduit Sticker",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 161,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 161,
+     "Node Name": "Stickers"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": null,
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
+   "Stock Class": "shop"
+  },
+  {
+   "Part ID": 727,
+   "DB Entry Type": "Part",
+   "Stock Type": "Consumable",
+   "Description": "Solar Circuit Breaker",
+   "Size": null,
+   "Manufacturer": null,
+   "MFG Part Number": null,
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 161,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 2,
+     "Node Name": "Solar"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 68,
+     "Node Name": "Warehouse"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 131,
+     "Node Name": "Case Stock"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 161,
+     "Node Name": "Stickers"
+    }
+   ],
+   "Stock Min": null,
+   "Stock Max": null,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": null,
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": null,
+   "VEN Part Number": null,
+   "VEN URL": null,
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": null,
+   "VEN Unit Description": null,
+   "Vendor Cost": null,
    "Stock Class": "shop"
   }
  ]
