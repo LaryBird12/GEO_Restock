@@ -1,6 +1,6 @@
 {
- "Export Timestamp": "2026-07-31T01:49:30+00:00",
- "Source Change ID": 5394,
+ "Export Timestamp": "2026-07-31T02:03:54+00:00",
+ "Source Change ID": 5402,
  "Object Count": 1047,
  "Parts": [
   {
@@ -24460,70 +24460,6 @@
    "Stock Class": "trailer"
   },
   {
-   "Part ID": 711,
-   "DB Entry Type": "Tool",
-   "Stock Type": "Nonstock",
-   "Description": "Leather Work Tool Belt",
-   "Size": null,
-   "Manufacturer": "BUCKET BOSS",
-   "MFG Part Number": "55134",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 54,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 1,
-     "Node Name": "Geo"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 5,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 63,
-     "Node Name": "Tools"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 8,
-     "Node Name": "Tool Bags"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 54,
-     "Node Name": "Drill Bag"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Home Depot",
-   "VEN Part Number": "202332329",
-   "VEN URL": "https://www.homedepot.com/p/BUCKET-BOSS-2-in-Classic-Series-Saddle-Leather-Extra-Large-Work-Tool-Belt-Waists-37-in-to-46-in-55134/202332329",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Belt",
-   "Vendor Cost": 20.93,
-   "Stock Class": "trailer"
-  },
-  {
    "Part ID": 712,
    "DB Entry Type": "Part",
    "Stock Type": "Nonstock",
@@ -24585,6 +24521,70 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Holster",
    "Vendor Cost": 19.98,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 711,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "Leather Work Tool Belt",
+   "Size": null,
+   "Manufacturer": "BUCKET BOSS",
+   "MFG Part Number": "55134",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 54,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 8,
+     "Node Name": "Tool Bags"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 54,
+     "Node Name": "Drill Bag"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Home Depot",
+   "VEN Part Number": "202332329",
+   "VEN URL": "https://www.homedepot.com/p/BUCKET-BOSS-2-in-Classic-Series-Saddle-Leather-Extra-Large-Work-Tool-Belt-Waists-37-in-to-46-in-55134/202332329",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Belt",
+   "Vendor Cost": 20.93,
    "Stock Class": "trailer"
   },
   {
@@ -24780,70 +24780,6 @@
    "Stock Class": "trailer"
   },
   {
-   "Part ID": 716,
-   "DB Entry Type": "Tool",
-   "Stock Type": "Nonstock",
-   "Description": "Full Face Respirator",
-   "Size": null,
-   "Manufacturer": "3M",
-   "MFG Part Number": "6800",
-   "CAT 1": null,
-   "CAT 2": null,
-   "CAT 3": null,
-   "Location ID": 54,
-   "Location Path": [
-    {
-     "Step Type": "Location",
-     "Node ID": 44,
-     "Node Name": "Master Inventory"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 45,
-     "Node Name": "Scottsville"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 1,
-     "Node Name": "Geo"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 5,
-     "Node Name": "Trailer"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 63,
-     "Node Name": "Tools"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 8,
-     "Node Name": "Tool Bags"
-    },
-    {
-     "Step Type": "Location",
-     "Node ID": 54,
-     "Node Name": "Drill Bag"
-    }
-   ],
-   "Stock Min": 1.0,
-   "Stock Max": 1.0,
-   "Reorder Quantity": null,
-   "Locations Unit Of Measure": "Each",
-   "Component Quantity": null,
-   "Component Unit Description": null,
-   "Vendor Name": "Amazon",
-   "VEN Part Number": "B007JZ1LG6",
-   "VEN URL": "https://www.amazon.com/dp/B007JZ1LG6",
-   "VEN Case QTY Txt": null,
-   "VEN Case QTY #": 1,
-   "VEN Unit Description": "Mask",
-   "Vendor Cost": 120.0,
-   "Stock Class": "trailer"
-  },
-  {
    "Part ID": 717,
    "DB Entry Type": "Tool",
    "Stock Type": "Nonstock",
@@ -24905,6 +24841,70 @@
    "VEN Case QTY #": 1,
    "VEN Unit Description": "Extension",
    "Vendor Cost": 12.97,
+   "Stock Class": "trailer"
+  },
+  {
+   "Part ID": 716,
+   "DB Entry Type": "Tool",
+   "Stock Type": "Nonstock",
+   "Description": "Full Face Respirator",
+   "Size": null,
+   "Manufacturer": "3M",
+   "MFG Part Number": "6800",
+   "CAT 1": null,
+   "CAT 2": null,
+   "CAT 3": null,
+   "Location ID": 54,
+   "Location Path": [
+    {
+     "Step Type": "Location",
+     "Node ID": 44,
+     "Node Name": "Master Inventory"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 45,
+     "Node Name": "Scottsville"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 1,
+     "Node Name": "Geo"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 5,
+     "Node Name": "Trailer"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 63,
+     "Node Name": "Tools"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 8,
+     "Node Name": "Tool Bags"
+    },
+    {
+     "Step Type": "Location",
+     "Node ID": 54,
+     "Node Name": "Drill Bag"
+    }
+   ],
+   "Stock Min": 1.0,
+   "Stock Max": 1.0,
+   "Reorder Quantity": null,
+   "Locations Unit Of Measure": "Each",
+   "Component Quantity": null,
+   "Component Unit Description": null,
+   "Vendor Name": "Amazon",
+   "VEN Part Number": "B007JZ1LG6",
+   "VEN URL": "https://www.amazon.com/dp/B007JZ1LG6",
+   "VEN Case QTY Txt": null,
+   "VEN Case QTY #": 1,
+   "VEN Unit Description": "Mask",
+   "Vendor Cost": 120.0,
    "Stock Class": "trailer"
   },
   {
