@@ -1000,24 +1000,11 @@ function printReorder(){
     // the thead (vendor name row + column-title row) reprints on any overflow page for free.
     let t='<table class="vgroup'+(vi>0?' pagebreak':'')+'">'+colgroup;
     t+='<thead><tr><th colspan="7" class="vname">'+esc(v)+'</th></tr>';
-    // WEB LINK REPLACED BY THE VENDOR PART NUMBER, PRINT ONLY (Mitch, 2026-07-30).
-    // Carson places the orders off this printout and cannot click a link, so on
-    // paper the URL was dead weight. What he needs is the number he types.
-    // Same column, same 10% width -- the number takes the space the link vacated.
-    t+='<tr>'+['Part','Shop Min','Order Qty','Unit Cost','VEN Case QTY','VEN Part #','Flagged By'].map(hh=>'<th>'+hh+'</th>').join('')+'</tr></thead>';
+    t+='<tr>'+['Part','Shop Min','Order Qty','Unit Cost','VEN Case QTY','Web Link','Flagged By'].map(hh=>'<th>'+hh+'</th>').join('')+'</tr></thead>';
     t+='<tbody>'+items.map(r=>{
-      // THE GRAY "null" IS THE FEATURE, NOT A GAP TO TIDY. A part with no vendor
-      // number is one nobody has sourced yet, and printing the word makes the
-      // report double as a to-do list of exactly those. Carson asks what it
-      // means once; after that his eye skips the gray and still sees it. Do NOT
-      // swap it for a blank, a dash, "N/A" or "TBD", and do not hide the row.
-      // Reuses .nullval, the same treatment Unit Cost already uses in this very
-      // report -- a second, differently-styled "null" would read as two
-      // different things.
-      const vpn=(r.vendorPart==null||String(r.vendorPart).trim()==='')
-        ? '<span class="nullval">null</span>' : esc(r.vendorPart);
+      const link=r.venUrl?'<a href="'+h(r.venUrl)+'">Web Link</a>':'—';
       const cost=(r.cost===''||r.cost==null)?'<span class="nullval">null</span>':esc(CFG.currency+r.cost);
-      let tr='<tr><td>'+esc(r.name)+'</td><td class="num">'+nz(r.shopMin)+'</td><td class="num">'+nz(r.orderQty)+'</td><td class="num">'+cost+'</td><td class="num">'+nz(r.venCaseQty)+'</td><td>'+vpn+'</td><td>'+esc(r.teamLabel)+'</td></tr>';
+      let tr='<tr><td>'+esc(r.name)+'</td><td class="num">'+nz(r.shopMin)+'</td><td class="num">'+nz(r.orderQty)+'</td><td class="num">'+cost+'</td><td class="num">'+nz(r.venCaseQty)+'</td><td>'+link+'</td><td>'+esc(r.teamLabel)+'</td></tr>';
       // Tool replacement notes ride directly under their line item, stacked.
       r.notes.forEach(n=>{tr+='<tr class="noterow"><td colspan="7">&#128295; '+esc(n.name||'?')+esc(noteTag(n))+': '+esc(n.reason)+'</td></tr>';});
       return tr;
