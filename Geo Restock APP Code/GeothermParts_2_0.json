@@ -1,6 +1,6 @@
 {
- "Export Timestamp": "2026-08-05T02:54:06+00:00",
- "Source Change ID": 5675,
+ "Export Timestamp": "2026-08-05T14:50:08+00:00",
+ "Source Change ID": 5676,
  "Object Count": 1115,
  "Parts": [
   {
@@ -7224,7 +7224,7 @@
      "Node Name": "Hose Fittings & Pipe"
     }
    ],
-   "Stock Min": 8.0,
+   "Stock Min": 16.0,
    "Stock Max": 20.0,
    "Reorder Quantity": null,
    "Locations Unit Of Measure": "Each",
